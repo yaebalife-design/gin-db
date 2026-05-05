@@ -60,11 +60,50 @@
     });
   }
 
+  // 5. Furusato page filter
+  function initFurusatoFilter() {
+    var bar = document.querySelector('.filter-bar');
+    if (!bar) return;
+    var chips = bar.querySelectorAll('.filter-chip');
+    var cards = document.querySelectorAll('.furusato-card');
+    if (!cards.length) return;
+
+    function applyFilter(f) {
+      cards.forEach(function (c) {
+        var show = false;
+        if (f === 'all') {
+          show = true;
+        } else if (f === 'amount-10000') {
+          show = parseInt(c.getAttribute('data-amount') || '0', 10) <= 10000;
+        } else if (f === 'amount-30000') {
+          show = parseInt(c.getAttribute('data-amount') || '0', 10) <= 30000;
+        } else if (f === 'award') {
+          show = c.getAttribute('data-award') === 'true';
+        } else if (f === 'set') {
+          show = c.getAttribute('data-set') === 'true';
+        } else if (f.indexOf('region-') === 0) {
+          var region = f.replace('region-', '');
+          show = c.getAttribute('data-region') === region;
+        }
+        c.style.display = show ? '' : 'none';
+      });
+    }
+
+    chips.forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        chips.forEach(function (c) { c.classList.remove('active'); });
+        chip.classList.add('active');
+        applyFilter(chip.getAttribute('data-filter') || 'all');
+      });
+    });
+  }
+
   function init() {
     initReveal();
     initHeaderShadow();
     initNavToggle();
     initCountUp();
+    initFurusatoFilter();
   }
 
   if (document.readyState === 'loading') {

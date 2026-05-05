@@ -40,19 +40,19 @@
     </p>
 
     <div class="filter-bar">
-      <span class="filter-chip active">すべて</span>
-      <span class="filter-chip">寄附額1万円以下</span>
-      <span class="filter-chip">寄附額3万円以下</span>
-      <span class="filter-chip">受賞歴あり</span>
-      <span class="filter-chip">飲み比べセット</span>
-      <span class="filter-chip">北海道</span>
-      <span class="filter-chip">京都</span>
-      <span class="filter-chip">鳥取</span>
+      <button class="filter-chip active" data-filter="all">すべて</button>
+      <button class="filter-chip" data-filter="amount-10000">寄附額1万円以下</button>
+      <button class="filter-chip" data-filter="amount-30000">寄附額3万円以下</button>
+      <button class="filter-chip" data-filter="award">受賞歴あり</button>
+      <button class="filter-chip" data-filter="set">飲み比べセット</button>
+      <button class="filter-chip" data-filter="region-北海道">北海道</button>
+      <button class="filter-chip" data-filter="region-京都">京都</button>
+      <button class="filter-chip" data-filter="region-鳥取">鳥取</button>
     </div>
 
     <div class="grid">
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="15000" data-region="北海道" data-award="true" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥15,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 北海道虻田郡ニセコ町</div>
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="30000" data-region="鳥取" data-award="true" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥30,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 鳥取県倉吉市</div>
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="20000" data-region="京都" data-award="true" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥20,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 京都府京都市</div>
@@ -100,7 +100,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="12000" data-region="鹿児島" data-award="false" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥12,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 鹿児島県南さつま市</div>
@@ -115,7 +115,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="10000" data-region="広島" data-award="false" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥10,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 広島県廿日市市</div>
@@ -130,7 +130,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="18000" data-region="北海道" data-award="false" data-set="true">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥18,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 北海道札幌市</div>
@@ -145,7 +145,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="8000" data-region="新潟" data-award="false" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥8,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 新潟県上越市</div>
@@ -160,7 +160,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="16000" data-region="石川" data-award="false" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥16,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 石川県金沢市</div>
@@ -175,7 +175,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="13000" data-region="岐阜" data-award="false" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥13,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 岐阜県下呂市</div>
@@ -190,7 +190,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="14000" data-region="高知" data-award="false" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥14,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 高知県安芸郡</div>
@@ -205,7 +205,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="25000" data-region="京都" data-award="false" data-set="false">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥25,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 京都府与謝郡伊根町</div>
@@ -220,7 +220,7 @@
         </div>
       </div>
 
-      <div class="furusato-card">
+      <div class="furusato-card" data-amount="22000" data-region="北海道" data-award="false" data-set="true">
         <div class="furusato-card__top">
           <div class="furusato-card__amount">¥22,000 <small>寄附</small></div>
           <div class="furusato-card__city"><svg class="icon-svg"><use href="/assets/icons.svg#i-pin"/></svg> 北海道虻田郡ニセコ町</div>
