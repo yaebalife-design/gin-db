@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gin-DB｜日本のクラフトジン蒸留所100+を網羅する検索データベース</title>
+<meta name="description" content="日本全国のクラフトジン蒸留所100箇所以上、銘柄387、ボタニカル52種類を横断検索。柚子・山椒・桜などの香りから探せる無料データベース。">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/age-gate.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="logo">Gin-DB <small>日本のクラフトジン100+</small></div>
+    <nav class="site-nav">
+      <a href="index.html" class="current">トップ</a>
+      <a href="botanical.html">ボタニカル逆引き</a>
+      <a href="awards.html">受賞ジン</a>
+      <a href="furusato.html">ふるさと納税</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__inner">
+    <h1>日本のクラフトジンを、<br>香りから探す。</h1>
+    <p>全国100以上の蒸留所が手がけるジャパニーズジンを、ボタニカル・受賞歴・地域から横断検索。</p>
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <span class="num">123</span>
+        <span class="label">DISTILLERIES</span>
+      </div>
+      <div class="hero__stat">
+        <span class="num">387</span>
+        <span class="label">BRANDS</span>
+      </div>
+      <div class="hero__stat">
+        <span class="num">52</span>
+        <span class="label">BOTANICALS</span>
+      </div>
+      <div class="hero__stat">
+        <span class="num">38</span>
+        <span class="label">AWARDS 2024-25</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <div class="age-warning">⚠️ 20歳未満の飲酒は法律で禁止されています。本サイトは20歳以上の方を対象としています。</div>
+  <div class="aff-notice">📢 当サイトはアフィリエイトプログラムを利用した広告を掲載しています。</div>
+
+  <!-- 全国マップ -->
+  <section class="section">
+    <div class="section__head">
+      <h2 class="section__title"><span class="icon">🗾</span>地域から探す</h2>
+      <span class="section__sub">全国123蒸留所を都道府県別に</span>
+    </div>
+    <div class="map-placeholder">
+      <div class="map-placeholder__overlay">
+        <h3>日本全国123蒸留所マップ</h3>
+        <p style="font-size:13px;color:var(--sub);">クリックで地域を絞り込み</p>
+        <div class="map-placeholder__counts">
+          <span>北海道<strong>8</strong></span>
+          <span>東北<strong>5</strong></span>
+          <span>関東<strong>32</strong></span>
+          <span>中部<strong>18</strong></span>
+          <span>近畿<strong>21</strong></span>
+          <span>中国<strong>11</strong></span>
+          <span>四国<strong>9</strong></span>
+          <span>九州<strong>19</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 今月の受賞ジン -->
+  <section class="section">
+    <div class="section__head">
+      <h2 class="section__title"><span class="icon">🏆</span>世界が認めたジャパニーズジン</h2>
+      <a href="awards.html" class="section__more">受賞歴タイムラインを見る →</a>
+    </div>
+    <div class="grid grid--3">
+      <a href="distillery/niseko-ohoro.html" class="card">
+        <div class="card__img">🥃</div>
+        <span class="card__badge">WORLD'S BEST 2024</span>
+        <h3 class="card__title">ohoro GIN</h3>
+        <p class="card__sub">ニセコ蒸溜所｜北海道</p>
+        <div class="card__price">¥4,950 <small style="color:var(--sub);font-weight:400;">/ 700ml</small></div>
+        <div class="card__meta">日本のジンとして史上初の世界最高賞</div>
+      </a>
+      <a href="distillery/matsui-hakuto.html" class="card">
+        <div class="card__img">🥃</div>
+        <span class="card__badge">WORLD'S BEST 2025</span>
+        <h3 class="card__title">白兎プレミアム</h3>
+        <p class="card__sub">松井酒造｜鳥取県</p>
+        <div class="card__price">¥6,600 <small style="color:var(--sub);font-weight:400;">/ 700ml</small></div>
+        <div class="card__meta">2年連続で日本勢が世界最高賞を獲得</div>
+      </a>
+      <a href="distillery/kyoto-kinobi.html" class="card">
+        <div class="card__img">🥃</div>
+        <span class="card__badge card__badge--green">GOLD 2024 / 2025</span>
+        <h3 class="card__title">季の美 京都ドライジン</h3>
+        <p class="card__sub">京都蒸溜所｜京都府</p>
+        <div class="card__price">¥5,500 <small style="color:var(--sub);font-weight:400;">/ 700ml</small></div>
+        <div class="card__meta">日本初のクラフトジン専業蒸溜所</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ボタニカル逆引き -->
+  <section class="section">
+    <div class="section__head">
+      <h2 class="section__title"><span class="icon">🌿</span>香りから探す（ボタニカル逆引き）</h2>
+      <a href="botanical.html" class="section__more">全52種を見る →</a>
+    </div>
+    <p class="section__sub" style="margin-bottom:20px;">「柚子の入ったジンが欲しい」「山椒の効いたジンを飲みたい」— 香りから逆引き</p>
+    <div class="chips">
+      <a href="botanical.html" class="chip">柚子<strong>14</strong></a>
+      <a href="botanical.html" class="chip">山椒<strong>11</strong></a>
+      <a href="botanical.html" class="chip">桜<strong>7</strong></a>
+      <a href="botanical.html" class="chip">玉露<strong>5</strong></a>
+      <a href="botanical.html" class="chip">檜<strong>6</strong></a>
+      <a href="botanical.html" class="chip">生姜<strong>9</strong></a>
+      <a href="botanical.html" class="chip">紫蘇<strong>8</strong></a>
+      <a href="botanical.html" class="chip">煎茶<strong>10</strong></a>
+      <a href="botanical.html" class="chip">レモン<strong>22</strong></a>
+      <a href="botanical.html" class="chip">よもぎ<strong>4</strong></a>
+      <a href="botanical.html" class="chip">和胡椒<strong>3</strong></a>
+      <a href="botanical.html" class="chip">山桜<strong>2</strong></a>
+      <a href="botanical.html" class="chip">わさび<strong>2</strong></a>
+      <a href="botanical.html" class="chip">黒文字<strong>5</strong></a>
+      <a href="botanical.html" class="chip">花椒<strong>3</strong></a>
+    </div>
+  </section>
+
+  <!-- 注目蒸留所 -->
+  <section class="section">
+    <div class="section__head">
+      <h2 class="section__title"><span class="icon">🏭</span>注目の蒸留所</h2>
+      <span class="section__sub">10件をピックアップ</span>
+    </div>
+    <div class="grid">
+      <a href="distillery/niseko-ohoro.html" class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">ニセコ蒸溜所</h3>
+        <p class="card__sub">北海道虻田郡ニセコ町</p>
+        <div class="card__meta">代表銘柄: ohoro GIN ／ 見学可</div>
+      </a>
+      <a href="distillery/kyoto-kinobi.html" class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">京都蒸溜所</h3>
+        <p class="card__sub">京都府京都市</p>
+        <div class="card__meta">代表銘柄: 季の美 ／ 見学要予約</div>
+      </a>
+      <a href="distillery/matsui-hakuto.html" class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">松井酒造</h3>
+        <p class="card__sub">鳥取県倉吉市</p>
+        <div class="card__meta">代表銘柄: 白兎 ／ 見学要予約</div>
+      </a>
+      <div class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">本坊酒造 マルス津貫蒸溜所</h3>
+        <p class="card__sub">鹿児島県南さつま市</p>
+        <div class="card__meta">代表銘柄: 和美人 ／ 見学可</div>
+      </div>
+      <div class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">サクラオB&D</h3>
+        <p class="card__sub">広島県廿日市市</p>
+        <div class="card__meta">代表銘柄: SAKURAO GIN ／ 見学可</div>
+      </div>
+      <div class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">紅櫻蒸溜所</h3>
+        <p class="card__sub">北海道札幌市南区</p>
+        <div class="card__meta">代表銘柄: 9148 ／ 見学要予約</div>
+      </div>
+      <div class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">サントリー大阪工場</h3>
+        <p class="card__sub">大阪府大阪市</p>
+        <div class="card__meta">代表銘柄: 翠 / ROKU ／ 見学不可</div>
+      </div>
+      <div class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">ニッカウヰスキー栃木工場</h3>
+        <p class="card__sub">栃木県さくら市</p>
+        <div class="card__meta">代表銘柄: カフェジン ／ 見学不可</div>
+      </div>
+      <div class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">辰巳蒸溜所</h3>
+        <p class="card__sub">石川県金沢市</p>
+        <div class="card__meta">代表銘柄: 加賀ノ月 ／ 見学要予約</div>
+      </div>
+      <div class="card">
+        <div class="card__img">🏭</div>
+        <h3 class="card__title">奥飛騨酒造</h3>
+        <p class="card__sub">岐阜県下呂市</p>
+        <div class="card__meta">代表銘柄: 槍ヶ岳 ／ 見学要予約</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__cols">
+      <div>
+        <h4>Gin-DB</h4>
+        <p style="font-size:12px;line-height:1.7;">日本のクラフトジン蒸留所と銘柄を、香り・受賞歴・地域から横断検索できる無料データベース。月次自動更新。</p>
+      </div>
+      <div>
+        <h4>探す</h4>
+        <ul>
+          <li><a href="botanical.html">ボタニカル逆引き</a></li>
+          <li><a href="awards.html">受賞ジン</a></li>
+          <li><a href="furusato.html">ふるさと納税</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>サイト情報</h4>
+        <ul>
+          <li><a href="about.html">運営者情報</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="disclaimer.html">免責事項・広告表記</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お知らせ</h4>
+        <p style="font-size:12px;">⚠️ 20歳未満の飲酒は法律で禁止されています。</p>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      © 2026 Gin-DB ／ 当サイトはアフィリエイトプログラムを利用しています
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
