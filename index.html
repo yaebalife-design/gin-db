@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Gin-DB｜日本のクラフトジン蒸留所100+を網羅する検索データベース</title>
 <meta name="description" content="日本全国のクラフトジン蒸留所100箇所以上、銘柄387、ボタニカル52種類を横断検索。柚子・山椒・桜などの香りから探せる無料データベース。">
@@ -21,7 +22,7 @@
 <header class="site-header">
   <div class="site-header__inner">
     <div class="logo"><a href="index.html">Gin-DB</a> <small>日本のクラフトジン</small></div>
-    <button class="nav-toggle" aria-label="メニュー">☰</button>
+    <button class="nav-toggle" aria-label="メニュー"><svg class="icon-svg" width="20" height="20"><use href="/assets/icons.svg#i-menu"/></svg></button>
     <nav class="site-nav">
       <a href="index.html" class="current">トップ</a>
       <a href="botanical.html">ボタニカル逆引き</a>
@@ -60,35 +61,97 @@
 
 <main class="container">
 
-  <div class="aff-notice">📢 当サイトはアフィリエイトプログラムを利用した広告を掲載しています。</div>
-
-  <section class="section reveal">
+  <!-- 3つの探し方 -->
+  <section class="section reveal" style="margin-top: -20px;">
     <div class="section__head">
-      <h2 class="section__title">🗾 地域から探す</h2>
-      <span class="section__sub">全国123蒸留所を都道府県別に</span>
+      <h2 class="section__title"><svg class="icon-svg"><use href="/assets/icons.svg#i-search"/></svg>3つの探し方</h2>
+      <span class="section__sub">あなたに合うジンを見つける</span>
     </div>
-    <div class="map-placeholder">
-      <div class="map-placeholder__overlay">
-        <h3>日本全国123蒸留所マップ</h3>
-        <p style="font-size:13px;color:var(--sub);">準備中：クリックで地域を絞り込み</p>
-        <div class="map-placeholder__counts">
-          <span>北海道<strong>8</strong></span>
-          <span>東北<strong>5</strong></span>
-          <span>関東<strong>32</strong></span>
-          <span>中部<strong>18</strong></span>
-          <span>近畿<strong>21</strong></span>
-          <span>中国<strong>11</strong></span>
-          <span>四国<strong>9</strong></span>
-          <span>九州<strong>19</strong></span>
-        </div>
-      </div>
+    <div class="discover-grid">
+      <a href="botanical.html" class="discover-tile">
+        <div class="discover-tile__icon"><svg class="icon-svg"><use href="/assets/icons.svg#i-leaf"/></svg></div>
+        <h3 class="discover-tile__title">香りから探す</h3>
+        <p class="discover-tile__desc">柚子・山椒・桜・玉露など、52種類のボタニカルから逆引き。「この素材を使ったジンが欲しい」が一発で見つかる。</p>
+        <span class="discover-tile__cta">ボタニカル逆引きへ <svg class="icon-svg"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+      <a href="awards.html" class="discover-tile">
+        <div class="discover-tile__icon"><svg class="icon-svg"><use href="/assets/icons.svg#i-trophy"/></svg></div>
+        <h3 class="discover-tile__title">受賞歴から探す</h3>
+        <p class="discover-tile__desc">World Gin Awards等の国際コンテスト受賞ジンを年表で。日本勢が2年連続で世界最高賞を獲得。</p>
+        <span class="discover-tile__cta">受賞タイムラインへ <svg class="icon-svg"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+      <a href="furusato.html" class="discover-tile">
+        <div class="discover-tile__icon"><svg class="icon-svg"><use href="/assets/icons.svg#i-gift"/></svg></div>
+        <h3 class="discover-tile__title">ふるさと納税で探す</h3>
+        <p class="discover-tile__desc">ふるなび・楽天ふるさと納税の返礼品から国産クラフトジン35銘柄を一覧。寄附額・地域で絞り込み。</p>
+        <span class="discover-tile__cta">返礼品ジン一覧へ <svg class="icon-svg"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
     </div>
   </section>
 
+  <!-- 地域から探す -->
   <section class="section reveal">
     <div class="section__head">
-      <h2 class="section__title">🏆 世界が認めたジャパニーズジン</h2>
-      <a href="awards.html" class="section__more">受賞歴タイムラインを見る →</a>
+      <h2 class="section__title"><svg class="icon-svg"><use href="/assets/icons.svg#i-map"/></svg>地域から探す</h2>
+      <span class="section__sub">全国123蒸留所を地域別に</span>
+    </div>
+    <div class="region-grid">
+      <a href="#" class="region-tile" style="--region-color:#3b6e9c;">
+        <span class="region-tile__name-en">HOKKAIDO</span>
+        <span class="region-tile__name">北海道</span>
+        <span class="region-tile__count"><strong>8</strong>蒸留所</span>
+        <span class="region-tile__arrow"><svg class="icon-svg" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+      <a href="#" class="region-tile" style="--region-color:#7b4f8c;">
+        <span class="region-tile__name-en">TOHOKU</span>
+        <span class="region-tile__name">東北</span>
+        <span class="region-tile__count"><strong>5</strong>蒸留所</span>
+        <span class="region-tile__arrow"><svg class="icon-svg" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+      <a href="#" class="region-tile" style="--region-color:#3d6e3d;">
+        <span class="region-tile__name-en">KANTO</span>
+        <span class="region-tile__name">関東</span>
+        <span class="region-tile__count"><strong>32</strong>蒸留所</span>
+        <span class="region-tile__arrow"><svg class="icon-svg" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+      <a href="#" class="region-tile" style="--region-color:#9c6f3b;">
+        <span class="region-tile__name-en">CHUBU</span>
+        <span class="region-tile__name">中部</span>
+        <span class="region-tile__count"><strong>18</strong>蒸留所</span>
+        <span class="region-tile__arrow"><svg class="icon-svg" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+      <a href="#" class="region-tile" style="--region-color:#9c4f4f;">
+        <span class="region-tile__name-en">KANSAI</span>
+        <span class="region-tile__name">近畿</span>
+        <span class="region-tile__count"><strong>21</strong>蒸留所</span>
+        <span class="region-tile__arrow"><svg class="icon-svg" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+      <a href="#" class="region-tile" style="--region-color:#3b8c8c;">
+        <span class="region-tile__name-en">CHUGOKU</span>
+        <span class="region-tile__name">中国</span>
+        <span class="region-tile__count"><strong>11</strong>蒸留所</span>
+        <span class="region-tile__arrow"><svg class="icon-svg" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+      <a href="#" class="region-tile" style="--region-color:#5c8c3b;">
+        <span class="region-tile__name-en">SHIKOKU</span>
+        <span class="region-tile__name">四国</span>
+        <span class="region-tile__count"><strong>9</strong>蒸留所</span>
+        <span class="region-tile__arrow"><svg class="icon-svg" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+      <a href="#" class="region-tile" style="--region-color:#bf6f4f;">
+        <span class="region-tile__name-en">KYUSHU</span>
+        <span class="region-tile__name">九州</span>
+        <span class="region-tile__count"><strong>19</strong>蒸留所</span>
+        <span class="region-tile__arrow"><svg class="icon-svg" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 受賞ジン -->
+  <section class="section reveal">
+    <div class="section__head">
+      <h2 class="section__title"><svg class="icon-svg"><use href="/assets/icons.svg#i-trophy"/></svg>世界が認めたジャパニーズジン</h2>
+      <a href="awards.html" class="section__more">受賞歴タイムラインを見る <svg class="icon-svg"><use href="/assets/icons.svg#i-arrow-right"/></svg></a>
     </div>
     <div class="grid grid--3">
       <a href="distillery/niseko-ohoro.html" class="card">
@@ -124,10 +187,11 @@
     </div>
   </section>
 
+  <!-- ボタニカル逆引き -->
   <section class="section reveal">
     <div class="section__head">
-      <h2 class="section__title">🌿 香りから探す（ボタニカル逆引き）</h2>
-      <a href="botanical.html" class="section__more">全52種を見る →</a>
+      <h2 class="section__title"><svg class="icon-svg"><use href="/assets/icons.svg#i-leaf"/></svg>香りから探す</h2>
+      <a href="botanical.html" class="section__more">全52種を見る <svg class="icon-svg"><use href="/assets/icons.svg#i-arrow-right"/></svg></a>
     </div>
     <p style="font-size:14px;color:var(--sub);margin-bottom:20px;">「柚子の入ったジンが欲しい」「山椒の効いたジンを飲みたい」— 香りから逆引き</p>
     <div class="chips">
@@ -146,9 +210,10 @@
     </div>
   </section>
 
+  <!-- 注目蒸留所 -->
   <section class="section reveal">
     <div class="section__head">
-      <h2 class="section__title">🏭 注目の蒸留所</h2>
+      <h2 class="section__title"><svg class="icon-svg"><use href="/assets/icons.svg#i-distillery"/></svg>注目の蒸留所</h2>
       <span class="section__sub">10件をピックアップ</span>
     </div>
     <div class="grid">
@@ -176,62 +241,62 @@
           <div class="card__meta">代表銘柄: 白兎 ／ 見学要予約</div>
         </div>
       </a>
-      <div class="card">
+      <a href="distillery/hombo-tsunuki.html" class="card">
         <div class="card__img card__img--kyushu"><div><div class="card__img-name">マルス津貫</div><div class="card__img-romaji">HOMBO</div><div class="card__img-area">鹿児島県</div></div></div>
         <div class="card__body">
           <h3 class="card__title">本坊酒造 マルス津貫蒸溜所</h3>
           <p class="card__sub">鹿児島県南さつま市</p>
           <div class="card__meta">代表銘柄: 和美人 ／ 見学可</div>
         </div>
-      </div>
-      <div class="card">
+      </a>
+      <a href="distillery/sakurao.html" class="card">
         <div class="card__img card__img--chugoku"><div><div class="card__img-name">サクラオB&D</div><div class="card__img-romaji">SAKURAO</div><div class="card__img-area">広島県</div></div></div>
         <div class="card__body">
           <h3 class="card__title">サクラオB&D</h3>
           <p class="card__sub">広島県廿日市市</p>
           <div class="card__meta">代表銘柄: SAKURAO GIN ／ 見学可</div>
         </div>
-      </div>
-      <div class="card">
+      </a>
+      <a href="distillery/benizakura.html" class="card">
         <div class="card__img card__img--hokkaido"><div><div class="card__img-name">紅櫻蒸溜所</div><div class="card__img-romaji">BENIZAKURA</div><div class="card__img-area">北海道</div></div></div>
         <div class="card__body">
           <h3 class="card__title">紅櫻蒸溜所</h3>
           <p class="card__sub">北海道札幌市南区</p>
           <div class="card__meta">代表銘柄: 9148 ／ 見学要予約</div>
         </div>
-      </div>
-      <div class="card">
+      </a>
+      <a href="distillery/suntory-osaka.html" class="card">
         <div class="card__img card__img--kansai"><div><div class="card__img-name">サントリー大阪</div><div class="card__img-romaji">SUNTORY</div><div class="card__img-area">大阪府</div></div></div>
         <div class="card__body">
           <h3 class="card__title">サントリー大阪工場</h3>
           <p class="card__sub">大阪府大阪市</p>
           <div class="card__meta">代表銘柄: 翠 / ROKU ／ 見学不可</div>
         </div>
-      </div>
-      <div class="card">
+      </a>
+      <a href="distillery/nikka-tochigi.html" class="card">
         <div class="card__img card__img--kanto"><div><div class="card__img-name">ニッカ栃木</div><div class="card__img-romaji">NIKKA</div><div class="card__img-area">栃木県</div></div></div>
         <div class="card__body">
           <h3 class="card__title">ニッカウヰスキー栃木工場</h3>
           <p class="card__sub">栃木県さくら市</p>
           <div class="card__meta">代表銘柄: カフェジン ／ 見学不可</div>
         </div>
-      </div>
-      <div class="card">
+      </a>
+      <a href="distillery/tatsumi.html" class="card">
         <div class="card__img card__img--hokuriku"><div><div class="card__img-name">辰巳蒸溜所</div><div class="card__img-romaji">TATSUMI</div><div class="card__img-area">石川県</div></div></div>
         <div class="card__body">
           <h3 class="card__title">辰巳蒸溜所</h3>
           <p class="card__sub">石川県金沢市</p>
           <div class="card__meta">代表銘柄: 加賀ノ月 ／ 見学要予約</div>
         </div>
-      </div>
-      <div class="card">
+      </a>
+      <a href="distillery/okuhida.html" class="card">
         <div class="card__img card__img--chubu"><div><div class="card__img-name">奥飛騨酒造</div><div class="card__img-romaji">OKUHIDA</div><div class="card__img-area">岐阜県</div></div></div>
         <div class="card__body">
           <h3 class="card__title">奥飛騨酒造</h3>
           <p class="card__sub">岐阜県下呂市</p>
           <div class="card__meta">代表銘柄: 槍ヶ岳 ／ 見学要予約</div>
         </div>
-      </div>
+      </a>
     </div>
   </section>
 
