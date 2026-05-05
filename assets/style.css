@@ -335,12 +335,61 @@ h1, h2, h3, h4 {
 .card__img {
   width: 100%;
   height: 180px;
-  background: linear-gradient(135deg, #e5e1d6 0%, #d4b87f 100%);
+  background: linear-gradient(135deg, #2d5a3d 0%, #1e3d29 100%);
   background-size: cover;
   background-position: center;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.95);
+  font-family: var(--serif);
+  text-align: center;
+  padding: 16px;
+  isolation: isolate;
 }
+.card__img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(212,184,127,0.18) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(212,184,127,0.12) 0%, transparent 50%);
+  z-index: -1;
+}
+.card__img-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.card__img-romaji {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  opacity: 0.75;
+  text-transform: uppercase;
+}
+.card__img-area {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  opacity: 0.65;
+  margin-top: 6px;
+}
+/* Region color variants */
+.card__img--hokkaido { background: linear-gradient(135deg, #1e3a4f 0%, #0f1f2c 100%); }
+.card__img--tohoku { background: linear-gradient(135deg, #3b3a4a 0%, #1f1e2c 100%); }
+.card__img--kanto { background: linear-gradient(135deg, #2d3a4a 0%, #18222e 100%); }
+.card__img--chubu { background: linear-gradient(135deg, #2d4a3a 0%, #1a2c22 100%); }
+.card__img--kansai { background: linear-gradient(135deg, #4a3a2d 0%, #2c221a 100%); }
+.card__img--chugoku { background: linear-gradient(135deg, #3a4a3d 0%, #1f2c22 100%); }
+.card__img--shikoku { background: linear-gradient(135deg, #3a4a47 0%, #1f2c2a 100%); }
+.card__img--kyushu { background: linear-gradient(135deg, #4a2d2d 0%, #2c1a1a 100%); }
+.card__img--hokuriku { background: linear-gradient(135deg, #4a3d2d 0%, #2c241a 100%); }
 .card__img::after {
   content: "";
   position: absolute;
