@@ -378,6 +378,9 @@ h1, h2, h3, h4 {
   display: block;
   overflow: hidden;
   position: relative;
+  /* 画面外描画を遅延してスクロール&初期表示を高速化 */
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 360px;
 }
 .card::before {
   content: "";
@@ -675,6 +678,9 @@ h1, h2, h3, h4 {
   gap: 24px;
   align-items: stretch;
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s;
+  /* 画面外の描画を遅延 */
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 220px;
 }
 .bottle:hover {
   transform: translateY(-2px);
