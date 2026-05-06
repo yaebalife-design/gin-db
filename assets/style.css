@@ -817,6 +817,43 @@ h1, h2, h3, h4 {
 .btn--outline:hover { background: var(--green); color: white; }
 .btn--lg { padding: 14px 28px; font-size: 14px; }
 
+/* ========== Article Table (記事用テーブル) ========== */
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 18px 0 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.article-table thead { background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-deeper) 100%); }
+.article-table thead th {
+  padding: 12px 14px;
+  text-align: left;
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  border: none;
+}
+.article-table tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  line-height: 1.7;
+}
+.article-table tbody tr:last-child td { border-bottom: none; }
+.article-table tbody tr:nth-child(even) { background: var(--line-light); }
+.article-table tbody tr.is-highlight { background: #fff8e8; }
+.article-table tbody tr:hover { background: rgba(184,151,92,0.08); }
+.article-table strong { color: var(--green-dark); }
+
+@media (max-width: 600px) {
+  .article-table { font-size: 12.5px; }
+  .article-table thead th, .article-table tbody td { padding: 10px 8px; }
+}
+
 /* ========== Timeline ========== */
 .timeline { position: relative; padding-left: 40px; }
 .timeline::before {
