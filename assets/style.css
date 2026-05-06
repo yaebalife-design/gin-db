@@ -843,10 +843,15 @@ h1, h2, h3, h4 {
   width: 100%;
   min-width: 560px;
   border-collapse: collapse;
+  table-layout: fixed;
   font-size: 14px;
   margin: 0;
   border: none;
   border-radius: 0;
+}
+.article-table th, .article-table td {
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 .article-table thead { background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-deeper) 100%); }
 .article-table thead th {
