@@ -817,6 +817,46 @@ h1, h2, h3, h4 {
 .btn--outline:hover { background: var(--green); color: white; }
 .btn--lg { padding: 14px 28px; font-size: 14px; }
 
+/* ========== Botanical Tabs ========== */
+.bot-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0 8px;
+}
+.bot-tab {
+  display: inline-flex;
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+  cursor: pointer;
+  user-select: none;
+}
+.bot-tab strong {
+  color: var(--green);
+  font-weight: 700;
+}
+.bot-tab:hover {
+  border-color: var(--gold-light);
+  background: #fffaf0;
+}
+.bot-tab.is-active {
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-deeper) 100%);
+  color: #fff;
+  border-color: var(--green-dark);
+  box-shadow: 0 2px 10px rgba(30,61,41,0.25);
+}
+.bot-tab.is-active strong {
+  color: var(--gold-light);
+}
+.bot-tab:active { transform: translateY(1px); }
+
 /* ========== Article Table (記事用テーブル) ========== */
 .article-table-wrap {
   margin: 18px 0 24px;
