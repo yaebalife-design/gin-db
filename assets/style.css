@@ -818,14 +818,35 @@ h1, h2, h3, h4 {
 .btn--lg { padding: 14px 28px; font-size: 14px; }
 
 /* ========== Article Table (記事用テーブル) ========== */
-.article-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
+.article-table-wrap {
   margin: 18px 0 24px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border: 1px solid var(--line);
   border-radius: 8px;
-  overflow: hidden;
+  position: relative;
+}
+.article-table-wrap::after {
+  content: "→ 横スクロール";
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 10px;
+  color: var(--gold-deep);
+  background: rgba(255,255,255,0.9);
+  padding: 2px 8px;
+  border-radius: 10px;
+  pointer-events: none;
+}
+.article-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 0;
+  border: none;
+  border-radius: 0;
 }
 .article-table thead { background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-deeper) 100%); }
 .article-table thead th {
@@ -850,8 +871,9 @@ h1, h2, h3, h4 {
 .article-table strong { color: var(--green-dark); }
 
 @media (max-width: 600px) {
-  .article-table { font-size: 12.5px; }
+  .article-table { font-size: 12.5px; min-width: 540px; }
   .article-table thead th, .article-table tbody td { padding: 10px 8px; }
+  .article-table-wrap::after { display: inline-block; }
 }
 
 /* ========== Timeline ========== */
