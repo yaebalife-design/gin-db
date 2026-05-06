@@ -822,8 +822,6 @@ h1, h2, h3, h4 {
   margin: 18px 0 24px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  border: 1px solid var(--line);
-  border-radius: 8px;
   position: relative;
 }
 .article-table-wrap::after {
@@ -842,12 +840,14 @@ h1, h2, h3, h4 {
 .article-table {
   width: 100%;
   min-width: 560px;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   table-layout: fixed;
   font-size: 14px;
   margin: 0;
-  border: none;
-  border-radius: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
 }
 .article-table th, .article-table td {
   word-break: break-word;
