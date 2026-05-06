@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://gin-db.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://gin-db.com/botanical.html</loc><priority>0.9</priority></url>
-  <url><loc>https://gin-db.com/awards.html</loc><priority>0.9</priority></url>
-  <url><loc>https://gin-db.com/furusato.html</loc><priority>0.9</priority></url>
+  <url><loc>https://gin-db.com/botanical</loc><priority>0.9</priority></url>
+  <url><loc>https://gin-db.com/awards</loc><priority>0.9</priority></url>
+  <url><loc>https://gin-db.com/furusato</loc><priority>0.9</priority></url>
   <url><loc>https://gin-db.com/guide/</loc><priority>0.9</priority></url>
-  <url><loc>https://gin-db.com/distillery/niseko-ohoro.html</loc><priority>0.8</priority></url>
-  <url><loc>https://gin-db.com/distillery/kyoto-kinobi.html</loc><priority>0.8</priority></url>
-  <url><loc>https://gin-db.com/distillery/matsui-hakuto.html</loc><priority>0.8</priority></url>
-  <url><loc>https://gin-db.com/distillery/hombo-tsunuki.html</loc><priority>0.8</priority></url>
-  <url><loc>https://gin-db.com/distillery/sakurao.html</loc><priority>0.8</priority></url>
-  <url><loc>https://gin-db.com/distillery/benizakura.html</loc><priority>0.8</priority></url>
-  <url><loc>https://gin-db.com/distillery/suntory-osaka.html</loc><priority>0.8</priority></url>
-  <url><loc>https://gin-db.com/distillery/nikka-miyagikyo.html</loc><priority>0.8</priority></url>
-  <url><loc>https://gin-db.com/distillery/tatsumi.html</loc><priority>0.8</priority></url>
-  <url><loc>https://gin-db.com/region/hokkaido.html</loc><priority>0.7</priority></url>
-  <url><loc>https://gin-db.com/region/tohoku.html</loc><priority>0.7</priority></url>
-  <url><loc>https://gin-db.com/region/kanto.html</loc><priority>0.7</priority></url>
-  <url><loc>https://gin-db.com/region/chubu.html</loc><priority>0.7</priority></url>
-  <url><loc>https://gin-db.com/region/kansai.html</loc><priority>0.7</priority></url>
-  <url><loc>https://gin-db.com/region/chugoku.html</loc><priority>0.7</priority></url>
-  <url><loc>https://gin-db.com/region/shikoku.html</loc><priority>0.7</priority></url>
-  <url><loc>https://gin-db.com/region/kyushu.html</loc><priority>0.7</priority></url>
-  <url><loc>https://gin-db.com/about.html</loc><priority>0.5</priority></url>
-  <url><loc>https://gin-db.com/privacy.html</loc><priority>0.3</priority></url>
-  <url><loc>https://gin-db.com/disclaimer.html</loc><priority>0.3</priority></url>
+  <url><loc>https://gin-db.com/distillery/niseko-ohoro</loc><priority>0.8</priority></url>
+  <url><loc>https://gin-db.com/distillery/kyoto-kinobi</loc><priority>0.8</priority></url>
+  <url><loc>https://gin-db.com/distillery/matsui-hakuto</loc><priority>0.8</priority></url>
+  <url><loc>https://gin-db.com/distillery/hombo-tsunuki</loc><priority>0.8</priority></url>
+  <url><loc>https://gin-db.com/distillery/sakurao</loc><priority>0.8</priority></url>
+  <url><loc>https://gin-db.com/distillery/benizakura</loc><priority>0.8</priority></url>
+  <url><loc>https://gin-db.com/distillery/suntory-osaka</loc><priority>0.8</priority></url>
+  <url><loc>https://gin-db.com/distillery/nikka-miyagikyo</loc><priority>0.8</priority></url>
+  <url><loc>https://gin-db.com/distillery/tatsumi</loc><priority>0.8</priority></url>
+  <url><loc>https://gin-db.com/region/hokkaido</loc><priority>0.7</priority></url>
+  <url><loc>https://gin-db.com/region/tohoku</loc><priority>0.7</priority></url>
+  <url><loc>https://gin-db.com/region/kanto</loc><priority>0.7</priority></url>
+  <url><loc>https://gin-db.com/region/chubu</loc><priority>0.7</priority></url>
+  <url><loc>https://gin-db.com/region/kansai</loc><priority>0.7</priority></url>
+  <url><loc>https://gin-db.com/region/chugoku</loc><priority>0.7</priority></url>
+  <url><loc>https://gin-db.com/region/shikoku</loc><priority>0.7</priority></url>
+  <url><loc>https://gin-db.com/region/kyushu</loc><priority>0.7</priority></url>
+  <url><loc>https://gin-db.com/about</loc><priority>0.5</priority></url>
+  <url><loc>https://gin-db.com/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://gin-db.com/disclaimer</loc><priority>0.3</priority></url>
 </urlset>
