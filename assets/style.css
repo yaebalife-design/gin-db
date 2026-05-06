@@ -1352,19 +1352,20 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
 .static-page p { font-size: 14px; line-height: 2; margin-bottom: 16px; }
 .static-page ul, .static-page ol { margin: 12px 0 16px 24px; }
 .static-page li { font-size: 14px; line-height: 2; margin-bottom: 6px; }
-.static-page table {
+.static-page table:not(.article-table) {
   width: 100%; border-collapse: collapse; margin: 16px 0;
   font-size: 14px; border-radius: 8px; overflow: hidden;
   border: 1px solid var(--line);
 }
-.static-page th, .static-page td {
+.static-page table:not(.article-table) th,
+.static-page table:not(.article-table) td {
   border-bottom: 1px solid var(--line);
   padding: 12px 16px;
   text-align: left;
   vertical-align: top;
 }
-.static-page tr:last-child td { border-bottom: none; }
-.static-page th {
+.static-page table:not(.article-table) tr:last-child td { border-bottom: none; }
+.static-page table:not(.article-table) th {
   background: linear-gradient(135deg, #fdf6e3 0%, #f4e8c8 100%);
   font-weight: 600;
   width: 30%;
