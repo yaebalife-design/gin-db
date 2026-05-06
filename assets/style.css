@@ -724,11 +724,15 @@ h1, h2, h3, h4 {
 .bottle__buttons { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
 
 .bottle__img--product {
+  width: 180px;
+  min-height: 220px;
   background: #ffffff;
   border: 1px solid var(--line);
-  padding: 10px;
+  padding: 14px;
+  transition: border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 .bottle__img--product::after { display: none; }
+.bottle__img--product:hover { border-color: var(--gold-light); box-shadow: var(--shadow); }
 .bottle__img--product a { display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
 .bottle__img--product img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; mix-blend-mode: multiply; }
 
