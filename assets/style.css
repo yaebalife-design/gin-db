@@ -917,6 +917,7 @@ h1, h2, h3, h4 {
 .article-table tbody tr.is-highlight { background: #fff8e8; }
 .article-table tbody tr:hover { background: rgba(184,151,92,0.08); }
 .article-table strong { color: var(--green-dark); }
+.article-table td.col-label { color: var(--sub); width: 140px; font-weight: 500; }
 
 @media (max-width: 600px) {
   .article-table { font-size: 12.5px; min-width: 540px; }
