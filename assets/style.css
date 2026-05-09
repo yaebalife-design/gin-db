@@ -1134,12 +1134,6 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   box-shadow: 0 6px 16px rgba(212, 175, 55, 0.18);
   color: white;
 }
-.affiliate-btn--rakuten {
-  border-left: 3px solid #bf0000;
-}
-.affiliate-btn--amazon {
-  border-left: 3px solid #ff9900;
-}
 .affiliate-btn__icon {
   color: var(--gold);
   flex-shrink: 0;
