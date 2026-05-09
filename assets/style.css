@@ -1147,6 +1147,27 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   line-height: 1.7;
   margin-top: 10px;
 }
+.affiliate-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--gold-deep);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  transition: color 0.18s ease;
+}
+.affiliate-link:hover {
+  color: var(--gold);
+  text-decoration: underline;
+}
+.bottle__links {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
 
 /* ========== Icon SVG ========== */
 .icon-svg {
