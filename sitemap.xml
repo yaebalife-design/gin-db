@@ -133,7 +133,6 @@
   <url><loc>https://gin-db.com/gin/shirakawa-meijo-1</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/naturadistill-1</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/naturadistill-2</loc><priority>0.6</priority></url>
-  <url><loc>https://gin-db.com/gin/naturadistill-3</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/kiuchi-yasato-1</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/meiri-shurui-1</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/meiri-shurui-2</loc><priority>0.6</priority></url>
@@ -205,6 +204,7 @@
   <url><loc>https://gin-db.com/gin/nozawa-onsen-6</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/fuyou-shuzo-1</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/kurosawa-shuzo-1</loc><priority>0.6</priority></url>
+  <url><loc>https://gin-db.com/gin/kurosawa-shuzo-2</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/nakatsugawa-1</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/nakatsugawa-2</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/numazu-distillery-1</loc><priority>0.6</priority></url>
@@ -297,6 +297,7 @@
   <url><loc>https://gin-db.com/gin/hombo-tsunuki-3</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/kyoya-yuzu-1</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/kyoya-yuzu-2</loc><priority>0.6</priority></url>
+  <url><loc>https://gin-db.com/gin/kyoya-yuzu-3</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/osuzu-yama-1</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/osuzu-yama-2</loc><priority>0.6</priority></url>
   <url><loc>https://gin-db.com/gin/osuzu-yama-3</loc><priority>0.6</priority></url>
