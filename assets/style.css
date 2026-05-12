@@ -1110,6 +1110,18 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 12px;
+  position: relative;
+}
+/* もしものインプレッション計測pixelをflex計算から除外（gap余白を防ぐ） */
+.affiliate-btns > img,
+.bottle__links > img {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 .affiliate-btn {
   display: inline-flex;
@@ -1200,6 +1212,7 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
+  position: relative;
 }
 
 /* ========== Icon SVG ========== */
