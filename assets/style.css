@@ -1134,6 +1134,21 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   box-shadow: 0 6px 16px rgba(212, 175, 55, 0.18);
   color: white;
 }
+/* ホバー時のみブランド識別: 楽天=赤、Amazon=オレンジ（普段は黒×金統一を維持） */
+.affiliate-btn--rakuten:hover {
+  border-color: #bf0000;
+  box-shadow: 0 6px 16px rgba(191, 0, 0, 0.22);
+}
+.affiliate-btn--amazon:hover {
+  border-color: #ff9900;
+  box-shadow: 0 6px 16px rgba(255, 153, 0, 0.22);
+}
+.affiliate-btn--rakuten:hover .affiliate-btn__icon {
+  color: #ff5050;
+}
+.affiliate-btn--amazon:hover .affiliate-btn__icon {
+  color: #ffb340;
+}
 .affiliate-btn__icon {
   color: var(--gold);
   flex-shrink: 0;
@@ -1160,6 +1175,12 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
 .affiliate-link:hover {
   color: var(--gold);
   text-decoration: underline;
+}
+.affiliate-link--rakuten:hover {
+  color: #bf0000;
+}
+.affiliate-link--amazon:hover {
+  color: #cf7800;
 }
 .bottle__links {
   margin-top: 12px;
