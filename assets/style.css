@@ -1134,34 +1134,32 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   box-shadow: 0 6px 16px rgba(212, 175, 55, 0.18);
   color: white;
 }
-/* ブランド識別カラー（A+B案統合）: 楽天=赤、Amazon=オレンジ */
+/* H案: 完全ブランド色背景（最派手バージョン）*/
 .affiliate-btn--rakuten {
-  color: #ff8080;
+  background: linear-gradient(135deg, #8c1010 0%, #bf0000 100%);
+  color: white;
+  border-color: #bf0000;
 }
 .affiliate-btn--amazon {
-  color: #ffb340;
+  background: linear-gradient(135deg, #232f3e 0%, #ff9900 100%);
+  color: white;
+  border-color: #ff9900;
 }
-.affiliate-btn--rakuten .affiliate-btn__icon {
-  color: #ff5050;
-}
+.affiliate-btn--rakuten .affiliate-btn__icon,
 .affiliate-btn--amazon .affiliate-btn__icon {
-  color: #ff9900;
+  color: white;
 }
 .affiliate-btn--rakuten:hover {
-  border-color: #bf0000;
-  box-shadow: 0 6px 16px rgba(191, 0, 0, 0.25);
-  color: #ffa0a0;
+  background: linear-gradient(135deg, #a01818 0%, #d92020 100%);
+  border-color: #ff5050;
+  box-shadow: 0 6px 18px rgba(191, 0, 0, 0.45);
+  color: white;
 }
 .affiliate-btn--amazon:hover {
-  border-color: #ff9900;
-  box-shadow: 0 6px 16px rgba(255, 153, 0, 0.25);
-  color: #ffc870;
-}
-.affiliate-btn--rakuten:hover .affiliate-btn__icon {
-  color: #ff7070;
-}
-.affiliate-btn--amazon:hover .affiliate-btn__icon {
-  color: #ffb340;
+  background: linear-gradient(135deg, #2d3a4d 0%, #ffb340 100%);
+  border-color: #ffb340;
+  box-shadow: 0 6px 18px rgba(255, 153, 0, 0.45);
+  color: white;
 }
 .affiliate-btn__icon {
   color: var(--gold);
