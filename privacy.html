@@ -40,8 +40,8 @@
 <header class="site-header">
   <div class="site-header__inner">
     <div class="logo"><a href="index.html">Gin-DB</a> <small>日本のクラフトジン200+</small></div>
-    <button class="nav-toggle" aria-label="メニュー"><svg class="icon-svg" width="20" height="20"><use href="/assets/icons.svg#i-menu"/></svg></button>
-    <nav class="site-nav">
+    <button class="nav-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav"><svg class="icon-svg" width="20" height="20" aria-hidden="true"><use href="/assets/icons.svg#i-menu"/></svg></button>
+    <nav class="site-nav" id="site-nav">
       <a href="index.html">トップ</a>
       <a href="botanical.html">ボタニカル逆引き</a>
       <a href="awards.html">受賞ジン</a>
@@ -124,7 +124,7 @@
       </div>
       <div>
         <h4>お知らせ</h4>
-        <p style="font-size:12px;"><svg class="icon-svg"><use href="/assets/icons.svg#i-warning"/></svg> 20歳未満の飲酒は法律で禁止されています。</p>
+        <p style="font-size:12px;"><svg class="icon-svg" aria-hidden="true"><use href="/assets/icons.svg#i-warning"/></svg> 20歳未満の飲酒は法律で禁止されています。</p>
       </div>
     </div>
     <div class="site-footer__bottom">

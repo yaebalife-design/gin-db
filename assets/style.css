@@ -14,6 +14,13 @@ a { color: inherit; text-decoration: none; transition: color 0.2s; }
 img { max-width: 100%; display: block; }
 button { font-family: inherit; }
 
+/* ========== Focus ring (keyboard) ========== */
+:where(a, button, [role="button"], summary, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 /* ========== Color Palette ========== */
 :root {
   --bg: #faf8f3;
@@ -1418,36 +1425,6 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
 }
 .discover-tile:hover .discover-tile__cta { gap: 10px; }
 
-/* ========== Map placeholder ========== */
-.map-placeholder {
-  background: linear-gradient(135deg, #e8eddf 0%, #d6e0c8 100%);
-  border-radius: 14px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin-bottom: 24px;
-  border: 1px solid var(--line);
-  overflow: hidden;
-}
-.map-placeholder::before {
-  content: "🗾"; font-size: 220px; opacity: 0.12; position: absolute;
-}
-.map-placeholder__overlay {
-  position: relative;
-  text-align: center;
-  padding: 28px;
-  background: rgba(255,255,255,0.92);
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-  box-shadow: var(--shadow);
-}
-.map-placeholder__overlay h3 { font-family: var(--serif); font-size: 20px; margin-bottom: 8px; color: var(--green-dark); }
-.map-placeholder__counts { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 14px; }
-.map-placeholder__counts span { font-size: 12px; color: var(--sub); }
-.map-placeholder__counts strong { color: var(--green); margin-left: 4px; font-weight: 700; }
-
 /* ========== Breadcrumb ========== */
 .breadcrumb { font-size: 12px; color: var(--sub); margin-bottom: 18px; letter-spacing: 0.02em; }
 .breadcrumb a { color: var(--green); }
@@ -1552,4 +1529,16 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   background: var(--line-light);
   border-radius: 999px;
   color: var(--sub);
+}
+
+/* ========== Reduced motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  /* IntersectionObserver 前でも本文が消えないよう可視を保証 */
+  .reveal { opacity: 1 !important; transform: none !important; }
 }

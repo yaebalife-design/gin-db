@@ -40,8 +40,8 @@
 <header class="site-header">
   <div class="site-header__inner">
     <div class="logo"><a href="index.html">Gin-DB</a> <small>日本のクラフトジン200+</small></div>
-    <button class="nav-toggle" aria-label="メニュー"><svg class="icon-svg" width="20" height="20"><use href="/assets/icons.svg#i-menu"/></svg></button>
-    <nav class="site-nav">
+    <button class="nav-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav"><svg class="icon-svg" width="20" height="20" aria-hidden="true"><use href="/assets/icons.svg#i-menu"/></svg></button>
+    <nav class="site-nav" id="site-nav">
       <a href="index.html">トップ</a>
       <a href="botanical.html">ボタニカル逆引き</a>
       <a href="awards.html">受賞ジン</a>
@@ -123,7 +123,7 @@
       </div>
       <div>
         <h4>お知らせ</h4>
-        <p class="site-footer__notice"><svg class="icon-svg" style="vertical-align:-3px;margin-right:4px;"><use href="/assets/icons.svg#i-warning"/></svg>20歳未満の飲酒は法律で禁止されています。</p>
+        <p class="site-footer__notice"><svg class="icon-svg" style="vertical-align:-3px;margin-right:4px;" aria-hidden="true"><use href="/assets/icons.svg#i-warning"/></svg>20歳未満の飲酒は法律で禁止されています。</p>
         <p class="site-footer__legal">飲酒は20歳になってから。お酒は楽しく適量で。妊娠中・授乳期の飲酒はやめましょう。</p>
       </div>
     </div>

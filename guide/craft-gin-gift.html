@@ -41,8 +41,8 @@
 <header class="site-header">
   <div class="site-header__inner">
     <div class="logo"><a href="../index.html">Gin-DB</a> <small>日本のクラフトジン</small></div>
-    <button class="nav-toggle" aria-label="メニュー"><svg class="icon-svg" width="20" height="20"><use href="/assets/icons.svg#i-menu"/></svg></button>
-    <nav class="site-nav">
+    <button class="nav-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav"><svg class="icon-svg" width="20" height="20" aria-hidden="true"><use href="/assets/icons.svg#i-menu"/></svg></button>
+    <nav class="site-nav" id="site-nav">
       <a href="../index.html">トップ</a>
       <a href="../botanical.html">ボタニカル逆引き</a>
       <a href="../awards.html">受賞ジン</a>
@@ -96,7 +96,7 @@
 
       <h3 style="font-family:var(--serif);font-size:20px;margin:24px 0 12px;color:var(--green-dark);">② 世界的な評価の高まり：いまが「贈り時」</h3>
 
-      <p><a href="../awards.html" style="color:var(--green);font-weight:600;">2024年と2025年</a>、日本のジンは<strong>World Gin Awardsの世界最高賞を2年連続</strong>で獲得しました（2024 Classic Gin部門：ニセコohoro／2025 Contemporary Style Gin部門：松井白兎プレミアム）。「日本人が世界一に選んだ国産ジン」を贈れるのは、いま現在というタイミングならではです。受賞歴の裏付けがある銘柄は、贈り物としての<strong>客観的な品質保証</strong>になります。</p>
+      <p><a href="../awards.html" style="color:var(--green);font-weight:600;">2024年と2025年</a>、日本のジンは<strong>World Gin Awardsの世界最高賞を2年連続</strong>で獲得しました（2024 Classic Gin部門：ニセコohoro／2025 Contemporary Style Gin部門：松井白兎プレミアム）。「部門別で世界最高賞に選ばれた国産ジン」を贈れるのは、いま現在というタイミングならではです。受賞歴の裏付けがある銘柄は、贈り物としての<strong>客観的な品質保証</strong>になります。</p>
 
       <h3 style="font-family:var(--serif);font-size:20px;margin:24px 0 12px;color:var(--green-dark);">③ 保存性が高く、開けるタイミングを選べる</h3>
 
@@ -119,7 +119,7 @@
       <h3 style="font-family:var(--serif);font-size:20px;margin:28px 0 12px;color:var(--green-dark);">軸1：味（受賞歴で「お墨付き」を選ぶ）</h3>
       <p>ジンの世界には<strong>World Gin Awards（WGA）</strong>、<strong>International Wine &amp; Spirit Competition（IWSC）</strong>、<strong>International Spirits Challenge（ISC）</strong>、<strong>San Francisco World Spirits Competition（SFWSC）</strong>、国内の<strong>東京ウイスキー&amp;スピリッツコンペティション（TWSC）</strong>、英国の<strong>The Gin Masters</strong>といった大型コンテストがあります。受賞歴のあるジンは品質の客観的裏付けがあり、贈り物として安心感があります。</p>
 
-      <p>本記事の15銘柄はすべて、何らかの公式コンテストでの<strong>受賞歴</strong>か、独自の<strong>地域物語性</strong>を持つ銘柄です。特に<strong>2024-2025年のWGA世界最高賞ジン</strong>は、その年に贈ること自体が「リアルタイムで世界一の銘柄を贈る」という特別な意味を持ちます。</p>
+      <p>本記事の15銘柄はすべて、何らかの公式コンテストでの<strong>受賞歴</strong>か、独自の<strong>地域物語性</strong>を持つ銘柄です。特に<strong>2024-2025年のWGA部門別世界最高賞ジン</strong>は、その年に贈ること自体が「その年に部門別世界最高賞を獲った銘柄を贈る」という特別な意味を持ちます。</p>
 
       <h3 style="font-family:var(--serif);font-size:20px;margin:28px 0 12px;color:var(--green-dark);">軸2：デザイン（ボトルが食器棚で映える）</h3>
       <p>食器棚に並べたときの存在感も、ギフトの満足度を左右します。<strong>九谷焼風の絵柄をあしらった「KOBE GIN PREMIUM」</strong>、<strong>薩摩ボタンモチーフの「和美人」</strong>、<strong>ステンレス製ボトルの「橘花KIKKA GIN 澪標」</strong>、<strong>ヴィンテージなラベルの「白兎プレミアム」</strong>、<strong>白い陶器調の「ohoro GIN Limited Edition」</strong>など、ボトルデザインで個性を主張する銘柄が増えています。</p>
@@ -144,7 +144,7 @@
         <li><strong>瀬戸内</strong> → 檸檬・甘夏（瀬戸内蒸溜所）</li>
       </ul>
 
-      <p>3軸（味・デザイン・物語）が揃った銘柄を選べば、贈った瞬間から相手との会話が生まれます。「これ、私の出身地のジンだね」「世界一のジンって本当？」「このボトルすごく綺麗」──こうした会話のきっかけが、ジンギフトの本質的な価値です。</p>
+      <p>3軸（味・デザイン・物語）が揃った銘柄を選べば、贈った瞬間から相手との会話が生まれます。「これ、私の出身地のジンだね」「これ、世界的な賞を獲ったジンなの？」「このボトルすごく綺麗」──こうした会話のきっかけが、ジンギフトの本質的な価値です。</p>
     </section>
 
     <section id="sec3" style="margin-bottom:56px;">
@@ -192,10 +192,10 @@
       <p style="font-size:14px;color:var(--sub);margin-bottom:32px;">大切な人の誕生日、結婚祝い、目上の方への中元・歳暮など、しっかりした贈答に。希少性と物語性が際立つ5銘柄です。</p>
 
       <article style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px;">
-        <span style="display:inline-block;background:linear-gradient(135deg,var(--green),var(--green-dark));color:white;padding:4px 12px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:0.1em;margin-bottom:10px;">日本初RE100%蒸溜所・椿主役</span>
+        <span style="display:inline-block;background:linear-gradient(135deg,var(--green),var(--green-dark));color:white;padding:4px 12px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:0.1em;margin-bottom:10px;">日本初RE100%を掲げる蒸溜所・椿主役</span>
         <h3 style="font-family:var(--serif);font-size:22px;margin-bottom:6px;"><a href="../gin/gotogin-1.html" style="color:var(--green-dark);">6. GOTOGIN the origin（五島つばき蒸溜所）</a></h3>
         <p style="font-size:13px;color:var(--sub);margin-bottom:12px;">長崎県五島市福江島 ／ 47% ／ 500ml ／ <strong>¥7,150（税込・公式）</strong></p>
-        <p style="font-size:14px;line-height:1.9;">長崎・五島列島の福江島に誕生した、日本初のRE100%（再生可能エネルギー100%）蒸溜所。福江島に多数自生する<strong>椿の実</strong>を主役に、椿茶、椿油搾り粕など<strong>椿尽くし</strong>を軸に、ナツメグ・リコリス・カカオニブ・紅茶・山椒・ラズベリーなど計17種で複層化した実験的構成。SDGsへの取り組みを評価する贈り先や、<strong>唯一無二の島の物語に共感する相手</strong>に最適。500mlサイズなのでペアリング用や少量プレミアム用途にも合います。長崎・離島ゆかりの方への贈答にも特別感が出ます。</p>
+        <p style="font-size:14px;line-height:1.9;">長崎・五島列島の福江島に誕生し、<strong>「日本初のRE100%（再生可能エネルギー100%）蒸溜所」を目指すと公式に掲げる</strong>造り手（2024年公式リリース）。福江島に多数自生する<strong>椿の実</strong>を主役に、椿茶、椿油搾り粕など<strong>椿尽くし</strong>を軸に、ナツメグ・リコリス・カカオニブ・紅茶・山椒・ラズベリーなど計17種で複層化した実験的構成。SDGsへの取り組みを評価する贈り先や、<strong>唯一無二の島の物語に共感する相手</strong>に最適。500mlサイズなのでペアリング用や少量プレミアム用途にも合います。長崎・離島ゆかりの方への贈答にも特別感が出ます。</p>
       </article>
 
       <article style="background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px;margin-bottom:18px;">
@@ -223,7 +223,7 @@
         <span style="display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:white;padding:4px 12px;border-radius:4px;font-size:11px;font-weight:700;letter-spacing:0.1em;margin-bottom:10px;">WGA 2025 WORLD'S BEST CONTEMPORARY STYLE GIN</span>
         <h3 style="font-family:var(--serif);font-size:22px;margin-bottom:6px;"><a href="../gin/matsui-hakuto-2.html" style="color:var(--green-dark);">10. 白兎プレミアム（松井酒造）</a></h3>
         <p style="font-size:13px;color:var(--sub);margin-bottom:12px;">鳥取県倉吉市 ／ 47% ／ 700ml ／ <strong>¥3,960（税込・公式）</strong> ※化粧箱付き仕様は¥6,500前後</p>
-        <p style="font-size:14px;line-height:1.9;"><strong>2025年 WGA Contemporary Style Gin部門 世界最高賞</strong>。明治43年（1910年）創業の松井酒造が、<strong>鳥取県産梨</strong>を主役に据えた14種ボタニカル設計で世界の頂点に。<strong>過去6年連続でWGA入賞</strong>を続け、ついに2025年に世界最高賞へ到達した実力派。本体価格は¥3,960とリーズナブルですが、<strong>専用化粧箱付きの贈答仕様</strong>を選ぶと¥6,500〜¥7,000前後となり、本格ギフトレンジに収まります。<strong>「いま現在、世界一のジンを贈れる」</strong>──このタイミングならではの特別感です。鳥取・山陰ゆかりの方や、ハイクオリティ志向の方へ。</p>
+        <p style="font-size:14px;line-height:1.9;"><strong>2025年 WGA Contemporary Style Gin部門 世界最高賞</strong>。明治43年（1910年）創業の松井酒造が、<strong>鳥取県産梨</strong>を主役に据えた14種ボタニカル設計で世界の頂点に。<strong>過去6年連続でWGA入賞</strong>を続け、ついに2025年に世界最高賞へ到達した実力派。本体価格は¥3,960とリーズナブルですが、<strong>専用化粧箱付きの贈答仕様</strong>を選ぶと¥6,500〜¥7,000前後となり、本格ギフトレンジに収まります。<strong>「いま、部門別で世界最高賞のジンを贈れる」</strong>──このタイミングならではの特別感です。鳥取・山陰ゆかりの方や、ハイクオリティ志向の方へ。</p>
       </article>
     </section>
 
@@ -322,7 +322,7 @@
       <p>母親世代へは、<strong>柑橘系のフローラル・優しい香り</strong>のジンが好まれます。<a href="../gin/kyoto-kinobi-1.html" style="color:var(--green);">季の美 京都ドライジン</a>（玉露・木の芽の和ハーブ）、<a href="../gin/setouchi-distillery-1.html" style="color:var(--green);">檸檬 LEMON</a>（瀬戸内のレモン主役）、<a href="../gin/yamato-yucho-5.html" style="color:var(--green);">橘花KIKKA GIN 澪標</a>（ステンレスボトルで美しい）など。<strong>ボトルデザイン重視・500ml小容量</strong>を選ぶと、飲みきりサイズで母世代に親切。価格は5,000〜8,000円帯が好バランス。</p>
 
       <h3 style="font-family:var(--serif);font-size:20px;margin:28px 0 12px;color:var(--green-dark);">誕生日</h3>
-      <p>相手の年齢・好み次第ですが、<strong>「いま現在の最新トレンドを贈れる」</strong>という意味では<a href="../gin/matsui-hakuto-2.html" style="color:var(--green);">白兎プレミアム</a>（WGA 2025世界最高賞）が最有力候補。「2025年に世界一になった日本のジンだよ」というストーリーは、誕生日プレゼントとして強力です。<strong>30〜50代の本格志向の方</strong>に。</p>
+      <p>相手の年齢・好み次第ですが、<strong>「いま現在の最新トレンドを贈れる」</strong>という意味では<a href="../gin/matsui-hakuto-2.html" style="color:var(--green);">白兎プレミアム</a>（WGA 2025 Contemporary Style Gin部門 世界最高賞）が最有力候補。「2025年にContemporary Style Gin部門で世界最高賞を獲った日本のジンだよ」というストーリーは、誕生日プレゼントとして強力です。<strong>30〜50代の本格志向の方</strong>に。</p>
 
       <h3 style="font-family:var(--serif);font-size:20px;margin:28px 0 12px;color:var(--green-dark);">退職祝い・開業祝い</h3>
       <p>節目の贈答には<strong>限定品・樽熟成・特別仕様</strong>を。<a href="../gin/kobe-distillery-3.html" style="color:var(--green);">PREMIUM KOBE GIN YAMA</a>（テキーラ樽10ヶ月・限定900本）、<a href="../gin/kobe-distillery-4.html" style="color:var(--green);">UMI</a>（海の素材・限定900本）の2本セット、<a href="../gin/kyoto-kinobi-5.html" style="color:var(--green);">季の美 エディションG</a>（アンリ・ジロー樽）など、価格帯8,000〜10,000円超のプレミアム銘柄が映えます。「この一本を選ぶ理由」を一言添えるとさらに価値が伝わります。</p>
@@ -334,7 +334,7 @@
       <p>取引先・目上の方への定例ギフトには、<strong>「品質を客観的に証明できる受賞銘柄」</strong>が安心。<a href="../gin/niseko-ohoro-1.html" style="color:var(--green);">ohoro GIN Standard</a>（WGA 2024 World's Best）、<a href="../gin/matsui-hakuto-2.html" style="color:var(--green);">白兎プレミアム</a>（WGA 2025 World's Best）、<a href="../gin/hombo-tsunuki-1.html" style="color:var(--green);">和美人</a>（TWSC 2024 Best of the Best）など。<strong>のし対応・化粧箱仕様</strong>を必ず付け、メッセージカードに受賞歴を明記すると贈り物の格が上がります。</p>
 
       <h3 style="font-family:var(--serif);font-size:20px;margin:28px 0 12px;color:var(--green-dark);">海外の方への贈答</h3>
-      <p>海外在住の方や外国人ゲストには、<strong>「日本性が一目で伝わる銘柄」</strong>を。<a href="../gin/kyoto-kinobi-1.html" style="color:var(--green);">季の美 京都ドライジン</a>（京都ブランド）、<a href="../gin/suntory-osaka-2.html" style="color:var(--green);">ROKU〈六〉</a>（サントリーブランドで世界知名度高い）、<a href="../gin/niseko-ohoro-1.html" style="color:var(--green);">ohoro GIN</a>（北海道・WGA世界一）。なお海外への持ち運びは航空会社の規定に従ってください（液体は預け入れ手荷物・100ml超は機内持ち込み不可）。</p>
+      <p>海外在住の方や外国人ゲストには、<strong>「日本性が一目で伝わる銘柄」</strong>を。<a href="../gin/kyoto-kinobi-1.html" style="color:var(--green);">季の美 京都ドライジン</a>（京都ブランド）、<a href="../gin/suntory-osaka-2.html" style="color:var(--green);">ROKU〈六〉</a>（サントリーブランドで世界知名度高い）、<a href="../gin/niseko-ohoro-1.html" style="color:var(--green);">ohoro GIN</a>（北海道・WGA Classic Gin部門 世界最高賞）。なお海外への持ち運びは航空会社の規定に従ってください（液体は預け入れ手荷物・100ml超は機内持ち込み不可）。</p>
     </section>
 
     <section id="sec8" style="margin-bottom:56px;">

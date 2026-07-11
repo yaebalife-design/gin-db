@@ -35,8 +35,34 @@
     var btn = document.querySelector('.nav-toggle');
     var header = document.querySelector('.site-header');
     if (!btn || !header) return;
-    btn.addEventListener('click', function () {
+
+    // aria-expanded を開閉状態に同期（属性が無くても安全に動作）
+    function sync() {
+      btn.setAttribute('aria-expanded', header.classList.contains('nav-open') ? 'true' : 'false');
+    }
+    function open() { header.classList.add('nav-open'); sync(); }
+    function close() { header.classList.remove('nav-open'); sync(); }
+
+    sync();
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
       header.classList.toggle('nav-open');
+      sync();
+    });
+
+    // Escape でメニューを閉じてトグルへフォーカスを戻す
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && header.classList.contains('nav-open')) {
+        close();
+        btn.focus();
+      }
+    });
+
+    // 外側クリックで閉じる
+    document.addEventListener('click', function (e) {
+      if (!header.classList.contains('nav-open')) return;
+      if (!header.contains(e.target)) close();
     });
   }
 
