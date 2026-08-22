@@ -1218,6 +1218,20 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
 .affiliate-link--amazon:hover {
   color: #cf7800;
 }
+/* ふるさと納税ポータル（A8経由）。地は黒×金のまま、ホバー時だけポータル別のアクセント */
+.affiliate-link--choice:hover { color: #1f8a4c; }
+.affiliate-link--furunavi:hover { color: #2a7fb8; }
+.affiliate-link--satofull:hover { color: #c2571f; }
+/* ふるさと納税カード下部：取扱ポータルのリンクを折り返して並べる */
+.furusato-card__links {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+  align-items: center;
+}
 .bottle__links {
   margin-top: 12px;
   display: flex;
