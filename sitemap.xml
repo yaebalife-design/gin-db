@@ -17,6 +17,10 @@
   <url><loc>https://gin-db.com/guide/hinoki-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/haskap-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/sakura-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/kuromoji-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/shiso-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/citrus-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/juniper-gin-guide</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/wga-japan-2024-2025</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/guide/martini-complete-guide</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/guide/10-ways-to-drink</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
@@ -115,14 +119,14 @@
   <url><loc>https://gin-db.com/distillery/mizuho-origin1848</loc><priority>0.7</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/distillery/ishikawa-shuzo-okinawa</loc><priority>0.7</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/region/hokkaido</loc><priority>0.7</priority><lastmod>2026-08-29</lastmod></url>
-  <url><loc>https://gin-db.com/region/tohoku</loc><priority>0.7</priority><lastmod>2026-05-09</lastmod></url>
-  <url><loc>https://gin-db.com/region/kanto</loc><priority>0.7</priority><lastmod>2026-05-09</lastmod></url>
+  <url><loc>https://gin-db.com/region/tohoku</loc><priority>0.7</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/region/kanto</loc><priority>0.7</priority><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://gin-db.com/region/chubu</loc><priority>0.7</priority><lastmod>2026-08-29</lastmod></url>
-  <url><loc>https://gin-db.com/region/kansai</loc><priority>0.7</priority><lastmod>2026-05-09</lastmod></url>
-  <url><loc>https://gin-db.com/region/chugoku</loc><priority>0.7</priority><lastmod>2026-05-09</lastmod></url>
-  <url><loc>https://gin-db.com/region/shikoku</loc><priority>0.7</priority><lastmod>2026-05-09</lastmod></url>
-  <url><loc>https://gin-db.com/region/kyushu</loc><priority>0.7</priority><lastmod>2026-05-09</lastmod></url>
-  <url><loc>https://gin-db.com/region/okinawa</loc><priority>0.7</priority><lastmod>2026-05-09</lastmod></url>
+  <url><loc>https://gin-db.com/region/kansai</loc><priority>0.7</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/region/chugoku</loc><priority>0.7</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/region/shikoku</loc><priority>0.7</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/region/kyushu</loc><priority>0.7</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/region/okinawa</loc><priority>0.7</priority><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://gin-db.com/gin/niseko-ohoro-1</loc><priority>0.6</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/gin/niseko-ohoro-2</loc><priority>0.6</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/gin/niseko-ohoro-3</loc><priority>0.6</priority><lastmod>2026-05-09</lastmod></url>
