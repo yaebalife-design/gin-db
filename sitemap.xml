@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://gin-db.com/</loc><priority>1.0</priority><lastmod>2026-05-09</lastmod></url>
-  <url><loc>https://gin-db.com/botanical</loc><priority>0.9</priority><lastmod>2026-05-09</lastmod></url>
+  <url><loc>https://gin-db.com/botanical</loc><priority>0.9</priority><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://gin-db.com/awards</loc><priority>0.9</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/furusato</loc><priority>0.9</priority><lastmod>2026-05-09</lastmod></url>
-  <url><loc>https://gin-db.com/guide/</loc><priority>0.9</priority><lastmod>2026-05-09</lastmod></url>
+  <url><loc>https://gin-db.com/guide/</loc><priority>0.9</priority><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/what-is-craft-gin</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/guide/gin-tonic-recipe</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/guide/yuzu-gin-ranking</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
@@ -12,6 +12,11 @@
   <url><loc>https://gin-db.com/guide/japanese-gin-history</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/guide/craft-gin-gift</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/guide/sansho-gin-ranking</loc><priority>0.85</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/gyokuro-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/ginger-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/hinoki-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/haskap-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/sakura-gin-ranking</loc><priority>0.8</priority><lastmod>2026-08-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/wga-japan-2024-2025</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/guide/martini-complete-guide</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
   <url><loc>https://gin-db.com/guide/10-ways-to-drink</loc><priority>0.85</priority><lastmod>2026-05-09</lastmod></url>
