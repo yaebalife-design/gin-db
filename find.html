@@ -786,10 +786,19 @@
     });
     if(sortSel.value !== 'default') p.push('sort=' + sortSel.value);
     var h = p.length ? '#' + p.join('&') : '';
-    if(h !== location.hash) history.replaceState(null, '', location.pathname + location.search + h);
+    // ?q= で来た場合もハッシュ表現に一本化する（同じ絞り込みが2通りのURLになるのを防ぐ）
+    var target = location.pathname + h;
+    if(target !== location.pathname + location.hash || location.search){
+      history.replaceState(null, '', target);
+    }
   }
   function readHash(){
+    // トップページの検索フォームは GET なので ?q=... で来る。
+    // 絞り込み状態の共有には #... を使っているので、**両方**読む。
+    // （?q= を読んでいなかったせいで、トップの検索窓が効いていなかった）
     var h = location.hash.replace(/^#/, '');
+    var qs = location.search.slice(1);
+    if(qs) h = h ? (qs + '&' + h) : qs;
     if(!h) return;
     lockHash = true;
     h.split('&').forEach(function(kv){
