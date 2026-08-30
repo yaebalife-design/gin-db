@@ -50,8 +50,14 @@
 
     function onKeydown(e) {
       if (e.key === 'Escape') {
+        // 2026-08-31 変更: 以前は Escape で leave()（＝政府広報オンラインへ遷移）していた。
+        // Escape は世界共通で「モーダルを閉じる」キーなので、閉じるつもりで押した成人が
+        // 警告なしに外部サイトへ飛ばされてサイトから消えていた。
+        // 年齢確認は閉じられてはいけないゲートなので、Escape では何もせず
+        // フォーカスをボタンに戻すだけにする。退出は「いいえ」ボタンからのみ。
         e.preventDefault();
-        leave();
+        var items = focusables();
+        if (items.length) items[0].focus();
         return;
       }
       if (e.key === 'Tab') {
@@ -85,7 +91,7 @@
     }
 
     function leave() {
-      // 「いいえ」/ Escape：未成年の退避先（政府広報オンライン）へ遷移
+      // 「いいえ」ボタン専用：未成年の退避先（政府広報オンライン）へ遷移
       restoreBackground();
       window.location.href = 'https://www.gov-online.go.jp/';
     }

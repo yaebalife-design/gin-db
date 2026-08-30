@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700;900&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=20260512b">
+<link rel="stylesheet" href="../assets/style.css?v=20260831">
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <script src="../assets/age-gate.js" defer></script>
 <script src="../assets/app.js" defer></script>
@@ -45,10 +45,11 @@
     <button class="nav-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav"><svg class="icon-svg" width="20" height="20" aria-hidden="true"><use href="/assets/icons.svg#i-menu"/></svg></button>
     <nav class="site-nav" id="site-nav">
       <a href="../index.html">トップ</a>
+      <a href="../find.html">一覧・検索</a>
       <a href="../botanical.html">ボタニカル逆引き</a>
       <a href="../awards.html">受賞ジン</a>
       <a href="../furusato.html">ふるさと納税</a>
-      <a href="index.html" class="current">ガイド</a>
+      <a href="../guide/index.html">ガイド</a>
     </nav>
   </div>
 </header>
@@ -152,9 +153,13 @@
       <p>近年、海外のジン専門コンテストで、日本の山椒採用ジンが目立った受賞を続けています。たとえば次のような実績です。</p>
 
       <ul style="padding-left:24px;line-height:2;">
-        <li><strong>2024 World's Best Classic Gin</strong>: <a href="../gin/niseko-ohoro-1.html" style="color:var(--green);font-weight:600;">ohoro GIN Standard</a>（ニセコ蒸溜所、ボタニカルに山椒系の和ハーブを含む）</li>
+        <!-- 2026-08-31 削除: ここに ohoro GIN Standard を「ボタニカルに山椒系の和ハーブを含む」として
+             載せていたが、ニセコ蒸溜所公式のボタニカルはヤチヤナギ・ニホンハッカ・ジュニパー・コリアンダー・
+             アンジェリカルート・オリスルート・リコリス・カモミール・レモン・オレンジ・柚子・ライム・
+             グレープフルーツの13種で、山椒（サンショウ属）は含まれない。
+             「山椒採用ジンの受賞実績」の一覧に載せるのは誤りなので削除した。 -->
         <li><strong>2024 WGA Contemporary Style Gin Gold</strong>: <a href="../gin/nozawa-onsen-2.html" style="color:var(--green);font-weight:600;">Classic Dry Gin</a>（野沢温泉、山椒3種ボタニカルの一つ）</li>
-        <li><strong>2025 World's Best Contemporary Style Gin</strong>: <a href="../gin/matsui-hakuto-2.html" style="color:var(--green);font-weight:600;">白兎プレミアム</a>（松井酒造、和山椒含む）</li>
+        <li><strong>2025 World's Best Contemporary Style Gin</strong>: <a href="../gin/matsui-hakuto-2.html" style="color:var(--green);font-weight:600;">白兎プレミアム</a>（松井酒造。ベースとなる白兎-HAKUTO-の基本9種に和山椒を含む。プレミアム追加5種は公式非公開）</li>
         <li><strong>2023 WGA Japan Country Winner Gold</strong>: <a href="../gin/musashino-distillery-1.html" style="color:var(--green);font-weight:600;">棘玉 TOGEDAMA</a>（武蔵野蒸留所、山椒×和素材4種）</li>
         <li><strong>2025 ISC Best Distilled Gin Trophy</strong>: <a href="../gin/suntory-osaka-1.html" style="color:var(--green);font-weight:600;">ROKU〈六〉</a>（サントリー大阪、和素材6種に山椒を含む）</li>
       </ul>
@@ -402,7 +407,7 @@
       <p>うなぎ・焼き鳥には<strong>クラシック山椒ジン（棘玉、CLASSIC DRY GIN、ROKU）</strong>。中華料理には<strong>DOJA（四川山椒）</strong>。和食全般には<strong>AWA GIN、季の美、ニッカ カフェジン</strong>。</p>
 
       <h3 style="font-family:var(--serif);font-size:19px;margin:28px 0 12px;">基準5：ギフト目的</h3>
-      <p>ギフトには<strong>世界最高賞・国際金賞</strong>のラベルが効きます。<a href="../gin/matsui-hakuto-2.html" style="color:var(--green);font-weight:600;">白兎プレミアム</a>（WGA 2025 World's Best）、<a href="../gin/musashino-distillery-1.html" style="color:var(--green);font-weight:600;">棘玉</a>（4コンテスト同時Gold）、<a href="../gin/kishu-kumano-1.html" style="color:var(--green);font-weight:600;">紀州熊野ジン</a>（パッケージ豪華・物語性）が定番。</p>
+      <p>ギフトには<strong>世界最高賞・国際金賞</strong>のラベルが効きます。<a href="../gin/matsui-hakuto-2.html" style="color:var(--green);font-weight:600;">白兎プレミアム</a>（WGA 2025 Contemporary Style Gin部門 World's Best）、<a href="../gin/musashino-distillery-1.html" style="color:var(--green);font-weight:600;">棘玉</a>（4コンテスト同時Gold）、<a href="../gin/kishu-kumano-1.html" style="color:var(--green);font-weight:600;">紀州熊野ジン</a>（パッケージ豪華・物語性）が定番。</p>
     </section>
 
     <section id="sec13" style="margin-bottom:56px;">
@@ -516,10 +521,11 @@
       <div>
         <h4>探す</h4>
         <ul>
+          <li><a href="../find.html">クラフトジン一覧・検索</a></li>
           <li><a href="../botanical.html">ボタニカル逆引き</a></li>
           <li><a href="../awards.html">受賞ジン</a></li>
           <li><a href="../furusato.html">ふるさと納税</a></li>
-          <li><a href="index.html">ガイド・コラム</a></li>
+          <li><a href="../guide/index.html">ガイド・コラム</a></li>
         </ul>
       </div>
       <div>

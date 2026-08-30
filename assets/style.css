@@ -16,7 +16,7 @@ button { font-family: inherit; }
 
 /* ========== Focus ring (keyboard) ========== */
 :where(a, button, [role="button"], summary, input, select, textarea, [tabindex]):focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--gold-deep);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -27,7 +27,7 @@ button { font-family: inherit; }
   --paper: #ffffff;
   --ink: #1a1a1a;
   --sub: #6b6b6b;
-  --sub-2: #7a7a7a;
+  --sub-2: #6b6b6b; /* 旧#7a7a7aは背景比4.04:1でWCAG AA未達 */
   --line: #e8e3d4;
   --line-light: #f1ede0;
 
@@ -79,6 +79,21 @@ h1, h2, h3, h4 {
 
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
 .reveal.reveal-in { opacity: 1; transform: translateY(0); }
+
+/* ========== a11y ========== */
+/* スクリーンリーダーにだけ読ませるラベル（視覚的には隠す） */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+/* キーボード操作時にナビを飛ばして本文へ行けるようにする */
+.skip-link {
+  position: absolute; left: 12px; top: -60px; z-index: 200;
+  background: var(--green-dark); color: #fff; padding: 11px 18px;
+  border-radius: 0 0 10px 10px; font-size: 14px; font-weight: 700; text-decoration: none;
+  transition: top 0.18s var(--ease);
+}
+.skip-link:focus { top: 0; }
 
 /* ========== Header ========== */
 .site-header {
@@ -520,7 +535,7 @@ h1, h2, h3, h4 {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  background: linear-gradient(135deg, #e0c280 0%, #b8975c 50%, #8b6f3f 100%);
+  background: linear-gradient(135deg, #8b6f3f 0%, #7d6338 50%, #6a5330 100%); /* 白文字で4.7:1以上を確保（旧#e0c280は1.72:1で判読不能だった） */
   background-size: 200% 100%;
   color: white;
   font-size: 10px;
@@ -1165,14 +1180,14 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   border-color: #bf0000;
 }
 .affiliate-btn--amazon {
-  background: linear-gradient(135deg, #232f3e 0%, #ff9900 100%);
-  color: white;
-  border-color: #ff9900;
+  /* Amazon純正のボタン配色（オレンジ地 × 濃紺文字）。
+     旧: 白文字 × #ff9900 は 2.14:1 で読めなかった。この配色は 8.25:1。 */
+  background: linear-gradient(135deg, #febd69 0%, #ff9900 100%);
+  color: #131921;
+  border-color: #e08a00;
 }
-.affiliate-btn--rakuten .affiliate-btn__icon,
-.affiliate-btn--amazon .affiliate-btn__icon {
-  color: white;
-}
+.affiliate-btn--rakuten .affiliate-btn__icon { color: white; }
+.affiliate-btn--amazon .affiliate-btn__icon { color: #131921; }
 .affiliate-btn--rakuten:hover {
   background: linear-gradient(135deg, #a01818 0%, #d92020 100%);
   border-color: #ff5050;
@@ -1199,14 +1214,21 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   margin-top: 10px;
 }
 .affiliate-link {
+  /* 2026-08-31: padding無しで高さ約22pxしかなく、スマホで押し分けられなかった。
+     地は黒×金のまま（外部ブランド色をUI地に被せない方針）、枠と余白で44pxを確保する。 */
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--paper);
   color: var(--gold-deep);
   font-weight: 600;
   text-decoration: none;
   font-size: 13px;
   letter-spacing: 0.01em;
-  transition: color 0.18s ease;
+  transition: color 0.18s ease, border-color 0.18s ease;
 }
 .affiliate-link:hover {
   color: var(--gold);
@@ -1236,7 +1258,7 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   margin-top: 12px;
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 10px;
   align-items: center;
   position: relative;
 }

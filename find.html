@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="google-site-verification" content="Iv08-YFZHmlaDa3lBSGyhFvcuq0y1E2jyvyC6bSNmR0" />
+<title>クラフトジン一覧｜日本の全92蒸溜所・219銘柄を横断検索｜Gin-DB</title>
+<meta name="description" content="日本のクラフトジン219銘柄・92蒸溜所（39都道府県）を、銘柄名・ボタニカル・地域・アルコール度数・価格帯・受賞歴で絞り込める一覧。全データ一次ソース確認済み。">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700;900&display=swap">
+<link rel="stylesheet" href="assets/style.css?v=20260831">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<script src="assets/age-gate.js" defer></script>
+<script src="assets/app.js" defer></script>
+<link rel="canonical" href="https://gin-db.com/find">
+<meta property="og:url" content="https://gin-db.com/find">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gin-DB">
+<meta property="og:title" content="クラフトジン一覧｜日本の全92蒸溜所・219銘柄を横断検索｜Gin-DB">
+<meta property="og:description" content="日本のクラフトジン219銘柄・92蒸溜所（39都道府県）を、銘柄名・ボタニカル・地域・アルコール度数・価格帯・受賞歴で絞り込める一覧。全データ一次ソース確認済み。">
+<meta property="og:image" content="https://gin-db.com/assets/images/og.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="クラフトジン一覧｜日本の全92蒸溜所・219銘柄を横断検索｜Gin-DB">
+<meta name="twitter:description" content="日本のクラフトジン219銘柄・92蒸溜所（39都道府県）を、銘柄名・ボタニカル・地域・アルコール度数・価格帯・受賞歴で絞り込める一覧。全データ一次ソース確認済み。">
+<meta name="twitter:image" content="https://gin-db.com/assets/images/og.jpg">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5MELG0C3X6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5MELG0C3X6');
+</script>
+<script type="application/ld+json">{"@context": "https://schema.org/", "@type": "CollectionPage", "name": "日本のクラフトジン一覧（219銘柄／92蒸溜所）", "url": "https://gin-db.com/find", "description": "日本のクラフトジン219銘柄・92蒸溜所（39都道府県）を、銘柄名・ボタニカル・地域・アルコール度数・価格帯・受賞歴で絞り込める一覧。全データ一次ソース確認済み。", "inLanguage": "ja-JP", "isPartOf": {"@type": "WebSite", "name": "Gin-DB", "url": "https://gin-db.com/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://gin-db.com/"}, {"@type": "ListItem", "position": 2, "name": "クラフトジン一覧", "item": "https://gin-db.com/find"}]}</script>
+
+<style>
+.fd-hero{padding:34px 0 18px;border-bottom:1px solid var(--line);margin-bottom:0}
+.fd-hero h1{font-family:var(--serif);font-size:clamp(24px,4.4vw,34px);line-height:1.35;margin-bottom:10px}
+.fd-hero p{font-size:14px;color:var(--sub);line-height:1.9;max-width:60ch}
+.fd-hero__counts{display:flex;gap:22px;flex-wrap:wrap;margin-top:16px}
+.fd-hero__count{display:flex;align-items:baseline;gap:6px}
+.fd-hero__count b{font-family:var(--sans);font-size:26px;font-weight:700;color:var(--green-dark);letter-spacing:-.02em}
+.fd-hero__count span{font-size:12px;color:var(--sub);letter-spacing:.08em}
+
+.fd-sticky{position:sticky;top:0;z-index:30;background:var(--bg,#fff);padding:12px 0 0;
+  box-shadow:0 6px 18px -12px rgba(0,0,0,.35)}
+.fd-tabs{display:flex;gap:4px;border-bottom:2px solid var(--line);margin-bottom:12px}
+.fd-tab{appearance:none;border:0;background:none;font:inherit;cursor:pointer;padding:10px 18px;
+  font-weight:700;font-size:14.5px;color:var(--sub);border-bottom:3px solid transparent;margin-bottom:-2px;
+  border-radius:6px 6px 0 0}
+.fd-tab[aria-selected="true"]{color:var(--green-dark);border-bottom-color:var(--gold)}
+.fd-tab:hover{background:rgba(184,151,92,.08)}
+.fd-tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+.fd-search{position:relative;margin-bottom:10px}
+.fd-search input{width:100%;font:inherit;font-size:16px;padding:13px 44px 13px 42px;
+  border:1.5px solid var(--line);border-radius:11px;background:var(--paper,#fbfaf7);color:inherit}
+.fd-search input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,151,92,.16)}
+.fd-search__icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:18px;height:18px;
+  color:var(--sub);pointer-events:none}
+.fd-search__clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);appearance:none;border:0;
+  background:none;cursor:pointer;padding:8px;color:var(--sub);font-size:18px;line-height:1;border-radius:8px}
+.fd-search__clear:hover{background:rgba(0,0,0,.06)}
+
+.fd-toggle{appearance:none;border:1px solid var(--line);background:var(--paper,#fbfaf7);font:inherit;
+  font-size:13px;font-weight:700;padding:9px 15px;border-radius:9px;cursor:pointer;color:var(--green-dark);
+  display:inline-flex;align-items:center;gap:7px}
+.fd-toggle:hover{border-color:var(--gold)}
+.fd-toggle__caret{transition:transform .2s}
+.fd-toggle[aria-expanded="true"] .fd-toggle__caret{transform:rotate(180deg)}
+
+.fd-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-bottom:12px}
+.fd-count{font-size:13.5px;color:var(--sub);margin-left:auto}
+.fd-count b{font-family:var(--sans);font-size:19px;color:var(--green-dark);font-weight:700}
+.fd-reset{appearance:none;border:0;background:none;font:inherit;font-size:12.5px;color:var(--sub);
+  text-decoration:underline;cursor:pointer;padding:6px}
+.fd-reset:hover{color:var(--rose)}
+.fd-sortsel{font:inherit;font-size:13px;padding:8px 10px;border:1px solid var(--line);border-radius:9px;
+  background:var(--paper,#fbfaf7);color:inherit}
+
+.fd-filters{display:none;border:1px solid var(--line);border-radius:13px;padding:6px 16px 14px;
+  background:var(--paper,#fbfaf7);margin-bottom:14px}
+.fd-filters.is-open{display:block}
+.fd-fgroup{padding:12px 0;border-bottom:1px dashed var(--line)}
+.fd-fgroup:last-child{border-bottom:0}
+.fd-fgroup__label{display:block;font-size:11.5px;font-weight:700;letter-spacing:.1em;color:var(--sub);
+  margin-bottom:9px;text-transform:uppercase}
+.fd-fgroup__label small{font-weight:400;letter-spacing:0;text-transform:none;opacity:.8}
+.fd-chips{display:flex;flex-wrap:wrap;gap:7px}
+.fd-chip{appearance:none;font:inherit;cursor:pointer;font-size:13px;padding:7px 12px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;color:var(--ink,#23281f);display:inline-flex;align-items:center;gap:6px;
+  transition:background .15s,border-color .15s,color .15s}
+.fd-chip:hover{border-color:var(--gold)}
+.fd-chip:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.fd-chip[aria-pressed="true"]{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
+.fd-chip__n{font-family:var(--sans);font-size:11px;opacity:.6;font-weight:600}
+.fd-chip[aria-pressed="true"] .fd-chip__n{opacity:.75}
+
+.fd-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.fr{border-bottom:1px solid var(--line)}
+.fr.is-hidden{display:none}
+.fl{display:grid;grid-template-columns:1fr auto auto;gap:5px 18px;align-items:center;
+  padding:13px 10px 12px;text-decoration:none;color:inherit;border-radius:8px}
+.fl:hover{background:rgba(184,151,92,.09)}
+.fl:focus-visible{outline:2px solid var(--gold);outline-offset:-2px}
+.fm{min-width:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 9px}
+.fn{font-weight:700;font-size:15.5px;line-height:1.5;color:var(--green-dark)}
+.fw{font-size:12.5px;color:var(--sub)}
+.fs{font-size:13px;color:var(--sub);white-space:nowrap}
+.fp{font-size:13.5px;font-weight:700;text-align:right;white-space:nowrap;min-width:9em}
+.fp.q,.fs .q{font-weight:400;color:var(--sub);opacity:.7}
+.fl i,.fw i{font-style:normal;opacity:.4;margin:0 5px}
+/* ボタニカル原文。1行に省略表示するが、DOMには全文が残るので検索に効く */
+.fo{margin:0;padding:0 10px 11px;font-size:11.5px;line-height:1.6;color:var(--sub);
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.fb{font-size:10.5px;font-weight:700;padding:3px 8px;border-radius:5px;letter-spacing:.03em;white-space:nowrap}
+.fb-wb{background:linear-gradient(135deg,#b8975c,#d9c089);color:#3a2c10}
+.fb-gold{background:rgba(184,151,92,.18);color:#8a6a2e}
+.fb-other{background:rgba(45,90,61,.1);color:var(--green-dark)}
+
+.fd-empty{display:none;padding:56px 20px;text-align:center;color:var(--sub)}
+.fd-empty.is-shown{display:block}
+.fd-empty b{display:block;font-size:16px;color:var(--ink,#23281f);margin-bottom:8px}
+
+.fd-note{font-size:12px;color:var(--sub);line-height:1.9;margin:22px 0 8px;padding:14px 16px;
+  background:var(--paper,#fbfaf7);border:1px solid var(--line);border-radius:11px}
+
+@media (max-width:720px){
+  .fl{grid-template-columns:1fr auto;padding:12px 6px 11px}
+  .fs{grid-column:1;font-size:12px}
+  .fp{grid-column:2;grid-row:1/3;align-self:center;min-width:0;font-size:12.5px;
+    max-width:9.5em;white-space:normal;text-align:right;line-height:1.45}
+  .fo{padding:0 6px 10px}
+  .fd-bar{gap:8px}
+  .fd-count{width:100%;margin-left:0;order:9}
+  .fd-tab{padding:10px 12px;font-size:13.5px}
+  .fd-hero__counts{gap:16px}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header class="site-header">
+  <div class="site-header__inner">
+    <div class="logo"><a href="index.html">Gin-DB</a> <small>日本のクラフトジン</small></div>
+    <button class="nav-toggle" aria-label="メニュー" aria-expanded="false" aria-controls="site-nav"><svg class="icon-svg" width="20" height="20" aria-hidden="true"><use href="/assets/icons.svg#i-menu"/></svg></button>
+    <nav class="site-nav" id="site-nav" aria-label="メインメニュー">
+      <a href="index.html">トップ</a>
+      <a href="find.html" class="current" aria-current="page">一覧・検索</a>
+      <a href="botanical.html">ボタニカル逆引き</a>
+      <a href="awards.html">受賞ジン</a>
+      <a href="furusato.html">ふるさと納税</a>
+      <a href="guide/index.html">ガイド</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container" id="main" tabindex="-1">
+
+  <nav class="breadcrumb" aria-label="パンくず">
+    <ol>
+      <li><a href="index.html">トップ</a></li>
+      <li>クラフトジン一覧</li>
+    </ol>
+  </nav>
+
+  <div class="fd-hero">
+    <h1>日本のクラフトジン一覧</h1>
+    <p>全国92蒸溜所・219銘柄を1画面で。銘柄名でも、香りでも、地域でも、度数でも、価格でも絞り込めます。掲載データはすべて各蒸溜所の公式情報で確認したものです。</p>
+    <div class="fd-hero__counts">
+      <div class="fd-hero__count"><b>219</b><span>銘柄</span></div>
+      <div class="fd-hero__count"><b>92</b><span>蒸溜所</span></div>
+      <div class="fd-hero__count"><b>39</b><span>都道府県</span></div>
+      <div class="fd-hero__count"><b>61</b><span>受賞銘柄</span></div>
+    </div>
+  </div>
+
+  <div class="fd-sticky">
+    <div class="fd-tabs" role="tablist" aria-label="検索対象">
+      <button type="button" class="fd-tab" role="tab" data-mode="brand" aria-selected="true"
+        aria-controls="fd-panel-brand" id="fd-tab-brand">銘柄から探す</button>
+      <button type="button" class="fd-tab" role="tab" data-mode="distillery" aria-selected="false"
+        aria-controls="fd-panel-distillery" id="fd-tab-distillery" tabindex="-1">蒸溜所から探す</button>
+    </div>
+
+    <div class="fd-search">
+      <svg class="fd-search__icon" aria-hidden="true"><use href="/assets/icons.svg#i-search"/></svg>
+      <label for="fd-q" class="sr-only">キーワードで絞り込む</label>
+      <input type="search" id="fd-q" autocomplete="off"
+        placeholder="銘柄名・蒸溜所名・県名・ボタニカルで検索">
+      <button type="button" class="fd-search__clear" id="fd-clear" aria-label="検索語を消す" style="display:none">×</button>
+    </div>
+
+    <div class="fd-bar">
+      <button type="button" class="fd-toggle" id="fd-ftoggle" aria-expanded="false" aria-controls="fd-filters">
+        絞り込み
+        <svg class="fd-toggle__caret icon-svg" width="12" height="12" aria-hidden="true"><use href="/assets/icons.svg#i-arrow-right"/></svg>
+      </button>
+      <label class="sr-only" for="fd-sort">並び順</label>
+      <select class="fd-sortsel" id="fd-sort">
+        <option value="default">並び順：北から南</option>
+        <option value="price-asc">価格が安い順</option>
+        <option value="price-desc">価格が高い順</option>
+        <option value="abv-desc">度数が高い順</option>
+      </select>
+      <button type="button" class="fd-reset" id="fd-reset" style="display:none">条件をリセット</button>
+      <span class="fd-count" id="fd-count" role="status" aria-live="polite"><b>219</b> 件</span>
+    </div>
+
+  <div class="fd-filters" id="fd-filters">
+    <div class="fd-fgroup">
+      <span class="fd-fgroup__label">香り・ボタニカル</span>
+      <div class="fd-chips"><button type="button" class="fd-chip" data-g="bots" data-v="yuzu" aria-pressed="false">柚子<span class="fd-chip__n">40</span></button><button type="button" class="fd-chip" data-g="bots" data-v="sansho" aria-pressed="false">山椒<span class="fd-chip__n">36</span></button><button type="button" class="fd-chip" data-g="bots" data-v="sakura" aria-pressed="false">桜<span class="fd-chip__n">17</span></button><button type="button" class="fd-chip" data-g="bots" data-v="gyokuro" aria-pressed="false">玉露・煎茶・緑茶<span class="fd-chip__n">36</span></button><button type="button" class="fd-chip" data-g="bots" data-v="hinoki" aria-pressed="false">檜・杉・白樺<span class="fd-chip__n">23</span></button><button type="button" class="fd-chip" data-g="bots" data-v="kuromoji" aria-pressed="false">黒文字<span class="fd-chip__n">14</span></button><button type="button" class="fd-chip" data-g="bots" data-v="ginger" aria-pressed="false">生姜<span class="fd-chip__n">27</span></button><button type="button" class="fd-chip" data-g="bots" data-v="shiso" aria-pressed="false">紫蘇<span class="fd-chip__n">11</span></button><button type="button" class="fd-chip" data-g="bots" data-v="juniper" aria-pressed="false">ジュニパーベリー<span class="fd-chip__n">89</span></button><button type="button" class="fd-chip" data-g="bots" data-v="lemon" aria-pressed="false">レモン・柑橘<span class="fd-chip__n">64</span></button><button type="button" class="fd-chip" data-g="bots" data-v="haskap" aria-pressed="false">ハスカップ・ベリー類<span class="fd-chip__n">22</span></button></div>
+    </div>
+    <div class="fd-fgroup">
+      <span class="fd-fgroup__label">地域</span>
+      <div class="fd-chips"><button type="button" class="fd-chip" data-g="region" data-v="hokkaido" aria-pressed="false">北海道<span class="fd-chip__n">11</span></button><button type="button" class="fd-chip" data-g="region" data-v="tohoku" aria-pressed="false">東北<span class="fd-chip__n">14</span></button><button type="button" class="fd-chip" data-g="region" data-v="kanto" aria-pressed="false">関東<span class="fd-chip__n">52</span></button><button type="button" class="fd-chip" data-g="region" data-v="chubu" aria-pressed="false">中部<span class="fd-chip__n">27</span></button><button type="button" class="fd-chip" data-g="region" data-v="kansai" aria-pressed="false">近畿<span class="fd-chip__n">34</span></button><button type="button" class="fd-chip" data-g="region" data-v="chugoku" aria-pressed="false">中国<span class="fd-chip__n">14</span></button><button type="button" class="fd-chip" data-g="region" data-v="shikoku" aria-pressed="false">四国<span class="fd-chip__n">8</span></button><button type="button" class="fd-chip" data-g="region" data-v="kyushu" aria-pressed="false">九州<span class="fd-chip__n">51</span></button><button type="button" class="fd-chip" data-g="region" data-v="okinawa" aria-pressed="false">沖縄<span class="fd-chip__n">8</span></button></div>
+    </div>
+    <div class="fd-fgroup fd-fgroup--brandonly">
+      <span class="fd-fgroup__label">アルコール度数</span>
+      <div class="fd-chips"><button type="button" class="fd-chip" data-g="abv" data-v="abv1" aria-pressed="false">〜40%<span class="fd-chip__n">34</span></button><button type="button" class="fd-chip" data-g="abv" data-v="abv2" aria-pressed="false">40〜45%<span class="fd-chip__n">76</span></button><button type="button" class="fd-chip" data-g="abv" data-v="abv3" aria-pressed="false">45〜50%<span class="fd-chip__n">69</span></button><button type="button" class="fd-chip" data-g="abv" data-v="abv4" aria-pressed="false">50%以上<span class="fd-chip__n">7</span></button></div>
+    </div>
+    <div class="fd-fgroup fd-fgroup--brandonly">
+      <span class="fd-fgroup__label">価格帯<small>（掲載時点の参考価格）</small></span>
+      <div class="fd-chips"><button type="button" class="fd-chip" data-g="price" data-v="p1" aria-pressed="false">〜3,000円<span class="fd-chip__n">31</span></button><button type="button" class="fd-chip" data-g="price" data-v="p2" aria-pressed="false">3,000〜5,000円<span class="fd-chip__n">74</span></button><button type="button" class="fd-chip" data-g="price" data-v="p3" aria-pressed="false">5,000〜8,000円<span class="fd-chip__n">58</span></button><button type="button" class="fd-chip" data-g="price" data-v="p4" aria-pressed="false">8,000円〜<span class="fd-chip__n">6</span></button></div>
+    </div>
+    <div class="fd-fgroup">
+      <span class="fd-fgroup__label">受賞歴</span>
+      <div class="fd-chips"><button type="button" class="fd-chip" data-g="award" data-v="worlds_best" aria-pressed="false">World's Best<span class="fd-chip__n">2</span></button><button type="button" class="fd-chip" data-g="award" data-v="gold" aria-pressed="false">金賞<span class="fd-chip__n">38</span></button><button type="button" class="fd-chip" data-g="award" data-v="any" aria-pressed="false">受賞歴あり<span class="fd-chip__n">61</span></button></div>
+    </div>
+  </div>
+  </div>
+
+  <div id="fd-panel-brand" role="tabpanel" aria-labelledby="fd-tab-brand">
+    <ul class="fd-list">
+<li class="fr" data-r="hokkaido" data-b="" data-a="abv3" data-p="p3" data-w="gold" data-sp="5000" data-sa="47.0"><a class="fl" href="gin/niseko-ohoro-2.html"><span class="fm"><span class="fn">ohoro GIN Limited Edition ニホンハッカ</span><b class="fb fb-gold">金賞</b><span class="fw">ニセコ蒸溜所<i>/</i>北海道</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥5,000（税別・公式希望小売）</span></a><p class="fo">Standard＋ニホンハッカ強化</p></li>
+<li class="fr" data-r="hokkaido" data-b="" data-a="abv3" data-p="p3" data-w="n" data-sp="5000" data-sa="47.0"><a class="fl" href="gin/niseko-ohoro-3.html"><span class="fm"><span class="fn">ohoro GIN Limited Edition ラベンダー</span><span class="fw">ニセコ蒸溜所<i>/</i>北海道</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥5,000（税別・公式希望小売）</span></a><p class="fo">Standard＋ラベンダー（北海道ニセコ町産）</p></li>
+<li class="fr" data-r="hokkaido" data-b="yuzu juniper lemon" data-a="abv3" data-p="p2" data-w="worlds_best" data-sp="4500" data-sa="47.0"><a class="fl" href="gin/niseko-ohoro-1.html"><span class="fm"><span class="fn">ohoro GIN Standard</span><b class="fb fb-wb">World's Best</b><span class="fw">ニセコ蒸溜所<i>/</i>北海道</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥4,500（税別・公式希望小売）</span></a><p class="fo">ヤチヤナギ・ニホンハッカ・ジュニパー・コリアンダー・アンジェリカルート・オリスルート・リコリス・カモミール・レモン・オレンジ・柚子・ライム・グレープフルーツ</p></li>
+<li class="fr" data-r="hokkaido" data-b="shiso juniper lemon" data-a="abv1" data-p="p2" data-w="gold" data-sp="3520" data-sa="40.0"><a class="fl" href="gin/tantakatan-1.html"><span class="fm"><span class="fn">TAN・TAKA・TAN GIN（鍛高譚ジン）</span><b class="fb fb-gold">金賞</b><span class="fw">合同酒精 旭川工場<i>/</i>北海道</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">¥3,520前後（税込・参考小売）</span></a><p class="fo">北海道白糠町産赤シソ、ジュニパー、コリアンダー、リコリスルート、アンジェリカルート、オレンジピール</p></li>
+<li class="fr" data-r="hokkaido" data-b="hinoki" data-a="abv2" data-p="p3" data-w="n" data-sp="5940" data-sa="45.0"><a class="fl" href="gin/shakotan-spirit-1.html"><span class="fm"><span class="fn">火の帆 KIBOU（きぼう）</span><span class="fw">積丹スピリット<i>/</i>北海道</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥5,940（税込・公式オンラインショップ）</span></a><p class="fo">アカエゾマツを基調、北海道産・積丹町産ボタニカル</p></li>
+<li class="fr" data-r="hokkaido" data-b="juniper lemon haskap" data-a="abv2" data-p="p3" data-w="n" data-sp="6380" data-sa="45.0"><a class="fl" href="gin/benizakura-1.html"><span class="fm"><span class="fn">9148 #0101 STANDARD</span><span class="fw">紅櫻蒸溜所<i>/</i>北海道</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥6,380（税込・公式オンライン）</span></a><p class="fo">14種：日高昆布、切干大根、干し椎茸、ブルーベリー（北海道産）、ジュニパー、コリアンダー、アンジェリカ、シナモン、レモンピール、ラベンダー、カルダモン、クローブ、黒胡椒、ピンクペッパー</p></li>
+<li class="fr" data-r="hokkaido" data-b="" data-a="abv1" data-p="p3" data-w="n" data-sp="6380" data-sa="40.0"><a class="fl" href="gin/benizakura-4.html"><span class="fm"><span class="fn">9148 #0211 FUKINOTO</span><span class="fw">紅櫻蒸溜所<i>/</i>北海道</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">¥6,380（税込・公式オンライン）</span></a><p class="fo">フキノトウ、北海道産素材ほか</p></li>
+<li class="fr" data-r="hokkaido" data-b="" data-a="abv4" data-p="p4" data-w="n" data-sp="8910" data-sa="57.0"><a class="fl" href="gin/benizakura-2.html"><span class="fm"><span class="fn">9148 #0303 NAVY STRENGTH</span><span class="fw">紅櫻蒸溜所<i>/</i>北海道</span></span><span class="fs"><span>57%</span><i>/</i>700ml</span><span class="fp">¥8,910（税込・公式オンライン）</span></a><p class="fo">9148 STANDARDのネイビーストレングス版</p></li>
+<li class="fr" data-r="hokkaido" data-b="sakura" data-a="abv2" data-p="p3" data-w="n" data-sp="6380" data-sa="45.0"><a class="fl" href="gin/benizakura-3.html"><span class="fm"><span class="fn">9148 #0396 SAKURA</span><span class="fw">紅櫻蒸溜所<i>/</i>北海道</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥6,380（税込・公式オンライン）</span></a><p class="fo">桜の葉、桜の花、函館真昆布等</p></li>
+<li class="fr" data-r="hokkaido" data-b="hinoki lemon" data-a="abv2" data-p="p1" data-w="gold" data-sp="2900" data-sa="45.0"><a class="fl" href="gin/maoi-distillery-1.html"><span class="fm"><span class="fn">落葉松 ザ・ピンネシリ・クラフトジン</span><b class="fb fb-gold">金賞</b><span class="fw">馬追蒸溜所<i>/</i>北海道</span></span><span class="fs"><span>45%</span><i>/</i>200ml</span><span class="fp">¥2,900（税込・公式）</span></a><p class="fo">中頓別町産カラマツ（キー）、レモン、ヒバ</p></li>
+<li class="fr" data-r="hokkaido" data-b="juniper lemon haskap" data-a="abv3" data-p="p3" data-w="n" data-sp="5500" data-sa="47.0"><a class="fl" href="gin/takasu-distillery-1.html"><span class="fm"><span class="fn">RETROGRADE</span><span class="fw">鷹栖蒸溜所<i>/</i>北海道</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥5,500（税込・正規流通）</span></a><p class="fo">ジュニパー・鷹栖町産ブルーベリー・ティムールペッパー・オークモス・コリアンダー・カルダモン・アンジェリカ・シナモン・愛媛県岩城産レモンピール／オレンジピール（10種）</p></li>
+<li class="fr" data-r="tohoku" data-b="sansho kuromoji juniper" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/sekinoichi-1.html"><span class="fm"><span class="fn">清庵 -SEIAN-</span><span class="fw">世嬉の一酒造<i>/</i>岩手県</span></span><span class="fs"><span>40%</span><i>/</i>330ml</span><span class="fp q">公式EC参照</span></a><p class="fo">ジュニパー、山椒の実、クロモジ、ヒバ</p></li>
+<li class="fr" data-r="tohoku" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/sekinoichi-2.html"><span class="fm"><span class="fn">清庵 SEIAN りんごバージョン</span><span class="fw">世嬉の一酒造<i>/</i>岩手県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">りんご使用</p></li>
+<li class="fr" data-r="tohoku" data-b="juniper haskap" data-a="abv1" data-p="p3" data-w="n" data-sp="5390" data-sa="40.0"><a class="fl" href="gin/nanbubijin-1.html"><span class="fm"><span class="fn">南部美人クラフトジン</span><span class="fw">南部美人<i>/</i>岩手県</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">¥5,390（税込・公式希望小売）</span></a><p class="fo">ジュニパーベリー、浄法寺漆（炙り）等</p></li>
+<li class="fr" data-r="tohoku" data-b="" data-a="abv1" data-p="p1" data-w="n" data-sp="2068" data-sa="40.0"><a class="fl" href="gin/nanbubijin-2.html"><span class="fm"><span class="fn">南部美人クラフトジン</span><span class="fw">南部美人<i>/</i>岩手県</span></span><span class="fs"><span>40%</span><i>/</i>200ml</span><span class="fp">¥2,068（税込・公式希望小売）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="tohoku" data-b="yuzu gyokuro juniper haskap" data-a="abv2" data-p="p2" data-w="gold" data-sp="4389" data-sa="42.0"><a class="fl" href="gin/miyagi-craft-gin-1.html"><span class="fm"><span class="fn">クラフトジン 欅（KEYAKI）</span><b class="fb fb-gold">金賞</b><span class="fw">Miyagi Craft Gin<i>/</i>宮城県</span></span><span class="fs"><span>42%</span><i>/</i>700ml</span><span class="fp">市場実勢 約¥4,389（税込）</span></a><p class="fo">宮城県産柚子果皮、セリ、茶葉、ぶどう果皮、ジュニパーベリー</p></li>
+<li class="fr" data-r="tohoku" data-b="" data-a="abv2" data-p="p3" data-w="n" data-sp="5489" data-sa="42.0"><a class="fl" href="gin/miyagi-craft-gin-2.html"><span class="fm"><span class="fn">クラフトピーチジン OBSESSED ～吐息～</span><span class="fw">Miyagi Craft Gin<i>/</i>宮城県</span></span><span class="fs"><span>42%</span><i>/</i>1.8L</span><span class="fp">市場実勢 約¥5,489（税込・1.8L）</span></a><p class="fo">桃由来香気成分中心</p></li>
+<li class="fr" data-r="tohoku" data-b="yuzu sansho juniper lemon" data-a="abv3" data-p="p2" data-w="gold" data-sp="4345" data-sa="47.0"><a class="fl" href="gin/nikka-miyagikyo-1.html"><span class="fm"><span class="fn">ニッカ カフェジン</span><b class="fb fb-gold">金賞</b><span class="fw">ニッカ宮城峡蒸溜所<i>/</i>宮城県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥4,345（税込・参考価格）</span></a><p class="fo">ジュニパー、コリアンダー、アンジェリカ、オレンジピール、レモンピール、柚子、甘夏、かぼす、シークヮーサー、山椒（11種）</p></li>
+<li class="fr" data-r="tohoku" data-b="hinoki juniper lemon" data-a="abv2" data-p="p2" data-w="n" data-sp="4400" data-sa="45.0"><a class="fl" href="gin/yamamoto-shuzo-1.html"><span class="fm"><span class="fn">クラフトジン ナイトトラベラー</span><span class="fw">山本酒造店<i>/</i>秋田県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥4,400前後（税込・正規流通）</span></a><p class="fo">30種ボタニカル。秋田県産6種：桔梗、カミツレ、秋田杉の葉（八峰町産）、檜山茶（能代市産）、林檎（横手市産）、セリ（湯沢市産）／外国産11種：ジュニパー、コリアンダー、シナモン、レモンピール、レモングラス、レモンバーム、オレンジピール、オレンジフラワー、ペパーミント、ユーカリプタス、カシス（残り13種は非公表）。日本酒「山本」の酒粕由来スピリッツ（粕取り焼酎）ベース</p></li>
+<li class="fr" data-r="tohoku" data-b="" data-a="abv2" data-p="p2" data-w="n" data-sp="4800" data-sa="45.0"><a class="fl" href="gin/yamamoto-shuzo-2.html"><span class="fm"><span class="fn">ナイトトラベラー 限定BOX 500ml版</span><span class="fw">山本酒造店<i>/</i>秋田県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥4,800前後（税込・市場実勢）</span></a><p class="fo">25種ボタニカル版（700ml版より3種少ない初回限定構成）。日本酒「山本」の酒粕由来スピリッツベース</p></li>
+<li class="fr" data-r="tohoku" data-b="hinoki juniper lemon" data-a="abv3" data-p="p2" data-w="gold" data-sp="3463" data-sa="46.0"><a class="fl" href="gin/akita-hakko-1.html"><span class="fm"><span class="fn">秋田杉GIN</span><b class="fb fb-gold">金賞</b><span class="fw">秋田県醗酵工業<i>/</i>秋田県</span></span><span class="fs"><span>46%</span><i>/</i>500ml</span><span class="fp">¥3,463（税込・公式希望小売）</span></a><p class="fo">ジュニパー、コリアンダー、アンジェリカ、オレンジピール、レモンピール、秋田杉の葉</p></li>
+<li class="fr" data-r="tohoku" data-b="" data-a="abv3" data-p="p1" data-w="n" data-sp="1249" data-sa="46.0"><a class="fl" href="gin/akita-hakko-2.html"><span class="fm"><span class="fn">秋田杉GIN</span><span class="fw">秋田県醗酵工業<i>/</i>秋田県</span></span><span class="fs"><span>46%</span><i>/</i>200ml</span><span class="fp">¥1,249（税込・公式希望小売）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="tohoku" data-b="kuromoji juniper" data-a="abv3" data-p="p2" data-w="other" data-sp="4980" data-sa="47.0"><a class="fl" href="gin/naturadistill-1.html"><span class="fm"><span class="fn">naturadistill 固有種蒸溜酒</span><b class="fb fb-other">受賞歴あり</b><span class="fw">naturadistill<i>/</i>福島県</span></span><span class="fs"><span>47%</span><i>/</i>500ml</span><span class="fp">¥4,980（税込・公式）</span></a><p class="fo">かやの実（キー）、橘、ジュニパー、クロモジ、ニオイコブシ</p></li>
+<li class="fr" data-r="tohoku" data-b="yuzu" data-a="abv3" data-p="p3" data-w="n" data-sp="5500" data-sa="47.0"><a class="fl" href="gin/naturadistill-2.html"><span class="fm"><span class="fn">柚子加加阿蒸溜酒</span><span class="fw">naturadistill<i>/</i>福島県</span></span><span class="fs"><span>47%</span><i>/</i>500ml</span><span class="fp">¥5,500（税込・市場実勢）</span></a><p class="fo">柚子・カカオ</p></li>
+<li class="fr" data-r="tohoku" data-b="juniper lemon" data-a="abv1" data-p="p1" data-w="n" data-sp="1180" data-sa="37.5"><a class="fl" href="gin/shirakawa-meijo-1.html"><span class="fm"><span class="fn">侍刃（JINJIN／ジンジン）</span><span class="fw">白河銘醸<i>/</i>福島県</span></span><span class="fs"><span>37.5%</span><i>/</i>500ml</span><span class="fp">¥1,180（税込・市場実勢）</span></a><p class="fo">ジュニパー、オレンジ系（公式詳細未確認）</p></li>
+<li class="fr" data-r="kanto" data-b="yuzu sansho sakura gyokuro hinoki" data-a="abv1" data-p="p2" data-w="n" data-sp="3850" data-sa="40.0"><a class="fl" href="gin/kiuchi-yasato-1.html"><span class="fm"><span class="fn">日の丸ジン 蔵風土（くらふうど）</span><span class="fw">八郷蒸溜所(木内酒造)<i>/</i>茨城県</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">福来みかん、山椒、柚子、緑茶、桜葉等＋杉樽熟成米焼酎ブレンド</p></li>
+<li class="fr" data-r="kanto" data-b="juniper lemon" data-a="abv1" data-p="p3" data-w="other" data-sp="7800" data-sa="40.0"><a class="fl" href="gin/meiri-shurui-1.html"><span class="fm"><span class="fn">ノエルのポーション（プレミアムクラフトジン）</span><b class="fb fb-other">受賞歴あり</b><span class="fw">明利酒類<i>/</i>茨城県</span></span><span class="fs"><span>40%</span><i>/</i>720ml</span><span class="fp">¥7,800（税込・公式）</span></a><p class="fo">マジョラム、ジュニパー、カモミール、オレンジフラワー、オレンジピール、レモンピール、リコリス、コリアンダー、シナモン、アンジェリカルート（10種）</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p2" data-w="n" data-sp="3850" data-sa="45.0"><a class="fl" href="gin/meiri-shurui-2.html"><span class="fm"><span class="fn">和GIN（プレミアムクラフトジン）</span><span class="fw">明利酒類<i>/</i>茨城県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式希望小売）</span></a><p class="fo">和素材中心（公式商品ページで詳細要確認）</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/nishibori-shuzo-1.html"><span class="fm"><span class="fn">クラフトジン</span><span class="fw">小山蒸溜所(西堀酒造)<i>/</i>栃木県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">清酒酵母発酵・蒸留（公式に銘柄詳細記載なし）</p></li>
+<li class="fr" data-r="kanto" data-b="juniper" data-a="abv1" data-p="p1" data-w="n" data-sp="1500" data-sa="40.0"><a class="fl" href="gin/miho-shurui-1.html"><span class="fm"><span class="fn">クラフトジン 歌川（うたがわ）</span><span class="fw">美峰酒類<i>/</i>群馬県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥1,500</span></a><p class="fo">ジュニパー、ラベンダー含む9種</p></li>
+<li class="fr" data-r="kanto" data-b="yuzu" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/miho-shurui-3.html"><span class="fm"><span class="fn">クラフトジン歌川 ゆず</span><span class="fw">美峰酒類<i>/</i>群馬県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp q">未確認</span></a><p class="fo">歌川＋柚子強化</p></li>
+<li class="fr" data-r="kanto" data-b="ginger" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/miho-shurui-2.html"><span class="fm"><span class="fn">クラフトジン歌川 生姜</span><span class="fw">美峰酒類<i>/</i>群馬県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp q">未確認</span></a><p class="fo">歌川＋生姜強化</p></li>
+<li class="fr" data-r="kanto" data-b="sansho ginger juniper" data-a="abv3" data-p="p2" data-w="gold" data-sp="4950" data-sa="47.0"><a class="fl" href="gin/musashino-distillery-1.html"><span class="fm"><span class="fn">Japanese Craft Gin 棘玉（TOGEDAMA）</span><b class="fb fb-gold">金賞</b><span class="fw">武蔵野蒸留所<i>/</i>埼玉県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥4,950（税込・公式希望小売）</span></a><p class="fo">ジュニパー、柚ピール、河越茶、山椒、桂皮、ジンジャー</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv3" data-p="p1" data-w="gold" data-sp="2050" data-sa="47.0"><a class="fl" href="gin/musashino-distillery-2.html"><span class="fm"><span class="fn">棘玉 TOGEDAMA</span><b class="fb fb-gold">金賞</b><span class="fw">武蔵野蒸留所<i>/</i>埼玉県</span></span><span class="fs"><span>47%</span><i>/</i>200ml</span><span class="fp">¥2,050（税込・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="kanto" data-b="sansho shiso lemon haskap" data-a="x" data-p="p1" data-w="n" data-sp="2200" data-sa="0"><a class="fl" href="gin/tateyama-brewing-2.html"><span class="fm"><span class="fn">TATEYAMA GIN BLEND Series</span><span class="fw">TATEYAMA BREWING<i>/</i>千葉県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>200ml</span><span class="fp">¥2,200（税込）</span></a><p class="fo">レモングラス／キンモクセイ／ストロベリー／紫蘇＆山椒／タイム＆シナモン（5種）</p></li>
+<li class="fr" data-r="kanto" data-b="sansho gyokuro kuromoji" data-a="x" data-p="p1" data-w="n" data-sp="1980" data-sa="0"><a class="fl" href="gin/tateyama-brewing-1.html"><span class="fm"><span class="fn">TATEYAMA GIN ELEMENT Series</span><span class="fw">TATEYAMA BREWING<i>/</i>千葉県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>200ml</span><span class="fp">¥1,980〜¥2,090（税込）</span></a><p class="fo">クロモジ、山椒、煎茶ほか単一ボタニカル21種展開</p></li>
+<li class="fr" data-r="kanto" data-b="yuzu gyokuro hinoki ginger juniper lemon" data-a="abv2" data-p="p3" data-w="n" data-sp="5950" data-sa="43.0"><a class="fl" href="gin/blue-rabbit-1.html"><span class="fm"><span class="fn">Blue Rabbit Tokyo Dry Gin</span><span class="fw">Blue Rabbit Distillery<i>/</i>東京都</span></span><span class="fs"><span>43%</span><i>/</i>700ml</span><span class="fp">¥5,950（税込・正規流通）</span></a><p class="fo">ジュニパー、ゆず、コリアンダー、煎茶葉、笹の葉、生姜、オリスルート、檜、レモンピール、ヘザー</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/blue-rabbit-2.html"><span class="fm"><span class="fn">Carrot Cake Gin</span><span class="fw">Blue Rabbit Distillery<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">公式オンライン要確認</span></a><p class="fo">キャロットケーキ風味</p></li>
+<li class="fr" data-r="kanto" data-b="lemon" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/blue-rabbit-3.html"><span class="fm"><span class="fn">Extremely Lemony Gin</span><span class="fw">Blue Rabbit Distillery<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">公式オンライン要確認</span></a><p class="fo">レモン強調</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/blue-rabbit-5.html"><span class="fm"><span class="fn">Hawaiian Vanilla Gin</span><span class="fw">Blue Rabbit Distillery<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">公式オンライン要確認</span></a><p class="fo">ハワイアンバニラ</p></li>
+<li class="fr" data-r="kanto" data-b="haskap" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/blue-rabbit-4.html"><span class="fm"><span class="fn">Lord Rasperton's Raspberry Field Gin</span><span class="fw">Blue Rabbit Distillery<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">公式オンライン要確認</span></a><p class="fo">ラズベリー</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv3" data-p="p3" data-w="n" data-sp="6650" data-sa="47.0"><a class="fl" href="gin/tokyo-craft-liqueur-1.html"><span class="fm"><span class="fn">TOM GIN #07 バジル</span><span class="fw">東京クラフトリキュール<i>/</i>東京都</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥6,650（税込）</span></a><p class="fo">バジル</p></li>
+<li class="fr" data-r="kanto" data-b="yuzu sansho" data-a="abv3" data-p="p3" data-w="n" data-sp="7615" data-sa="47.0"><a class="fl" href="gin/tokyo-craft-liqueur-2.html"><span class="fm"><span class="fn">TOM GIN #31 いたばし暗渠</span><span class="fw">東京クラフトリキュール<i>/</i>東京都</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥7,615（税込）</span></a><p class="fo">板橋区産柚子、蓼、ワサビの葉、セリ、山椒等</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/tokyo-craft-liqueur-3.html"><span class="fm"><span class="fn">TOM GIN #32 ジェニパーボムⅡ</span><span class="fw">東京クラフトリキュール<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">国産ジェニパーの葉と実</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv3" data-p="p2" data-w="gold" data-sp="3850" data-sa="47.0"><a class="fl" href="gin/ethical-spirits-1.html"><span class="fm"><span class="fn">LAST ELEGANT</span><b class="fb fb-gold">金賞</b><span class="fw">東京リバーサイド蒸溜所<i>/</i>東京都</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">ラベンダー、ピンクペッパー、カルダモン、ペッパー他（千代むすび酒造の酒粕由来ベース）</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv3" data-p="p1" data-w="gold" data-sp="1650" data-sa="47.0"><a class="fl" href="gin/ethical-spirits-2.html"><span class="fm"><span class="fn">LAST ELEGANT</span><b class="fb fb-gold">金賞</b><span class="fw">東京リバーサイド蒸溜所<i>/</i>東京都</span></span><span class="fs"><span>47%</span><i>/</i>200ml</span><span class="fp">¥1,650（税込）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p2" data-w="gold" data-sp="3850" data-sa="42.0"><a class="fl" href="gin/ethical-spirits-3.html"><span class="fm"><span class="fn">LAST ELYSIUM</span><b class="fb fb-gold">金賞</b><span class="fw">東京リバーサイド蒸溜所<i>/</i>東京都</span></span><span class="fs"><span>42%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">公式記載限定</p></li>
+<li class="fr" data-r="kanto" data-b="yuzu" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="41.0"><a class="fl" href="gin/ethical-spirits-4.html"><span class="fm"><span class="fn">LAST EN -燕-</span><span class="fw">東京リバーサイド蒸溜所<i>/</i>東京都</span></span><span class="fs"><span>41%</span><i>/</i>700ml</span><span class="fp q">公式EC要確認</span></a><p class="fo">獺祭規格外を蒸留したスピリッツ・柚子使用</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p2" data-w="n" data-sp="3960" data-sa="45.0"><a class="fl" href="gin/hachioji-distillery-1.html"><span class="fm"><span class="fn">TOKYO HACHIO GIN CLASSIC</span><span class="fw">東京八王子蒸溜所<i>/</i>東京都</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥3,960〜¥4,000（税込）</span></a><p class="fo">クラシックボタニカル</p></li>
+<li class="fr" data-r="kanto" data-b="lemon" data-a="abv1" data-p="p2" data-w="n" data-sp="3960" data-sa="40.0"><a class="fl" href="gin/hachioji-distillery-2.html"><span class="fm"><span class="fn">TOKYO HACHIO GIN ELDER FLOWER</span><span class="fw">東京八王子蒸溜所<i>/</i>東京都</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp">¥3,960（税込）</span></a><p class="fo">甘夏、エルダーフラワー他</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/hachioji-distillery-3.html"><span class="fm"><span class="fn">TOKYO HACHIO GIN ORIENTAL</span><span class="fw">東京八王子蒸溜所<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp q">未確認</span></a><p class="fo">公式オンライン要確認</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/hachioji-distillery-4.html"><span class="fm"><span class="fn">TOKYO SPICE GIN</span><span class="fw">東京八王子蒸溜所<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">スパイス系</p></li>
+<li class="fr" data-r="kanto" data-b="yuzu sansho sakura gyokuro" data-a="abv1" data-p="p2" data-w="n" data-sp="3850" data-sa="40.0"><a class="fl" href="gin/kiuchi-akihabara-1.html"><span class="fm"><span class="fn">日の丸ジン 蔵風土</span><span class="fw">東京蒸溜所(木内酒造)<i>/</i>東京都</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">福来みかん、山椒、柚子、緑茶、桜葉等（八郷蒸溜所製）</p></li>
+<li class="fr" data-r="kanto" data-b="ginger shiso juniper" data-a="abv3" data-p="p3" data-w="n" data-sp="5200" data-sa="48.0"><a class="fl" href="gin/fukagawa-distillery-1.html"><span class="fm"><span class="fn">FUEKI（フエキ）</span><span class="fw">深川蒸留所<i>/</i>東京都</span></span><span class="fs"><span>48%</span><i>/</i>500ml</span><span class="fp">¥5,200（税込・公式希望小売）</span></a><p class="fo">ジュニパー（マケドニア産）、ベチバー（国産）、柑橘類（国産）、青紫蘇（長野県産）、蒸し生姜（高知県産）、ヒバ（青森県産）</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="p3" data-w="n" data-sp="5500" data-sa="0"><a class="fl" href="gin/fukagawa-distillery-3.html"><span class="fm"><span class="fn">深川ツブロ 加密爾列（カミツレ）</span><span class="fw">深川蒸留所<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp">¥5,500（税込）</span></a><p class="fo">カミツレ</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="p3" data-w="n" data-sp="5500" data-sa="0"><a class="fl" href="gin/fukagawa-distillery-4.html"><span class="fm"><span class="fn">深川ツブロ 祁門茶（キーモンチャ）</span><span class="fw">深川蒸留所<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp">¥5,500（税込）</span></a><p class="fo">キーマン紅茶</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="p3" data-w="n" data-sp="5700" data-sa="0"><a class="fl" href="gin/fukagawa-distillery-2.html"><span class="fm"><span class="fn">深川ツブロ 薔薇</span><span class="fw">深川蒸留所<i>/</i>東京都</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp">¥5,700（税込）</span></a><p class="fo">薔薇</p></li>
+<li class="fr" data-r="kanto" data-b="juniper haskap" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/haneda-brewery-1.html"><span class="fm"><span class="fn">BATH LAB GIN #000 ～プレーン～</span><span class="fw">羽田ブルワリー<i>/</i>東京都</span></span><span class="fs"><span>40%</span><i>/</i>720ml</span><span class="fp q">公式希望小売非公開</span></a><p class="fo">ジュニパーベリーのみ</p></li>
+<li class="fr" data-r="kanto" data-b="sakura juniper" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/haneda-brewery-2.html"><span class="fm"><span class="fn">BATH LAB GIN #001 ～さくら～</span><span class="fw">羽田ブルワリー<i>/</i>東京都</span></span><span class="fs"><span>40%</span><i>/</i>720ml</span><span class="fp q">公式希望小売非公開</span></a><p class="fo">ジュニパー、コリアンダー他＋桜葉</p></li>
+<li class="fr" data-r="kanto" data-b="hinoki" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/haneda-brewery-3.html"><span class="fm"><span class="fn">BATH LAB GIN #002 ～檜～</span><span class="fw">羽田ブルワリー<i>/</i>東京都</span></span><span class="fs"><span>40%</span><i>/</i>720ml</span><span class="fp q">公式希望小売非公開</span></a><p class="fo">東京都青梅の杉と檜</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p3" data-w="n" data-sp="6820" data-sa="45.0"><a class="fl" href="gin/toranomon-distillery-2.html"><span class="fm"><span class="fn">4周年ジン hosi</span><span class="fw">虎ノ門蒸留所<i>/</i>東京都</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥6,820（税込）</span></a><p class="fo">限定</p></li>
+<li class="fr" data-r="kanto" data-b="juniper" data-a="abv2" data-p="p3" data-w="n" data-sp="5940" data-sa="45.0"><a class="fl" href="gin/toranomon-distillery-1.html"><span class="fm"><span class="fn">COMMON（コモン）レギュラージン</span><span class="fw">虎ノ門蒸留所<i>/</i>東京都</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥5,940（税込・公式）</span></a><p class="fo">マケドニア・北マケドニア産ジュニパー、チコリの根（八丈島産麦焼酎「情け嶋」＋奥多摩沢井湧き水ベース）</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p3" data-w="n" data-sp="5940" data-sa="45.0"><a class="fl" href="gin/toranomon-distillery-8.html"><span class="fm"><span class="fn">みかんの花</span><span class="fw">虎ノ門蒸留所<i>/</i>東京都</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥5,940（税込）</span></a><p class="fo">みかんの花</p></li>
+<li class="fr" data-r="kanto" data-b="lemon" data-a="abv2" data-p="p3" data-w="n" data-sp="6160" data-sa="45.0"><a class="fl" href="gin/toranomon-distillery-5.html"><span class="fm"><span class="fn">ブラッドオレンジ</span><span class="fw">虎ノ門蒸留所<i>/</i>東京都</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥6,160（税込）</span></a><p class="fo">ブラッドオレンジ</p></li>
+<li class="fr" data-r="kanto" data-b="lemon" data-a="abv2" data-p="p3" data-w="n" data-sp="6160" data-sa="45.0"><a class="fl" href="gin/toranomon-distillery-7.html"><span class="fm"><span class="fn">レモンとすだち</span><span class="fw">虎ノ門蒸留所<i>/</i>東京都</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥6,160（税込）</span></a><p class="fo">レモン・すだち</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p3" data-w="n" data-sp="6490" data-sa="45.0"><a class="fl" href="gin/toranomon-distillery-3.html"><span class="fm"><span class="fn">大島のくちなし</span><span class="fw">虎ノ門蒸留所<i>/</i>東京都</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥6,490（税込）</span></a><p class="fo">くちなし</p></li>
+<li class="fr" data-r="kanto" data-b="hinoki" data-a="abv2" data-p="p3" data-w="n" data-sp="5940" data-sa="45.0"><a class="fl" href="gin/toranomon-distillery-4.html"><span class="fm"><span class="fn">赤丸薄荷と白樺の葉</span><span class="fw">虎ノ門蒸留所<i>/</i>東京都</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥5,940（税込）</span></a><p class="fo">赤丸薄荷・白樺の葉</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p3" data-w="n" data-sp="5940" data-sa="45.0"><a class="fl" href="gin/toranomon-distillery-6.html"><span class="fm"><span class="fn">青梅の梅と梅の花</span><span class="fw">虎ノ門蒸留所<i>/</i>東京都</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥5,940（税込）</span></a><p class="fo">青梅・梅の花</p></li>
+<li class="fr" data-r="kanto" data-b="juniper lemon" data-a="abv3" data-p="p3" data-w="other" data-sp="5000" data-sa="46.0"><a class="fl" href="gin/number-eight-1.html"><span class="fm"><span class="fn">NUMBER EIGHT GIN - Yokohama Dry Gin</span><b class="fb fb-other">受賞歴あり</b><span class="fw">NUMBER EIGHT DISTILLERY<i>/</i>神奈川県</span></span><span class="fs"><span>46%</span><i>/</i>700ml</span><span class="fp">市場実勢 約¥5,000台</span></a><p class="fo">ジュニパー、イェルバブエナ、レモンバーベナ、神奈川産マンダリン、無農薬レモン、フレッシュホップ、コーヒー豆、アボカドシード（8種）</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/number-eight-2.html"><span class="fm"><span class="fn">NUMBER EIGHT GIN Double botanical</span><span class="fw">NUMBER EIGHT DISTILLERY<i>/</i>神奈川県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">公式個別ページ要確認</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv3" data-p="p2" data-w="n" data-sp="3200" data-sa="47.0"><a class="fl" href="gin/yokohama-bay-distillery-1.html"><span class="fm"><span class="fn">BAY GIN（ベイジン）</span><span class="fw">横浜ジン蒸溜所<i>/</i>神奈川県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥3,200前後（税込・市場実勢）</span></a><p class="fo">公式詳細要確認</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="p3" data-w="other" data-sp="6150" data-sa="0"><a class="fl" href="gin/yokohama-bay-distillery-2.html"><span class="fm"><span class="fn">BRONCO 20</span><b class="fb fb-other">受賞歴あり</b><span class="fw">横浜ジン蒸溜所<i>/</i>神奈川県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp">¥6,150（税込）</span></a><p class="fo">20種（バーテンダー北條智之氏監修）</p></li>
+<li class="fr" data-r="kanto" data-b="sakura haskap" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="43.0"><a class="fl" href="gin/yokohama-bay-distillery-3.html"><span class="fm"><span class="fn">横浜クラフトジン サクラ＆ベリー</span><span class="fw">横浜ジン蒸溜所<i>/</i>神奈川県</span></span><span class="fs"><span>43%</span><i>/</i>500ml</span><span class="fp q">公式店舗要確認</span></a><p class="fo">大磯の大島桜・枝垂れ桜、春の七草ゴギョウ、春苺、サワーチェリー、ブラックベリー、ラズベリー</p></li>
+<li class="fr" data-r="kanto" data-b="juniper haskap" data-a="abv2" data-p="p2" data-w="n" data-sp="4950" data-sa="41.0"><a class="fl" href="gin/kumazawa-shuzo-1.html"><span class="fm"><span class="fn">クラフトジン 白天狗（しろてんぐ）／ノーマル</span><span class="fw">熊澤酒造<i>/</i>神奈川県</span></span><span class="fs"><span>41%</span><i>/</i>700ml</span><span class="fp">¥4,950（税込・公式）</span></a><p class="fo">ジュニパーベリーのみ（粕取り焼酎・米焼酎ベース、3回蒸留）</p></li>
+<li class="fr" data-r="kanto" data-b="juniper lemon" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="41.0"><a class="fl" href="gin/kumazawa-shuzo-2.html"><span class="fm"><span class="fn">クラフトジン 白天狗／レモングラス</span><span class="fw">熊澤酒造<i>/</i>神奈川県</span></span><span class="fs"><span>41%</span><i>/</i>700ml</span><span class="fp q">公式オンラインストア要確認</span></a><p class="fo">ジュニパー＋自家栽培レモングラス</p></li>
+<li class="fr" data-r="kanto" data-b="sansho sakura gyokuro hinoki juniper lemon" data-a="abv2" data-p="p2" data-w="other" data-sp="4860" data-sa="43.0"><a class="fl" href="gin/koganei-shuzo-1.html"><span class="fm"><span class="fn">The Japanese Craft GIN 黄金井</span><b class="fb fb-other">受賞歴あり</b><span class="fw">黄金井酒造<i>/</i>神奈川県</span></span><span class="fs"><span>43%</span><i>/</i>500ml</span><span class="fp">¥4,860（税込・公式）</span></a><p class="fo">ジュニパー、厚木七沢産カボス、相模原産山椒、湘南ゴールド、杉、檜、伊勢原産桜花、大和産レモングラス、清川産茶葉、厚木七沢産どくだみ</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p1" data-w="other" data-sp="1800" data-sa="43.0"><a class="fl" href="gin/koganei-shuzo-2.html"><span class="fm"><span class="fn">The Japanese Craft GIN 黄金井</span><b class="fb fb-other">受賞歴あり</b><span class="fw">黄金井酒造<i>/</i>神奈川県</span></span><span class="fs"><span>43%</span><i>/</i>200ml</span><span class="fp">¥1,800（税込・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="chubu" data-b="yuzu gyokuro hinoki ginger juniper lemon" data-a="abv2" data-p="p3" data-w="gold" data-sp="6380" data-sa="45.0"><a class="fl" href="gin/echigo-yakuso-1.html"><span class="fm"><span class="fn">THE HERBALIST YASO GIN EXTRA HERB</span><b class="fb fb-gold">金賞</b><span class="fw">越後薬草蒸留所<i>/</i>新潟県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥6,380（税込・公式）</span></a><p class="fo">ジュニパー、杉葉、もみ、ピンクペッパー、柚子、ベルガモット、ジャスミン、コリアンダー、リコリス、緑茶、春ウコン、キャラウェイ、フェンネル、オレンジフラワー、ジンジャー、クローブ、オールスパイス、カルダモン、越後トウキ（アンジェリカ）、セロリシード（20種）</p></li>
+<li class="fr" data-r="chubu" data-b="" data-a="abv2" data-p="p2" data-w="gold" data-sp="4620" data-sa="45.0"><a class="fl" href="gin/echigo-yakuso-2.html"><span class="fm"><span class="fn">THE HERBALIST YASO GIN EXTRA HERB</span><b class="fb fb-gold">金賞</b><span class="fw">越後薬草蒸留所<i>/</i>新潟県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥4,620（税込・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="chubu" data-b="" data-a="abv3" data-p="x" data-w="n" data-sp="0" data-sa="50.0"><a class="fl" href="gin/alembic-kanazawa-3.html"><span class="fm"><span class="fn">Alembic Cask Rested Gin</span><span class="fw">Alembic Distillery<i>/</i>石川県</span></span><span class="fs"><span>50%</span><i>/</i>500ml</span><span class="fp q">公式EC参照</span></a><p class="fo">HACHIBAN／マデイラワイン樽（仏オーク）7ヶ月熟成</p></li>
+<li class="fr" data-r="chubu" data-b="kuromoji juniper lemon" data-a="abv3" data-p="p2" data-w="gold" data-sp="4000" data-sa="47.0"><a class="fl" href="gin/alembic-kanazawa-1.html"><span class="fm"><span class="fn">Alembic Gin HACHIBAN</span><b class="fb fb-gold">金賞</b><span class="fw">Alembic Distillery<i>/</i>石川県</span></span><span class="fs"><span>47%</span><i>/</i>500ml</span><span class="fp">¥4,000（税込・市場実勢）</span></a><p class="fo">ジュニパー、コリアンダー、カカオニブ、レモンピール（広島）、オレンジピール、クロモジ、アンジェリカルート、カシア（8種）</p></li>
+<li class="fr" data-r="chubu" data-b="" data-a="abv4" data-p="p3" data-w="n" data-sp="6500" data-sa="57.0"><a class="fl" href="gin/alembic-kanazawa-2.html"><span class="fm"><span class="fn">Alembic Gin HACHIBAN GUNJO STRENGTH</span><span class="fw">Alembic Distillery<i>/</i>石川県</span></span><span class="fs"><span>57%</span><i>/</i>500ml</span><span class="fp">¥6,500（税込・市場実勢）</span></a><p class="fo">HACHIBAN（使用量約30%増）</p></li>
+<li class="fr" data-r="chubu" data-b="yuzu sansho kuromoji juniper" data-a="abv1" data-p="p2" data-w="n" data-sp="3300" data-sa="40.0"><a class="fl" href="gin/oriental-kanazawa-1.html"><span class="fm"><span class="fn">blanc（ブラン）</span><span class="fw">オリエンタル金沢蒸溜所<i>/</i>石川県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp">¥3,300（税込・公式）</span></a><p class="fo">ジュニパー、金沢ゆず、加賀棒茶、クロモジ、山椒（米由来＝白糠ベース）</p></li>
+<li class="fr" data-r="chubu" data-b="sansho kuromoji juniper" data-a="abv2" data-p="p3" data-w="n" data-sp="6000" data-sa="45.0"><a class="fl" href="gin/fuyou-shuzo-1.html"><span class="fm"><span class="fn">YOHAKHU（ヨハク）</span><span class="fw">芙蓉酒造<i>/</i>長野県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥6,000（税別・公式）</span></a><p class="fo">ジュニパー、コリアンダー、リンゴ、カルダモン、クロモジ、熊笹、青実山椒、セージ、アンジェリカルート、リコリス、クローブ（11種）</p></li>
+<li class="fr" data-r="chubu" data-b="" data-a="abv4" data-p="p4" data-w="n" data-sp="8350" data-sa="55.0"><a class="fl" href="gin/nozawa-onsen-5.html"><span class="fm"><span class="fn">BARREL AGED GIN（Small Batch 002）</span><span class="fw">野沢温泉蒸留所<i>/</i>長野県</span></span><span class="fs"><span>55%</span><i>/</i>500ml</span><span class="fp">¥8,350（税込・公式）</span></a><p class="fo">シャルドネ樽21ヶ月熟成</p></li>
+<li class="fr" data-r="chubu" data-b="sansho lemon" data-a="abv3" data-p="p2" data-w="gold" data-sp="4850" data-sa="48.0"><a class="fl" href="gin/nozawa-onsen-2.html"><span class="fm"><span class="fn">CLASSIC DRY GIN</span><b class="fb fb-gold">金賞</b><span class="fw">野沢温泉蒸留所<i>/</i>長野県</span></span><span class="fs"><span>48%</span><i>/</i>500ml</span><span class="fp">¥4,850（税込・公式）</span></a><p class="fo">山椒、ビアンカレモン（広島）、オリスルート</p></li>
+<li class="fr" data-r="chubu" data-b="sakura lemon" data-a="abv2" data-p="p2" data-w="n" data-sp="4850" data-sa="42.0"><a class="fl" href="gin/nozawa-onsen-3.html"><span class="fm"><span class="fn">IWAI GIN</span><span class="fw">野沢温泉蒸留所<i>/</i>長野県</span></span><span class="fs"><span>42%</span><i>/</i>500ml</span><span class="fp">¥4,850（税込・公式）</span></a><p class="fo">メイヤーレモン、すもも、桜葉</p></li>
+<li class="fr" data-r="chubu" data-b="hinoki kuromoji" data-a="abv2" data-p="p2" data-w="gold" data-sp="4850" data-sa="45.0"><a class="fl" href="gin/nozawa-onsen-1.html"><span class="fm"><span class="fn">NOZAWA GIN</span><b class="fb fb-gold">金賞</b><span class="fw">野沢温泉蒸留所<i>/</i>長野県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥4,850（税込・公式）</span></a><p class="fo">クロモジ・杉・カキドオシ等</p></li>
+<li class="fr" data-r="chubu" data-b="" data-a="abv2" data-p="p3" data-w="n" data-sp="5350" data-sa="45.0"><a class="fl" href="gin/nozawa-onsen-6.html"><span class="fm"><span class="fn">OBUSE GIN</span><span class="fw">野沢温泉蒸留所<i>/</i>長野県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥5,350（税込・公式）</span></a><p class="fo">栗、韃靼そば、ターメリック</p></li>
+<li class="fr" data-r="chubu" data-b="shiso" data-a="abv2" data-p="p2" data-w="gold" data-sp="4850" data-sa="41.0"><a class="fl" href="gin/nozawa-onsen-4.html"><span class="fm"><span class="fn">SHISO GIN</span><b class="fb fb-gold">金賞</b><span class="fw">野沢温泉蒸留所<i>/</i>長野県</span></span><span class="fs"><span>41%</span><i>/</i>500ml</span><span class="fp">¥4,850（税込・公式）</span></a><p class="fo">アップルウッド、赤紫蘇、青紫蘇</p></li>
+<li class="fr" data-r="chubu" data-b="sansho gyokuro hinoki kuromoji ginger juniper lemon haskap" data-a="abv3" data-p="p3" data-w="gold" data-sp="5192" data-sa="47.0"><a class="fl" href="gin/yomeishu-kanomori-1.html"><span class="fm"><span class="fn">香の森（KANOMORI）</span><b class="fb fb-gold">金賞</b><span class="fw">養命酒製造 駒ヶ根工場<i>/</i>長野県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥5,192（税込・公式希望小売）</span></a><p class="fo">クロモジ（細枝・葉・太枝3部位）＋18種：ジュニパー、ローズマリー、松葉、杉葉、シナモン、ローレル、セージ、山椒、オレンジピール、アンジェリカ、ゴジベリー、ジンジャー、レモンピール、リコリス、アニス、桑、カルダモン、杜仲茶葉</p></li>
+<li class="fr" data-r="chubu" data-b="kuromoji" data-a="x" data-p="x" data-w="gold" data-sp="0" data-sa="0"><a class="fl" href="gin/yomeishu-kanomori-2.html"><span class="fm"><span class="fn">香の雫（KANOSHIZUKU）</span><b class="fb fb-gold">金賞</b><span class="fw">養命酒製造 駒ヶ根工場<i>/</i>長野県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>700ml</span><span class="fp q">未確認</span></a><p class="fo">クロモジ主体</p></li>
+<li class="fr" data-r="chubu" data-b="sansho hinoki juniper" data-a="abv1" data-p="p2" data-w="n" data-sp="3300" data-sa="40.0"><a class="fl" href="gin/kurosawa-shuzo-1.html"><span class="fm"><span class="fn">黒澤 白樺GIN</span><span class="fw">黒澤酒造<i>/</i>長野県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp">¥3,300（税込・市場実勢）</span></a><p class="fo">ジュニパー、白樺枝葉・樹液、葉山椒、梅、桑の実（米由来スピリッツ＋白樺樹液約3割）</p></li>
+<li class="fr" data-r="chubu" data-b="juniper" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="45.0"><a class="fl" href="gin/kurosawa-shuzo-2.html"><span class="fm"><span class="fn">黒澤 ＆SOBA GIN</span><span class="fw">黒澤酒造<i>/</i>長野県</span></span><span class="fs"><span>45%</span><i>/</i>720ml</span><span class="fp q">市場実勢で要確認</span></a><p class="fo">信州産そば実＋ジュニパー等（公式商品ページで詳細要確認）</p></li>
+<li class="fr" data-r="chubu" data-b="juniper lemon" data-a="abv3" data-p="p2" data-w="n" data-sp="3850" data-sa="50.0"><a class="fl" href="gin/nakatsugawa-2.html"><span class="fm"><span class="fn">NAKATSU GIN 南信州シトラス</span><span class="fw">中津川蒸留所<i>/</i>岐阜県</span></span><span class="fs"><span>50%</span><i>/</i>500ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">メイヤーレモン、ピンクレモネード、バレンタインライム、フィンガーライム、ジュニパー、チコリ根</p></li>
+<li class="fr" data-r="chubu" data-b="juniper lemon haskap" data-a="abv3" data-p="p2" data-w="n" data-sp="3850" data-sa="50.0"><a class="fl" href="gin/nakatsugawa-1.html"><span class="fm"><span class="fn">NAKATSU GIN（ドライジン）</span><span class="fw">中津川蒸留所<i>/</i>岐阜県</span></span><span class="fs"><span>50%</span><i>/</i>500ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">北マケドニア産ジュニパー、チコリ根、ラ・フランス、苺、メイヤーレモン、グレープフルーツ、知多バナナ</p></li>
+<li class="fr" data-r="chubu" data-b="" data-a="abv2" data-p="p3" data-w="n" data-sp="6000" data-sa="45.0"><a class="fl" href="gin/tatsumi-1.html"><span class="fm"><span class="fn">WET.MMXXI GIN</span><span class="fw">辰巳蒸留所(アルケミエ)<i>/</i>岐阜県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥6,000台</span></a><p class="fo">辰巳氏が摘んだ岐阜山中の野草中心</p></li>
+<li class="fr" data-r="chubu" data-b="" data-a="x" data-p="p3" data-w="n" data-sp="6000" data-sa="0"><a class="fl" href="gin/tatsumi-2.html"><span class="fm"><span class="fn">アルケミエ LAVENDER</span><span class="fw">辰巳蒸留所(アルケミエ)<i>/</i>岐阜県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp">市場実勢 ¥6,000台</span></a><p class="fo">ラベンダー</p></li>
+<li class="fr" data-r="chubu" data-b="" data-a="x" data-p="p3" data-w="n" data-sp="6000" data-sa="0"><a class="fl" href="gin/tatsumi-3.html"><span class="fm"><span class="fn">アルケミエ 金木犀 GIN</span><span class="fw">辰巳蒸留所(アルケミエ)<i>/</i>岐阜県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp">市場実勢 ¥6,000台</span></a><p class="fo">金木犀</p></li>
+<li class="fr" data-r="chubu" data-b="" data-a="x" data-p="p3" data-w="n" data-sp="5000" data-sa="0"><a class="fl" href="gin/numazu-distillery-4.html"><span class="fm"><span class="fn">LAZY MASTER ~Heavenly Rose~</span><span class="fw">沼津蒸留所<i>/</i>静岡県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥5,000</span></a><p class="fo">河津町産バラ</p></li>
+<li class="fr" data-r="chubu" data-b="yuzu sansho sakura gyokuro kuromoji ginger juniper lemon" data-a="abv2" data-p="p2" data-w="n" data-sp="4500" data-sa="42.0"><a class="fl" href="gin/numazu-distillery-2.html"><span class="fm"><span class="fn">LAZY MASTER ~Lushly Green~</span><span class="fw">沼津蒸留所<i>/</i>静岡県</span></span><span class="fs"><span>42%</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥4,500</span></a><p class="fo">桜葉（松崎町塩漬け）、緑茶、クロモジ、山椒、レモン、柚子、生姜、アンジェリカ、カルダモン、ジュニパー、コリアンダー（11種）</p></li>
+<li class="fr" data-r="chubu" data-b="sansho kuromoji" data-a="abv2" data-p="p2" data-w="other" data-sp="4500" data-sa="42.0"><a class="fl" href="gin/numazu-distillery-1.html"><span class="fm"><span class="fn">LAZY MASTER ~Silky Citrus~</span><b class="fb fb-other">受賞歴あり</b><span class="fw">沼津蒸留所<i>/</i>静岡県</span></span><span class="fs"><span>42%</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥4,500</span></a><p class="fo">西浦みかん、へだたちばな、クロモジ、山椒等8種</p></li>
+<li class="fr" data-r="chubu" data-b="gyokuro ginger lemon" data-a="abv2" data-p="p2" data-w="n" data-sp="4500" data-sa="42.0"><a class="fl" href="gin/numazu-distillery-3.html"><span class="fm"><span class="fn">LAZY MASTER ~Smoky Gold~</span><span class="fw">沼津蒸留所<i>/</i>静岡県</span></span><span class="fs"><span>42%</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥4,500</span></a><p class="fo">キンカン、金木犀、和紅茶、レモンピール、リンゴ、ジンジャー、メープル等11種</p></li>
+<li class="fr" data-r="chubu" data-b="sansho gyokuro ginger juniper lemon" data-a="abv1" data-p="x" data-w="gold" data-sp="0" data-sa="40.0"><a class="fl" href="gin/kiyosu-sakura-1.html"><span class="fm"><span class="fn">愛知クラフトジン キヨス</span><b class="fb fb-gold">金賞</b><span class="fw">清洲桜醸造<i>/</i>愛知県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp q">公式オンラインで要確認</span></a><p class="fo">ジュニパー、ミカンピール、抹茶、生姜、山椒、キャラウェイ、レモンピール、シナモン、カモミール、コリアンダー（10種）</p></li>
+<li class="fr" data-r="kansai" data-b="yuzu gyokuro ginger juniper" data-a="abv3" data-p="p2" data-w="n" data-sp="4600" data-sa="47.0"><a class="fl" href="gin/iseman-1.html"><span class="fm"><span class="fn">クラフトジン 伊勢神（ISE GIN）</span><span class="fw">伊勢萬<i>/</i>三重県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥4,600（税込・市場実勢）</span></a><p class="fo">ジュニパー、伊勢茶（ほうじ茶）、あおさ、みつ葉、柚子、梅、生姜（7種）</p></li>
+<li class="fr" data-r="kansai" data-b="juniper lemon" data-a="abv2" data-p="p2" data-w="n" data-sp="4980" data-sa="45.0"><a class="fl" href="gin/sicx-kyoto-1.html"><span class="fm"><span class="fn">KYOTO EBISU GIN</span><span class="fw">SiCX京都東山蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥4,980（税込・公式）</span></a><p class="fo">ジュニパー、無農薬ヨモギ（蔵王山麓）、クベブペッパー、コリアンダー、無農薬レモンピール（広島県呉市）、オレンジピール、レモンバーベナ、カルダモン、花椒、白檀（10種）</p></li>
+<li class="fr" data-r="kansai" data-b="ginger juniper lemon" data-a="abv2" data-p="p2" data-w="n" data-sp="3980" data-sa="45.0"><a class="fl" href="gin/sicx-kyoto-2.html"><span class="fm"><span class="fn">SiCX KYOTO LEMON CITRIC ACID GIN</span><span class="fw">SiCX京都東山蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥3,980（税込・公式）</span></a><p class="fo">ブラックレモン、グラインズオブパラダイス、カルダモン、クローブ、シナモン、コリアンダー、ジンジャー、ピンクペッパー、エチオピアンカルダモン、クエン酸、ジュニパー他</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv2" data-p="p2" data-w="n" data-sp="3980" data-sa="45.0"><a class="fl" href="gin/sicx-kyoto-3.html"><span class="fm"><span class="fn">SiCX KYOTO SPICE MAGIC GIN</span><span class="fw">SiCX京都東山蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥3,980（税込・公式）</span></a><p class="fo">27種スパイス5グループ（果実不使用）</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv3" data-p="p4" data-w="n" data-sp="29700" data-sa="47.0"><a class="fl" href="gin/kyotango-mairingen-3.html"><span class="fm"><span class="fn">MAIRINGEN EXTRA FRESH CRAFT GIN 2024</span><span class="fw">京丹後舞輪源蒸留所<i>/</i>京都府</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥29,700（税込・公式）</span></a><p class="fo">自社林産ネズミサシ、ハイネズ、生蜂蜜（100%地元産）</p></li>
+<li class="fr" data-r="kansai" data-b="kuromoji juniper" data-a="abv3" data-p="p3" data-w="other" data-sp="5610" data-sa="47.0"><a class="fl" href="gin/kyotango-mairingen-1.html"><span class="fm"><span class="fn">MAIRINGEN FRESH CRAFT GIN</span><b class="fb fb-other">受賞歴あり</b><span class="fw">京丹後舞輪源蒸留所<i>/</i>京都府</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥5,610（税込・公式）</span></a><p class="fo">14種ボタニカル（ジュニパー、焙煎竹、クロモジ等／蒸留当日朝摘み・日により変動）</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv3" data-p="p1" data-w="other" data-sp="2310" data-sa="47.0"><a class="fl" href="gin/kyotango-mairingen-2.html"><span class="fm"><span class="fn">MAIRINGEN FRESH CRAFT GIN</span><b class="fb fb-other">受賞歴あり</b><span class="fw">京丹後舞輪源蒸留所<i>/</i>京都府</span></span><span class="fs"><span>47%</span><i>/</i>200ml</span><span class="fp">¥2,310（税込・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="kansai" data-b="gyokuro" data-a="abv1" data-p="p1" data-w="n" data-sp="1980" data-sa="40.0"><a class="fl" href="gin/kyoto-miyako-2.html"><span class="fm"><span class="fn">京都ジン</span><span class="fw">京都みやこ蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">¥1,980（税込・公式）</span></a><p class="fo">国産ニッキ、抹茶等8種</p></li>
+<li class="fr" data-r="kansai" data-b="gyokuro" data-a="abv3" data-p="p2" data-w="n" data-sp="3960" data-sa="46.0"><a class="fl" href="gin/kyoto-miyako-1.html"><span class="fm"><span class="fn">京都ジン ハイクラス</span><span class="fw">京都みやこ蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>46%</span><i>/</i>700ml</span><span class="fp">¥3,960（税込・公式）</span></a><p class="fo">国産ニッキ、抹茶、なでしこ等10種</p></li>
+<li class="fr" data-r="kansai" data-b="gyokuro" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="45.0"><a class="fl" href="gin/kyoto-kinobi-3.html"><span class="fm"><span class="fn">季のTEA 京都ドライジン</span><span class="fw">京都蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp q">オープン価格</span></a><p class="fo">玉露・碾茶を強調</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv3" data-p="x" data-w="n" data-sp="0" data-sa="48.0"><a class="fl" href="gin/kyoto-kinobi-5.html"><span class="fm"><span class="fn">季の美 エディションG</span><span class="fw">京都蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>48%</span><i>/</i>700ml</span><span class="fp q">オープン価格</span></a><p class="fo">アンリ・ジロー樽熟成</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/kyoto-kinobi-4.html"><span class="fm"><span class="fn">季の美 エディションK</span><span class="fw">京都蒸溜所<i>/</i>京都府</span></span><span class="fs"><span class="q">未確認</span><i>/</i>700ml</span><span class="fp q">オープン価格</span></a><p class="fo">スコットランド・キルケラン蒸溜所のバーボン樽熟成</p></li>
+<li class="fr" data-r="kansai" data-b="yuzu sansho gyokuro hinoki ginger shiso juniper lemon" data-a="abv2" data-p="p2" data-w="gold" data-sp="4500" data-sa="45.0"><a class="fl" href="gin/kyoto-kinobi-1.html"><span class="fm"><span class="fn">季の美 京都ドライジン</span><b class="fb fb-gold">金賞</b><span class="fw">京都蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">市場実勢 約¥4,500〜¥5,500（オープン価格）</span></a><p class="fo">ジュニパー、オリス、ヒノキ、玉露、ゆず、レモン、山椒、生姜、笹の葉、赤しそ、木の芽（11種）</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv4" data-p="x" data-w="gold" data-sp="0" data-sa="54.0"><a class="fl" href="gin/kyoto-kinobi-2.html"><span class="fm"><span class="fn">季の美 勢（KI NO BI SEI）</span><b class="fb fb-gold">金賞</b><span class="fw">京都蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>54%</span><i>/</i>700ml</span><span class="fp q">オープン価格</span></a><p class="fo">季の美と同11種</p></li>
+<li class="fr" data-r="kansai" data-b="yuzu sansho ginger" data-a="abv2" data-p="p3" data-w="gold" data-sp="5500" data-sa="45.0"><a class="fl" href="gin/mori-kyoto-1.html"><span class="fm"><span class="fn">京和漢 DRY GIN FOREST OF KYOTO</span><b class="fb fb-gold">金賞</b><span class="fw">森の京都蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥5,500（税込・公式）</span></a><p class="fo">26種ボタニカル4層構成（柚子、みかん、山椒、生姜、和漢12種、京都発酵素材）</p></li>
+<li class="fr" data-r="kansai" data-b="juniper lemon" data-a="abv2" data-p="p3" data-w="n" data-sp="5500" data-sa="45.0"><a class="fl" href="gin/mori-kyoto-2.html"><span class="fm"><span class="fn">京和漢 DRY GIN MOON OF KYOTO</span><span class="fw">森の京都蒸溜所<i>/</i>京都府</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥5,500（税込・公式）</span></a><p class="fo">50種ボタニカル（ジュニパー、レモングラス、メリッサ、パンダンリーフ、ナイジェラ、和漢12種、京都発酵素材）</p></li>
+<li class="fr" data-r="kansai" data-b="yuzu sansho sakura gyokuro" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="43.0"><a class="fl" href="gin/suntory-osaka-1.html"><span class="fm"><span class="fn">ROKU〈六〉</span><span class="fw">サントリー大阪工場<i>/</i>大阪府</span></span><span class="fs"><span>43%</span><i>/</i>700ml</span><span class="fp q">オープン価格</span></a><p class="fo">桜花、桜葉、煎茶、玉露、山椒、柚子の和素材6種＋伝統的ボタニカル8種＝計14種</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv3" data-p="x" data-w="gold" data-sp="0" data-sa="47.0"><a class="fl" href="gin/suntory-osaka-2.html"><span class="fm"><span class="fn">ROKU〈六〉 47%</span><b class="fb fb-gold">金賞</b><span class="fw">サントリー大阪工場<i>/</i>大阪府</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp q">オープン価格</span></a><p class="fo">ROKUの高度数バー向け版</p></li>
+<li class="fr" data-r="kansai" data-b="yuzu gyokuro ginger" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/suntory-osaka-3.html"><span class="fm"><span class="fn">翠（SUI）</span><span class="fw">サントリー大阪工場<i>/</i>大阪府</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp q">オープン価格</span></a><p class="fo">柚子、緑茶、生姜（3種）</p></li>
+<li class="fr" data-r="kansai" data-b="yuzu sansho gyokuro shiso" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="42.0"><a class="fl" href="gin/kaikyo-distillery-1.html"><span class="fm"><span class="fn">135° East Hyogo Dry Gin</span><span class="fw">海峡蒸溜所<i>/</i>兵庫県</span></span><span class="fs"><span>42%</span><i>/</i>700ml</span><span class="fp q">公式希望小売は未表示</span></a><p class="fo">欧州伝統3種＋日本産5種（煎茶、柚子、紫蘇、梅、山椒）／日本酒蒸留液をブレンド時に添加</p></li>
+<li class="fr" data-r="kansai" data-b="juniper" data-a="abv2" data-p="p2" data-w="n" data-sp="3850" data-sa="43.0"><a class="fl" href="gin/kobe-distillery-2.html"><span class="fm"><span class="fn">KOBE GIN UMI</span><span class="fw">神戸蒸溜所<i>/</i>兵庫県</span></span><span class="fs"><span>43%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">すだち、いかなごのくぎ煮、鰹節、黒松、海苔、ジュニパー</p></li>
+<li class="fr" data-r="kansai" data-b="yuzu sansho gyokuro shiso juniper" data-a="abv2" data-p="p2" data-w="n" data-sp="3850" data-sa="43.0"><a class="fl" href="gin/kobe-distillery-1.html"><span class="fm"><span class="fn">KOBE GIN YAMA</span><span class="fw">神戸蒸溜所<i>/</i>兵庫県</span></span><span class="fs"><span>43%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">有馬山椒、静香園緑茶、柚子、青紫蘇、ジュニパー、楠</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv3" data-p="p4" data-w="n" data-sp="8800" data-sa="47.0"><a class="fl" href="gin/kobe-distillery-4.html"><span class="fm"><span class="fn">PREMIUM KOBE GIN UMI</span><span class="fw">神戸蒸溜所<i>/</i>兵庫県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥8,800（税込・公式）</span></a><p class="fo">UMI＋テキーラ樽10ヶ月熟成</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv3" data-p="p4" data-w="n" data-sp="8800" data-sa="47.0"><a class="fl" href="gin/kobe-distillery-3.html"><span class="fm"><span class="fn">PREMIUM KOBE GIN YAMA</span><span class="fw">神戸蒸溜所<i>/</i>兵庫県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥8,800（税込・公式）</span></a><p class="fo">YAMA＋テキーラ樽10ヶ月熟成</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv4" data-p="p4" data-w="n" data-sp="16500" data-sa="59.0"><a class="fl" href="gin/yamato-yucho-4.html"><span class="fm"><span class="fn">橘花 KIKKA GIN 一閃（いっせん）</span><span class="fw">大和蒸溜所(油長酒造)<i>/</i>奈良県</span></span><span class="fs"><span>59%</span><i>/</i>700ml</span><span class="fp">¥16,500（税込・公式）</span></a><p class="fo">標準3種の5倍量</p></li>
+<li class="fr" data-r="kansai" data-b="haskap" data-a="abv2" data-p="p3" data-w="n" data-sp="5500" data-sa="43.0"><a class="fl" href="gin/yamato-yucho-2.html"><span class="fm"><span class="fn">橘花 KIKKA GIN 朱華（はねず）</span><span class="fw">大和蒸溜所(油長酒造)<i>/</i>奈良県</span></span><span class="fs"><span>43%</span><i>/</i>700ml</span><span class="fp">¥5,500（税込・公式）</span></a><p class="fo">標準＋あすかルビー（苺）</p></li>
+<li class="fr" data-r="kansai" data-b="hinoki" data-a="abv3" data-p="p3" data-w="n" data-sp="5500" data-sa="47.0"><a class="fl" href="gin/yamato-yucho-3.html"><span class="fm"><span class="fn">橘花 KIKKA GIN 流転（ルテン）</span><span class="fw">大和蒸溜所(油長酒造)<i>/</i>奈良県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥5,500（税込・公式）</span></a><p class="fo">標準＋吉野杉、吉野檜、キハダの実</p></li>
+<li class="fr" data-r="kansai" data-b="lemon" data-a="abv2" data-p="p3" data-w="n" data-sp="7700" data-sa="45.0"><a class="fl" href="gin/yamato-yucho-5.html"><span class="fm"><span class="fn">橘花 KIKKA GIN 澪標（みおつくし）</span><span class="fw">大和蒸溜所(油長酒造)<i>/</i>奈良県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥7,700（税込・公式）</span></a><p class="fo">標準＋大阿太高原和梨、レモングラス、いちじくの葉、葡萄ポマース</p></li>
+<li class="fr" data-r="kansai" data-b="juniper" data-a="abv2" data-p="p3" data-w="n" data-sp="5500" data-sa="43.0"><a class="fl" href="gin/yamato-yucho-1.html"><span class="fm"><span class="fn">橘花 KIKKA GIN（標準）</span><span class="fw">大和蒸溜所(油長酒造)<i>/</i>奈良県</span></span><span class="fs"><span>43%</span><i>/</i>700ml</span><span class="fp">¥5,500（税込・公式）</span></a><p class="fo">ジュニパー、大和橘、大和当帰（3種）</p></li>
+<li class="fr" data-r="kansai" data-b="yuzu sansho hinoki juniper" data-a="abv3" data-p="p2" data-w="n" data-sp="4180" data-sa="47.0"><a class="fl" href="gin/fujishiro-4.html"><span class="fm"><span class="fn">DOJA</span><span class="fw">富士白蒸留所(中野BC)<i>/</i>和歌山県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥4,180（税込・公式）</span></a><p class="fo">ジュニパー、柚子ピール、杉、桧、ペパーミント、四川山椒、フェンネル、カルダモン、コリアンダー（インド蒸留所共同開発）</p></li>
+<li class="fr" data-r="kansai" data-b="sansho juniper lemon" data-a="abv3" data-p="p1" data-w="gold" data-sp="2970" data-sa="47.0"><a class="fl" href="gin/fujishiro-1.html"><span class="fm"><span class="fn">槙 -KOZUE-</span><b class="fb fb-gold">金賞</b><span class="fw">富士白蒸留所(中野BC)<i>/</i>和歌山県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥2,970（税込・公式）</span></a><p class="fo">ジュニパー、高野槙、温州みかんピール、レモンピール、山椒（高野槙を主役に据えたクラフトジン）</p></li>
+<li class="fr" data-r="kansai" data-b="sansho hinoki juniper lemon" data-a="abv3" data-p="p2" data-w="other" data-sp="3850" data-sa="47.0"><a class="fl" href="gin/fujishiro-2.html"><span class="fm"><span class="fn">香立 -KODACHI-</span><b class="fb fb-other">受賞歴あり</b><span class="fw">富士白蒸留所(中野BC)<i>/</i>和歌山県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">ジュニパー、紀州杉、紀州桧、温州みかんピール、レモンピール、山椒</p></li>
+<li class="fr" data-r="kansai" data-b="" data-a="abv2" data-p="p2" data-w="gold" data-sp="3850" data-sa="45.0"><a class="fl" href="gin/fujishiro-3.html"><span class="fm"><span class="fn">香雪 -KAYUKI-</span><b class="fb fb-gold">金賞</b><span class="fw">富士白蒸留所(中野BC)<i>/</i>和歌山県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">南高梅（梅酒蒸留）</p></li>
+<li class="fr" data-r="kansai" data-b="yuzu sansho hinoki ginger juniper" data-a="abv4" data-p="p3" data-w="n" data-sp="5500" data-sa="53.0"><a class="fl" href="gin/kishu-kumano-1.html"><span class="fm"><span class="fn">JAPANESE CRAFT GIN 熊野</span><span class="fw">紀州熊野蒸溜所<i>/</i>和歌山県</span></span><span class="fs"><span>53%</span><i>/</i>500ml</span><span class="fp">¥5,500（税込・公式）</span></a><p class="fo">19種：ジュニパー、コリアンダー、キャラウェイ、吉野杉、スターアニス、オールスパイス、クローブ、ベイリーフ、シナモン、和歌山県南高梅、柚子ピール、温州みかんピール、すだちピール、サカキ、真妻わさび、ぶどう山椒、生姜、ラベンダー</p></li>
+<li class="fr" data-r="chugoku" data-b="yuzu kuromoji juniper lemon" data-a="abv3" data-p="p2" data-w="other" data-sp="3300" data-sa="47.0"><a class="fl" href="gin/chiyomusubi-1.html"><span class="fm"><span class="fn">千代むすびクラフト・ジン 因伯人（IMPACT）</span><b class="fb fb-other">受賞歴あり</b><span class="fw">千代むすび酒造<i>/</i>鳥取県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">市場実勢 約¥3,300〜¥3,580（税込）</span></a><p class="fo">13種：ジュニパー、コリアンダー、レモン、八朔、柚子、クロモジ（地元産）等</p></li>
+<li class="fr" data-r="chugoku" data-b="" data-a="abv3" data-p="p1" data-w="n" data-sp="770" data-sa="47.0"><a class="fl" href="gin/chiyomusubi-2.html"><span class="fm"><span class="fn">因伯人（IMPACT）90mlミニ</span><span class="fw">千代むすび酒造<i>/</i>鳥取県</span></span><span class="fs"><span>47%</span><i>/</i>90ml</span><span class="fp">¥770（税込・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="chugoku" data-b="yuzu sansho sakura gyokuro juniper lemon" data-a="abv1" data-p="p1" data-w="n" data-sp="1496" data-sa="40.0"><a class="fl" href="gin/matsui-hakuto-1.html"><span class="fm"><span class="fn">白兎-HAKUTO-（マツイ ジン 白兎）</span><span class="fw">松井酒造<i>/</i>鳥取県</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">¥1,496（税込・公式希望小売）</span></a><p class="fo">ジュニパー、鳥取県産梨、コリアンダー、オレンジピール、ゆずピール、和山椒、玉露、サクラ、ブラックペッパー（9種）</p></li>
+<li class="fr" data-r="chugoku" data-b="" data-a="abv3" data-p="p2" data-w="worlds_best" data-sp="3960" data-sa="47.0"><a class="fl" href="gin/matsui-hakuto-2.html"><span class="fm"><span class="fn">白兎プレミアム</span><b class="fb fb-wb">World's Best</b><span class="fw">松井酒造<i>/</i>鳥取県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥3,960（税込・公式希望小売）</span></a><p class="fo">基本9種＋プレミアム5種（合計14種、5種詳細は非公開）</p></li>
+<li class="fr" data-r="chugoku" data-b="ginger juniper lemon" data-a="abv3" data-p="p3" data-w="n" data-sp="7700" data-sa="50.0"><a class="fl" href="gin/miyashita-okayama-1.html"><span class="fm"><span class="fn">クラフトジン岡山</span><span class="fw">岡山蒸溜所(宮下酒造)<i>/</i>岡山県</span></span><span class="fs"><span>50%</span><i>/</i>700ml</span><span class="fp">¥7,700（税込・公式）</span></a><p class="fo">ジュニパー、コリアンダー、レモンピール、アンジェリカ根、モルト、ラベンダー、オレンジ、ホップ、シナモン、ジンジャー、オールスパイス（米焼酎ベース、樫樽フィニッシュ）</p></li>
+<li class="fr" data-r="chugoku" data-b="" data-a="abv3" data-p="p3" data-w="n" data-sp="5500" data-sa="50.0"><a class="fl" href="gin/miyashita-okayama-2.html"><span class="fm"><span class="fn">クラフトジン岡山</span><span class="fw">岡山蒸溜所(宮下酒造)<i>/</i>岡山県</span></span><span class="fs"><span>50%</span><i>/</i>500ml</span><span class="fp">¥5,500（税込・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="chugoku" data-b="" data-a="abv3" data-p="p1" data-w="n" data-sp="2200" data-sa="50.0"><a class="fl" href="gin/miyashita-okayama-3.html"><span class="fm"><span class="fn">クラフトジン岡山</span><span class="fw">岡山蒸溜所(宮下酒造)<i>/</i>岡山県</span></span><span class="fs"><span>50%</span><i>/</i>200ml</span><span class="fp">¥2,200（税込・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="chugoku" data-b="gyokuro juniper lemon" data-a="abv3" data-p="p1" data-w="gold" data-sp="2420" data-sa="47.0"><a class="fl" href="gin/setouchi-distillery-1.html"><span class="fm"><span class="fn">クラフトジン瀬戸内 -檸檬-</span><b class="fb fb-gold">金賞</b><span class="fw">SETOUCHI DISTILLERY<i>/</i>広島県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥2,420（税込・公式）</span></a><p class="fo">レモン、ジュニパー、緑茶</p></li>
+<li class="fr" data-r="chugoku" data-b="" data-a="abv3" data-p="p1" data-w="n" data-sp="990" data-sa="47.0"><a class="fl" href="gin/setouchi-distillery-2.html"><span class="fm"><span class="fn">クラフトジン瀬戸内 -檸檬-</span><span class="fw">SETOUCHI DISTILLERY<i>/</i>広島県</span></span><span class="fs"><span>47%</span><i>/</i>150ml</span><span class="fp">¥990（税込・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="chugoku" data-b="gyokuro juniper lemon" data-a="abv3" data-p="p1" data-w="other" data-sp="2750" data-sa="47.0"><a class="fl" href="gin/setouchi-distillery-3.html"><span class="fm"><span class="fn">クラフトジン瀬戸内 -甘夏-</span><b class="fb fb-other">受賞歴あり</b><span class="fw">SETOUCHI DISTILLERY<i>/</i>広島県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥2,750（税込・公式）</span></a><p class="fo">甘夏、緑茶、ジュニパー</p></li>
+<li class="fr" data-r="chugoku" data-b="gyokuro juniper" data-a="abv3" data-p="p1" data-w="gold" data-sp="2860" data-sa="47.0"><a class="fl" href="gin/sakurao-3.html"><span class="fm"><span class="fn">SAKURAO GIN HAMAGOU</span><b class="fb fb-gold">金賞</b><span class="fw">サクラオB&amp;D<i>/</i>広島県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥2,860（税込・参考）</span></a><p class="fo">12種：ハマゴウ、ローズマリー、しらぬい、ラベンダー、緑茶、スペアミント（広島産6種）＋ジュニパー等6種</p></li>
+<li class="fr" data-r="chugoku" data-b="sakura kuromoji shiso juniper haskap" data-a="x" data-p="p2" data-w="n" data-sp="4400" data-sa="0"><a class="fl" href="gin/sakurao-2.html"><span class="fm"><span class="fn">SAKURAO GIN LIMITED</span><span class="fw">サクラオB&amp;D<i>/</i>広島県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>700ml</span><span class="fp">¥4,400前後（税込・市場実勢）</span></a><p class="fo">17種すべて広島産：桜（廿日市）、和ジュニパーベリー、クロモジ、木の芽、牡蠣殻（地御前産）、本わさび、青しそ等</p></li>
+<li class="fr" data-r="chugoku" data-b="yuzu gyokuro hinoki ginger shiso lemon" data-a="abv3" data-p="p1" data-w="gold" data-sp="2200" data-sa="47.0"><a class="fl" href="gin/sakurao-1.html"><span class="fm"><span class="fn">SAKURAO GIN ORIGINAL</span><b class="fb fb-gold">金賞</b><span class="fw">サクラオB&amp;D<i>/</i>広島県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥2,200前後（税込・市場実勢）</span></a><p class="fo">広島産9種（レモン・ネーブル・夏みかん・緑ゆず（安芸高田）・ダイダイ・ヒノキ・緑茶（府中）・赤しそ・ジンジャー（三次））＋海外5種</p></li>
+<li class="fr" data-r="chugoku" data-b="lemon" data-a="abv1" data-p="p3" data-w="other" data-sp="7000" data-sa="40.0"><a class="fl" href="gin/neo-blue-1.html"><span class="fm"><span class="fn">青舞 OrB（オーガニッククラフトジン）</span><b class="fb fb-other">受賞歴あり</b><span class="fw">Neo Blue Distillery<i>/</i>山口県</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">市場実勢 約¥7,000〜</span></a><p class="fo">13種：甘草、レモンバーベナ、レモングラス、イエルバルベナ、ローズゼラニウム、タイム、ローリエ、ラベンダー、ローズマリー、ホーリーバジル、バラ「さ姫」、高級香木等。柑橘類は不使用</p></li>
+<li class="fr" data-r="shikoku" data-b="juniper haskap" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="45.0"><a class="fl" href="gin/nissin-shurui-2.html"><span class="fm"><span class="fn">AWA GIN クラシック</span><span class="fw">日新酒類<i>/</i>徳島県</span></span><span class="fs"><span>45%</span><i>/</i>720ml</span><span class="fp q">未確認</span></a><p class="fo">マケドニア産ジュニパーベリー単一（クラシックスタイル）</p></li>
+<li class="fr" data-r="shikoku" data-b="yuzu sansho juniper" data-a="abv2" data-p="p3" data-w="gold" data-sp="5500" data-sa="45.0"><a class="fl" href="gin/nissin-shurui-1.html"><span class="fm"><span class="fn">AWA GIN（クリアボトル）</span><b class="fb fb-gold">金賞</b><span class="fw">日新酒類<i>/</i>徳島県</span></span><span class="fs"><span>45%</span><i>/</i>720ml</span><span class="fp">市場実勢 約¥5,500</span></a><p class="fo">すだち、木頭ゆずの果皮、阿波晩茶、国産山椒、マケドニア産ジュニパー（山田錦由来米アルコールベース）</p></li>
+<li class="fr" data-r="shikoku" data-b="yuzu sansho ginger juniper lemon" data-a="abv1" data-p="p2" data-w="n" data-sp="3850" data-sa="40.0"><a class="fl" href="gin/nishino-kinryo-1.html"><span class="fm"><span class="fn">夕凪GIN（JAPANESE CRAFT GIN）</span><span class="fw">西野金陵<i>/</i>香川県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">ジュニパー、柚子、瀬戸内産オリーブ、山椒、生姜、文旦、コリアンダー、レモン、クローブ、カシア（10種）</p></li>
+<li class="fr" data-r="shikoku" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/minakuchi-shuzo-3.html"><span class="fm"><span class="fn">道後ジン</span><span class="fw">水口酒造<i>/</i>愛媛県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp q">未確認</span></a><p class="fo">愛媛県産素材使用</p></li>
+<li class="fr" data-r="shikoku" data-b="" data-a="abv1" data-p="p1" data-w="gold" data-sp="2000" data-sa="40.0"><a class="fl" href="gin/minakuchi-shuzo-2.html"><span class="fm"><span class="fn">道後ジン 六媛</span><b class="fb fb-gold">金賞</b><span class="fw">水口酒造<i>/</i>愛媛県</span></span><span class="fs"><span>40%</span><i>/</i>200ml</span><span class="fp">市場実勢 約¥2,000</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="shikoku" data-b="juniper haskap" data-a="abv1" data-p="p3" data-w="n" data-sp="5500" data-sa="40.0"><a class="fl" href="gin/minakuchi-shuzo-1.html"><span class="fm"><span class="fn">道後ジン 六媛（ろくひめ）</span><span class="fw">水口酒造<i>/</i>愛媛県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥5,500</span></a><p class="fo">ジュニパー、ぶどう（ピオーネ）、いちご（あまおとめ）、栗（中山栗）、梅（七折福梅）、りんご（ふじ）、はだか麦＋ハーブ7種（愛媛県産6素材＋ハーブ）</p></li>
+<li class="fr" data-r="shikoku" data-b="sakura ginger juniper lemon" data-a="abv2" data-p="p2" data-w="other" data-sp="3700" data-sa="45.0"><a class="fl" href="gin/tsukasabotan-1.html"><span class="fm"><span class="fn">MAKINO GIN（マキノジン）</span><b class="fb fb-other">受賞歴あり</b><span class="fw">司牡丹酒造<i>/</i>高知県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥3,700（税込・公式）</span></a><p class="fo">12種：スエコザサ（佐川町産）、グァバ葉（南国市産・無農薬）、ジュニパー（産地公式記載なし）、ブシュカン果皮、ショウガ、ハーブ等。司牡丹「四季桜焼酎」ベース</p></li>
+<li class="fr" data-r="shikoku" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/tsukasabotan-2.html"><span class="fm"><span class="fn">マキノジン プレミアム</span><span class="fw">司牡丹酒造<i>/</i>高知県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">公式詳細未取得</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu sansho gyokuro juniper lemon haskap" data-a="abv2" data-p="p2" data-w="gold" data-sp="3500" data-sa="45.0"><a class="fl" href="gin/kitaya-1.html"><span class="fm"><span class="fn">KITAYA CRAFT GIN</span><b class="fb fb-gold">金賞</b><span class="fw">喜多屋<i>/</i>福岡県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥3,500</span></a><p class="fo">8種：ジュニパー、福岡県産ゆず皮、あまおう、熊本県産でこぽん皮、八女産煎茶、玉露、梅酒の梅、山椒（大吟醸酒粕取焼酎＋米焼酎ベース）</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu sakura gyokuro juniper" data-a="x" data-p="p2" data-w="n" data-sp="3205" data-sa="0"><a class="fl" href="gin/shinozaki-asakura-2.html"><span class="fm"><span class="fn">Freeee!!! - ASAKURA CRAFT GIN</span><span class="fw">朝倉蒸溜所(篠崎)<i>/</i>福岡県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>500ml</span><span class="fp">¥3,205（税込・市場実勢）</span></a><p class="fo">26種：ジュニパー、いちじく、桜花、柚子皮、玉露等</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu juniper" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/shinozaki-asakura-3.html"><span class="fm"><span class="fn">Freeee!!! Volume 2</span><span class="fw">朝倉蒸溜所(篠崎)<i>/</i>福岡県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">17種：ジュニパー、柿、木頭柚子、カカオニブ等。真空蒸留採用</p></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro juniper lemon" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="45.0"><a class="fl" href="gin/shinozaki-asakura-1.html"><span class="fm"><span class="fn">Jin40 - ASAKURA CRAFT GIN</span><span class="fw">朝倉蒸溜所(篠崎)<i>/</i>福岡県</span></span><span class="fs"><span>45%</span><i>/</i>750ml</span><span class="fp q">公式EC参照</span></a><p class="fo">4種：レモングラス、ジュニパー、緑茶、ペパーミント（ジュニパー以外は福岡県産）</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv2" data-p="x" data-w="n" data-sp="0" data-sa="45.0"><a class="fl" href="gin/akatorii-4.html"><span class="fm"><span class="fn">赤鳥居 SAKE GIN</span><span class="fw">光武酒造場<i>/</i>佐賀県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp q">未確認</span></a><p class="fo">大吟醸酒ベース</p></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro hinoki juniper lemon" data-a="abv2" data-p="p1" data-w="other" data-sp="1800" data-sa="45.0"><a class="fl" href="gin/akatorii-1.html"><span class="fm"><span class="fn">赤鳥居 オリジナル</span><b class="fb fb-other">受賞歴あり</b><span class="fw">光武酒造場<i>/</i>佐賀県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥1,800（税別・公式）</span></a><p class="fo">ジュニパー、レモンピール、オレンジピール、杉、日本茶</p></li>
+<li class="fr" data-r="kyushu" data-b="juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/akatorii-3.html"><span class="fm"><span class="fn">赤鳥居 ショコラ</span><span class="fw">光武酒造場<i>/</i>佐賀県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">ジュニパー、カカオニブ、オレンジピール</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/akatorii-2.html"><span class="fm"><span class="fn">赤鳥居 プレミアム</span><span class="fw">光武酒造場<i>/</i>佐賀県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">公式詳細要追加調査</p></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/munemasa-chajin-2.html"><span class="fm"><span class="fn">茶神 Chajin 丿貫（へちかん）</span><span class="fw">宗政酒造<i>/</i>佐賀県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp q">市場実勢 楽天等で要確認</span></a><p class="fo">京都名物・炒り番茶</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/munemasa-chajin-3.html"><span class="fm"><span class="fn">茶神 Chajin 紅葉（くれは）</span><span class="fw">宗政酒造<i>/</i>佐賀県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp q">市場実勢 楽天等で要確認</span></a><p class="fo">紅茶（アールグレイ）</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/munemasa-chajin-1.html"><span class="fm"><span class="fn">茶神 Chajin 角笛（つのぶえ）</span><span class="fw">宗政酒造<i>/</i>佐賀県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp q">市場実勢 楽天等で要確認</span></a><p class="fo">ジャスミン茶等（産地公式記載なし）</p></li>
+<li class="fr" data-r="kyushu" data-b="lemon" data-a="abv2" data-p="p2" data-w="n" data-sp="4500" data-sa="45.0"><a class="fl" href="gin/stilldam-1.html"><span class="fm"><span class="fn">スティルダムジン スタンダード（赤ラベル）</span><span class="fw">楠乃花蒸溜所<i>/</i>佐賀県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥4,500（税別・公式）</span></a><p class="fo">14種、佐賀県産レモングラス使用</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv2" data-p="p1" data-w="n" data-sp="2500" data-sa="45.0"><a class="fl" href="gin/stilldam-2.html"><span class="fm"><span class="fn">スティルダムジン スタンダード（赤ラベル）</span><span class="fw">楠乃花蒸溜所<i>/</i>佐賀県</span></span><span class="fs"><span>45%</span><i>/</i>375ml</span><span class="fp">¥2,500（税別・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="kyushu" data-b="lemon" data-a="abv2" data-p="p3" data-w="n" data-sp="5000" data-sa="45.0"><a class="fl" href="gin/stilldam-3.html"><span class="fm"><span class="fn">スティルダムジン リスボン（白ラベル）</span><span class="fw">楠乃花蒸溜所<i>/</i>佐賀県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥5,000（税別・公式）</span></a><p class="fo">鹿島産有機レモン（リスボン種）キー＋14種</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv2" data-p="p1" data-w="n" data-sp="2700" data-sa="45.0"><a class="fl" href="gin/stilldam-4.html"><span class="fm"><span class="fn">スティルダムジン リスボン（白ラベル）</span><span class="fw">楠乃花蒸溜所<i>/</i>佐賀県</span></span><span class="fs"><span>45%</span><i>/</i>375ml</span><span class="fp">¥2,700（税別・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu sansho juniper haskap" data-a="abv3" data-p="p3" data-w="n" data-sp="7150" data-sa="47.0"><a class="fl" href="gin/gotogin-1.html"><span class="fm"><span class="fn">GOTOGIN the origin</span><span class="fw">五島つばき蒸溜所<i>/</i>長崎県</span></span><span class="fs"><span>47%</span><i>/</i>500ml</span><span class="fp">¥7,150（税込・公式最高価格帯）</span></a><p class="fo">17種：ジュニパー、椿の実、つばき茶、椿油搾り粕、ナツメグ、リコリス、アンジェリカ、柚子、カカオニブ、アーモンド、紅茶、シナモン、山椒、レーズン、ラズベリー、カルダモン、コリアンダー</p></li>
+<li class="fr" data-r="kyushu" data-b="juniper" data-a="abv1" data-p="p1" data-w="n" data-sp="2970" data-sa="40.0"><a class="fl" href="gin/kinokawa-dennoshin-1.html"><span class="fm"><span class="fn">長崎出島ジン 伝之進 1812</span><span class="fw">杵の川<i>/</i>長崎県</span></span><span class="fs"><span>40%</span><i>/</i>510ml</span><span class="fp">¥2,970（税込・市場実勢）</span></a><p class="fo">マケドニア産ジュニパー（通常の3倍量超）、モロッコ産コリアンダー、クロアチア産アンジェリカ</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv1" data-p="p2" data-w="gold" data-sp="3000" data-sa="40.0"><a class="fl" href="gin/umegae-1.html"><span class="fm"><span class="fn">Japanese Craft Gin よきつき（令月）</span><b class="fb fb-gold">金賞</b><span class="fw">梅ヶ枝酒造<i>/</i>長崎県</span></span><span class="fs"><span>40%</span><i>/</i>720ml</span><span class="fp">市場実勢 約¥3,000</span></a><p class="fo">長崎県産フルーツ各種、梅古木の枝（日本酒ベース）</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/umegae-2.html"><span class="fm"><span class="fn">磨礪（マーレイ）</span><span class="fw">梅ヶ枝酒造<i>/</i>長崎県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">公式要確認</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu juniper haskap" data-a="abv3" data-p="p2" data-w="n" data-sp="3377" data-sa="47.0"><a class="fl" href="gin/omoya-iki-1.html"><span class="fm"><span class="fn">OMOYA GIN</span><span class="fw">重家酒造<i>/</i>長崎県</span></span><span class="fs"><span>47%</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥3,377</span></a><p class="fo">ジュニパーベリーと壱岐産ゆずの2種のみ（壱岐麦焼酎ベース）</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv3" data-p="x" data-w="n" data-sp="0" data-sa="47.0"><a class="fl" href="gin/omoya-iki-2.html"><span class="fm"><span class="fn">OMOYA GIN</span><span class="fw">重家酒造<i>/</i>長崎県</span></span><span class="fs"><span>47%</span><i>/</i>200ml</span><span class="fp q">未確認</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="kyushu" data-b="lemon" data-a="abv3" data-p="x" data-w="n" data-sp="0" data-sa="47.0"><a class="fl" href="gin/takata-jinjingin-3.html"><span class="fm"><span class="fn">Kumamoto jin jin GIN</span><span class="fw">高田酒造場<i>/</i>熊本県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp q">未確認</span></a><p class="fo">人吉球磨産米由来球磨焼酎、熊本県産晩白柚・不知火等柑橘果皮、ハーブ</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu juniper lemon" data-a="abv3" data-p="p3" data-w="n" data-sp="5500" data-sa="47.0"><a class="fl" href="gin/takata-jinjingin-1.html"><span class="fm"><span class="fn">jin jin GIN</span><span class="fw">高田酒造場<i>/</i>熊本県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">市場実勢 約¥5,500（税込）</span></a><p class="fo">ジュニパー、熊本産柑橘類（晩白柚、不知火、甘夏、晩柑、はるか、ゆず）皮、天草産ローズゼラニウム</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv3" data-p="x" data-w="n" data-sp="0" data-sa="47.0"><a class="fl" href="gin/takata-jinjingin-2.html"><span class="fm"><span class="fn">jin jin GIN</span><span class="fw">高田酒造場<i>/</i>熊本県</span></span><span class="fs"><span>47%</span><i>/</i>250ml</span><span class="fp q">未確認</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="kyushu" data-b="lemon" data-a="x" data-p="p3" data-w="n" data-sp="6600" data-sa="0"><a class="fl" href="gin/gno-hinata-3.html"><span class="fm"><span class="fn">HITOKIWA Hebesu Peel</span><span class="fw">G.N.O Inc.<i>/</i>宮崎県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp">¥6,600（税込・公式）</span></a><p class="fo">へべす皮</p></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro" data-a="x" data-p="p3" data-w="n" data-sp="6600" data-sa="0"><a class="fl" href="gin/gno-hinata-2.html"><span class="fm"><span class="fn">HITOKIWA Hojicha Tea</span><span class="fw">G.N.O Inc.<i>/</i>宮崎県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp">¥6,600（税込・公式）</span></a><p class="fo">ほうじ茶</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="x" data-p="p3" data-w="n" data-sp="6600" data-sa="0"><a class="fl" href="gin/gno-hinata-1.html"><span class="fm"><span class="fn">HITOKIWA Mango Seed</span><span class="fw">G.N.O Inc.<i>/</i>宮崎県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp">¥6,600（税込・公式）</span></a><p class="fo">マンゴーシード（キー）</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu sansho" data-a="abv3" data-p="x" data-w="gold" data-sp="0" data-sa="47.0"><a class="fl" href="gin/kyoya-yuzu-2.html"><span class="fm"><span class="fn">HINATA（ヒナタ）</span><b class="fb fb-gold">金賞</b><span class="fw">京屋酒造<i>/</i>宮崎県</span></span><span class="fs"><span>47%</span><i>/</i>750ml</span><span class="fp q">市場実勢で要確認</span></a><p class="fo">宮崎県産日向夏キー＋柚子・山椒等（芋焼酎ベース）</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu" data-a="abv1" data-p="p2" data-w="n" data-sp="4125" data-sa="40.0"><a class="fl" href="gin/kyoya-yuzu-3.html"><span class="fm"><span class="fn">Yuzu Cool クラフトジン</span><span class="fw">京屋酒造<i>/</i>宮崎県</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">¥4,125（税込・公式）</span></a><p class="fo">9種、柚子メイン＋スペアミント</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu sansho ginger juniper lemon" data-a="abv3" data-p="p3" data-w="gold" data-sp="5500" data-sa="47.0"><a class="fl" href="gin/kyoya-yuzu-1.html"><span class="fm"><span class="fn">油津吟（YUZU GIN）</span><b class="fb fb-gold">金賞</b><span class="fw">京屋酒造<i>/</i>宮崎県</span></span><span class="fs"><span>47%</span><i>/</i>750ml</span><span class="fp">¥5,500（税込・公式）</span></a><p class="fo">ジュニパー、柚子、山椒、生姜、きゅうり、へべず、日向夏、コリアンダー、クローブ（9種）。芋焼酎ベース</p></li>
+<li class="fr" data-r="kyushu" data-b="juniper" data-a="abv2" data-p="p2" data-w="n" data-sp="4050" data-sa="45.0"><a class="fl" href="gin/osuzu-yama-3.html"><span class="fm"><span class="fn">OSUZU GIN Cacao &amp; Muscat</span><span class="fw">尾鈴山蒸留所<i>/</i>宮崎県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥4,050（税抜・公式）</span></a><p class="fo">カカオ、マスカット、大和橘、ジュニパー、榊（鎌倉MAISON CACAOコラボ）</p></li>
+<li class="fr" data-r="kyushu" data-b="sansho ginger juniper lemon" data-a="abv2" data-p="p2" data-w="n" data-sp="4050" data-sa="45.0"><a class="fl" href="gin/osuzu-yama-2.html"><span class="fm"><span class="fn">OSUZU GIN Kumquat（金柑）</span><span class="fw">尾鈴山蒸留所<i>/</i>宮崎県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥4,050（税抜・公式）</span></a><p class="fo">宮崎県産無農薬金柑、ジュニパー、山椒、生姜</p></li>
+<li class="fr" data-r="kyushu" data-b="sansho ginger juniper" data-a="abv2" data-p="p2" data-w="n" data-sp="4050" data-sa="45.0"><a class="fl" href="gin/osuzu-yama-1.html"><span class="fm"><span class="fn">OSUZU GIN（オリジナル）</span><span class="fw">尾鈴山蒸留所<i>/</i>宮崎県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥4,050（税抜・公式）</span></a><p class="fo">地元素材中心：ジュニパー、山椒、生姜等（山ねこベース）</p></li>
+<li class="fr" data-r="kyushu" data-b="sakura hinoki lemon" data-a="abv2" data-p="p1" data-w="other" data-sp="990" data-sa="44.0"><a class="fl" href="gin/ginnez-1.html"><span class="fm"><span class="fn">銀鼠 -GINnez-</span><b class="fb fb-other">受賞歴あり</b><span class="fw">櫻の郷酒造<i>/</i>宮崎県</span></span><span class="fs"><span>44%</span><i>/</i>200ml</span><span class="fp">¥990（税込・公式）</span></a><p class="fo">日南産レモン（キー）、日向夏、飫肥杉、桜、レモングラス、コリアンダー</p></li>
+<li class="fr" data-r="kyushu" data-b="hinoki" data-a="abv3" data-p="p2" data-w="n" data-sp="4620" data-sa="47.0"><a class="fl" href="gin/hombo-tsunuki-2.html"><span class="fm"><span class="fn">和美人 The Forest</span><span class="fw">マルス津貫蒸溜所(本坊酒造)<i>/</i>鹿児島県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥4,620（税込）</span></a><p class="fo">和美人レギュラー11種＋屋久杉・ヒノキ葉（13種）</p></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro ginger shiso juniper" data-a="abv2" data-p="p2" data-w="n" data-sp="3850" data-sa="45.0"><a class="fl" href="gin/hombo-tsunuki-3.html"><span class="fm"><span class="fn">和美人 ダマスクローズ</span><span class="fw">マルス津貫蒸溜所(本坊酒造)<i>/</i>鹿児島県</span></span><span class="fs"><span>45%</span><i>/</i>495ml</span><span class="fp">¥3,850（税込）</span></a><p class="fo">ダマスクローズ、ジュニパー、コリアンダー、緑茶、紫蘇、生姜（6種）</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu gyokuro ginger shiso juniper lemon" data-a="abv3" data-p="p2" data-w="gold" data-sp="4180" data-sa="47.0"><a class="fl" href="gin/hombo-tsunuki-1.html"><span class="fm"><span class="fn">和美人（Japanese GIN 和美人）</span><b class="fb fb-gold">金賞</b><span class="fw">マルス津貫蒸溜所(本坊酒造)<i>/</i>鹿児島県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥4,400（税込・ギフト箱付）／¥4,180（ボトルのみ）</span></a><p class="fo">ジュニパー、コリアンダー、柚子、辺塚橙（へつかだいだい）、レモン、金柑（津貫加世田産）、けせん（ニードルウッド）、月桃、緑茶、生姜、紫蘇（11種）</p></li>
+<li class="fr" data-r="kyushu" data-b="juniper haskap" data-a="abv3" data-p="x" data-w="other" data-sp="0" data-sa="47.0"><a class="fl" href="gin/satasouji-akayane-1.html"><span class="fm"><span class="fn">AKAYANE CRAFT GIN（ジュニパーベリーオンリー）</span><b class="fb fb-other">受賞歴あり</b><span class="fw">佐多宗二商店<i>/</i>鹿児島県</span></span><span class="fs"><span>47%</span><i>/</i>720ml</span><span class="fp q">公式希望小売は未表示</span></a><p class="fo">ジュニパーベリーのみ（自社芋焼酎ベース）</p></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro juniper" data-a="abv3" data-p="p3" data-w="n" data-sp="5280" data-sa="47.0"><a class="fl" href="gin/satasouji-akayane-2.html"><span class="fm"><span class="fn">AKAYANE CRAFT GIN（緑茶）</span><span class="fw">佐多宗二商店<i>/</i>鹿児島県</span></span><span class="fs"><span>47%</span><i>/</i>720ml</span><span class="fp">¥5,280（税込・市場実勢）</span></a><p class="fo">ジュニパー、知覧茶（鹿児島県産緑茶）。芋焼酎ベース</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv3" data-p="x" data-w="n" data-sp="0" data-sa="46.0"><a class="fl" href="gin/satasouji-akayane-3.html"><span class="fm"><span class="fn">GIN HEART 春 [Haru]</span><span class="fw">佐多宗二商店<i>/</i>鹿児島県</span></span><span class="fs"><span>46%</span><i>/</i>720ml</span><span class="fp q">未確認</span></a><p class="fo">公式詳細要追加調査</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu" data-a="abv3" data-p="p2" data-w="other" data-sp="4290" data-sa="47.0"><a class="fl" href="gin/jin7-miyagahama-1.html"><span class="fm"><span class="fn">JIN7 series 00</span><b class="fb fb-other">受賞歴あり</b><span class="fw">宮ヶ浜蒸溜所(大山甚七商店)<i>/</i>鹿児島県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">市場実勢 約¥4,290</span></a><p class="fo">開聞山麓香料園のフレッシュオーガニックハーブ「芳樟」、指宿産木頭ゆず（白麹芋焼酎ベース）</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv3" data-p="p2" data-w="n" data-sp="4400" data-sa="47.0"><a class="fl" href="gin/jin7-miyagahama-2.html"><span class="fm"><span class="fn">JIN7 series 01</span><span class="fw">宮ヶ浜蒸溜所(大山甚七商店)<i>/</i>鹿児島県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">市場実勢 約¥4,400</span></a><p class="fo">鹿児島県産辺塚（へつか）だいだい（GI登録、年間出荷量4%未満の希少柑橘）</p></li>
+<li class="fr" data-r="kyushu" data-b="sakura" data-a="abv3" data-p="p2" data-w="n" data-sp="4950" data-sa="47.0"><a class="fl" href="gin/jin7-miyagahama-3.html"><span class="fm"><span class="fn">JIN7 series 02 Cherry Blossom Cask Finish</span><span class="fw">宮ヶ浜蒸溜所(大山甚七商店)<i>/</i>鹿児島県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">市場実勢 約¥4,950</span></a><p class="fo">桜（鹿児島県産）、知覧茶等。桜カスクフィニッシュ</p></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro hinoki juniper" data-a="abv2" data-p="p2" data-w="n" data-sp="3850" data-sa="45.0"><a class="fl" href="gin/komasa-gin-2.html"><span class="fm"><span class="fn">KOMASA GIN ほうじ茶</span><span class="fw">小正醸造<i>/</i>鹿児島県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">ほうじ茶、ジュニパー、ヒノキ等（産地は公式未明示）</p></li>
+<li class="fr" data-r="kyushu" data-b="sakura juniper" data-a="abv2" data-p="p2" data-w="gold" data-sp="3850" data-sa="45.0"><a class="fl" href="gin/komasa-gin-1.html"><span class="fm"><span class="fn">KOMASA GIN 桜島小みかん</span><b class="fb fb-gold">金賞</b><span class="fw">小正醸造<i>/</i>鹿児島県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥3,850（税込・公式希望小売）</span></a><p class="fo">桜島小みかん（鹿児島県産）、ジュニパー、コリアンダー（本格焼酎ベース）</p></li>
+<li class="fr" data-r="kyushu" data-b="haskap" data-a="abv2" data-p="p2" data-w="n" data-sp="3850" data-sa="45.0"><a class="fl" href="gin/komasa-gin-3.html"><span class="fm"><span class="fn">KOMASA GIN 苺</span><span class="fw">小正醸造<i>/</i>鹿児島県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">苺、ラズベリー・ブルーベリー、バジル</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu juniper" data-a="abv3" data-p="p2" data-w="other" data-sp="3630" data-sa="47.0"><a class="fl" href="gin/yamamoto-garappa-1.html"><span class="fm"><span class="fn">GARAPPA #01 CRAFT GIN</span><b class="fb fb-other">受賞歴あり</b><span class="fw">山元酒造<i>/</i>鹿児島県</span></span><span class="fs"><span>47%</span><i>/</i>720ml</span><span class="fp">¥3,630（税込・公式希望小売）</span></a><p class="fo">杜松子（ジュニパー）、コリアンダー、柚子、橙、ブラックペッパー</p></li>
+<li class="fr" data-r="kyushu" data-b="yuzu juniper lemon" data-a="abv1" data-p="p1" data-w="gold" data-sp="2134" data-sa="38.0"><a class="fl" href="gin/hamada-juju-1.html"><span class="fm"><span class="fn">ジャパニーズクラフトジン 樹々（JUJU）</span><b class="fb fb-gold">金賞</b><span class="fw">濵田酒造<i>/</i>鹿児島県</span></span><span class="fs"><span>38%</span><i>/</i>700ml</span><span class="fp">¥2,134（税込・公式希望小売）</span></a><p class="fo">ジュニパー、カモミール、オレンジピール、コリアンダー、国産柚子＋ハーブ計7種（米焼酎ベース・香り酵母発酵）</p></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="abv1" data-p="p1" data-w="n" data-sp="418" data-sa="38.0"><a class="fl" href="gin/hamada-juju-2.html"><span class="fm"><span class="fn">樹々（JUJU）ミニチュア</span><span class="fw">濵田酒造<i>/</i>鹿児島県</span></span><span class="fs"><span>38%</span><i>/</i>50ml</span><span class="fp">¥418（税込・公式）</span></a><p class="fo">同上</p></li>
+<li class="fr" data-r="kyushu" data-b="juniper" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/wakashio-424-2.html"><span class="fm"><span class="fn">424GIN -Classic botanicals-</span><span class="fw">若潮酒造<i>/</i>鹿児島県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">ジュニパー＋ロンドンジン伝統4種</p></li>
+<li class="fr" data-r="kyushu" data-b="juniper haskap" data-a="abv2" data-p="p1" data-w="other" data-sp="2970" data-sa="42.4"><a class="fl" href="gin/wakashio-424-1.html"><span class="fm"><span class="fn">424GIN -Juniper berry only-</span><b class="fb fb-other">受賞歴あり</b><span class="fw">若潮酒造<i>/</i>鹿児島県</span></span><span class="fs"><span>42.4%</span><i>/</i>500ml/720ml</span><span class="fp">¥2,970（税込・公式・500ml）</span></a><p class="fo">ジュニパーベリーのみ（複数芋焼酎ブレンド・世界唯一の木樽蒸留器製）</p></li>
+<li class="fr" data-r="okinawa" data-b="juniper lemon" data-a="abv3" data-p="p2" data-w="n" data-sp="3300" data-sa="47.0"><a class="fl" href="gin/masahiro-okinawa-1.html"><span class="fm"><span class="fn">まさひろオキナワジン RECIPE 01</span><span class="fw">まさひろ酒造<i>/</i>沖縄県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥3,300（税込・市場実勢）</span></a><p class="fo">ジュニパー、シークヮーサー、ゴーヤー、グァバ、ローゼル、ピィパーズ（6種）。泡盛ベース・ハイブリッド製法</p></li>
+<li class="fr" data-r="okinawa" data-b="lemon" data-a="abv3" data-p="p2" data-w="n" data-sp="3200" data-sa="47.0"><a class="fl" href="gin/masahiro-okinawa-2.html"><span class="fm"><span class="fn">まさひろオキナワジン RECIPE 02</span><span class="fw">まさひろ酒造<i>/</i>沖縄県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥3,200（税込・公式希望小売）</span></a><p class="fo">タンカン（沖縄産柑橘）等</p></li>
+<li class="fr" data-r="okinawa" data-b="gyokuro juniper lemon" data-a="abv3" data-p="p2" data-w="n" data-sp="3200" data-sa="47.0"><a class="fl" href="gin/masahiro-okinawa-3.html"><span class="fm"><span class="fn">まさひろオキナワジン RECIPE 03</span><span class="fw">まさひろ酒造<i>/</i>沖縄県</span></span><span class="fs"><span>47%</span><i>/</i>700ml</span><span class="fp">¥3,200（税込・公式希望小売）</span></a><p class="fo">沖縄産緑茶（メイン）、ジュニパー、シークヮーサー、コリアンダー（泡盛ベース）</p></li>
+<li class="fr" data-r="okinawa" data-b="sakura ginger juniper lemon" data-a="abv3" data-p="p2" data-w="other" data-sp="3960" data-sa="48.0"><a class="fl" href="gin/mizuho-origin1848-1.html"><span class="fm"><span class="fn">JAPANESE CRAFT GIN ORI-GiN 1848</span><b class="fb fb-other">受賞歴あり</b><span class="fw">瑞穂酒造<i>/</i>沖縄県</span></span><span class="fs"><span>48%</span><i>/</i>500ml</span><span class="fp">¥3,960（税込・公式）</span></a><p class="fo">沖縄産10種：ジュニパー、西表島産ピーチパイン、コリアンダー、レモングラス、月桃、ヒハツモドキ、シークヮーサー、生姜、紅茶、イェルバブエナ（さくら酵母仕込み泡盛ベース）</p></li>
+<li class="fr" data-r="okinawa" data-b="" data-a="abv2" data-p="p2" data-w="n" data-sp="4070" data-sa="45.0"><a class="fl" href="gin/mizuho-origin1848-3.html"><span class="fm"><span class="fn">ORI-GiN 1848 Honey Blend</span><span class="fw">瑞穂酒造<i>/</i>沖縄県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥4,070（税込・公式）</span></a><p class="fo">沖縄県産生はちみつ</p></li>
+<li class="fr" data-r="okinawa" data-b="haskap" data-a="abv2" data-p="p2" data-w="n" data-sp="4070" data-sa="45.0"><a class="fl" href="gin/mizuho-origin1848-2.html"><span class="fm"><span class="fn">ORI-GiN 1848 Strawberry</span><span class="fw">瑞穂酒造<i>/</i>沖縄県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥4,070（税込・公式）</span></a><p class="fo">苺強化</p></li>
+<li class="fr" data-r="okinawa" data-b="ginger juniper" data-a="abv2" data-p="p1" data-w="n" data-sp="2580" data-sa="45.0"><a class="fl" href="gin/ishikawa-shuzo-okinawa-2.html"><span class="fm"><span class="fn">ジンジャー クラフトジン</span><span class="fw">石川酒造場<i>/</i>沖縄県</span></span><span class="fs"><span>45%</span><i>/</i>500ml</span><span class="fp">¥2,580（税込・公式直営）</span></a><p class="fo">沖縄産新ショウガ（メイン）、ジュニパー、カーブチー果皮、クローブ、ピパーチ（泡盛ベース）</p></li>
+<li class="fr" data-r="okinawa" data-b="sansho ginger juniper lemon" data-a="abv4" data-p="p2" data-w="n" data-sp="3930" data-sa="57.0"><a class="fl" href="gin/ishikawa-shuzo-okinawa-1.html"><span class="fm"><span class="fn">ネイビーストレングス クラフトジン</span><span class="fw">石川酒造場<i>/</i>沖縄県</span></span><span class="fs"><span>57%</span><i>/</i>500ml</span><span class="fp">¥3,930（税込・公式直営）</span></a><p class="fo">ジュニパー、コリアンダーシード、カーブチーピール、タンカンピール、ピパーチ、カラキ、フェンネルシード、ジンジャー、山椒（9種・泡盛ベース）</p></li>
+    </ul>
+  </div>
+
+  <div id="fd-panel-distillery" role="tabpanel" aria-labelledby="fd-tab-distillery" hidden>
+    <ul class="fd-list">
+<li class="fr" data-r="hokkaido" data-b="juniper lemon yuzu" data-a="x" data-p="x" data-w="worlds_best" data-sp="4500" data-sa="0"><a class="fl" href="distillery/niseko-ohoro.html"><span class="fm"><span class="fn">ニセコ蒸溜所</span><b class="fb fb-wb">World's Best</b><span class="fw">北海道虻田郡ニセコ町</span></span><span class="fs">創業 2019年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="hokkaido" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="distillery/tankyu-distillery.html"><span class="fm"><span class="fn">丹丘蒸留所</span><span class="fw">北海道上川郡東川町</span></span><span class="fs">創業 2025年</span><span class="fp">0 銘柄</span></a></li>
+<li class="fr" data-r="hokkaido" data-b="juniper lemon shiso" data-a="x" data-p="x" data-w="gold" data-sp="3520" data-sa="0"><a class="fl" href="distillery/tantakatan.html"><span class="fm"><span class="fn">合同酒精 旭川工場</span><b class="fb fb-gold">金賞</b><span class="fw">北海道旭川市</span></span><span class="fs">創業 未確認</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="hokkaido" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="distillery/sapporo-shusei.html"><span class="fm"><span class="fn">札幌酒精工業</span><span class="fw">北海道札幌市</span></span><span class="fs">創業 1933年（昭和8年）</span><span class="fp">0 銘柄</span></a></li>
+<li class="fr" data-r="hokkaido" data-b="hinoki" data-a="x" data-p="x" data-w="n" data-sp="5940" data-sa="0"><a class="fl" href="distillery/shakotan-spirit.html"><span class="fm"><span class="fn">積丹スピリット</span><span class="fw">北海道積丹郡積丹町</span></span><span class="fs">創業 未確認</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="hokkaido" data-b="haskap juniper lemon sakura" data-a="x" data-p="x" data-w="n" data-sp="6380" data-sa="0"><a class="fl" href="distillery/benizakura.html"><span class="fm"><span class="fn">紅櫻蒸溜所</span><span class="fw">北海道札幌市南区</span></span><span class="fs">創業 2018年</span><span class="fp">4 銘柄</span></a></li>
+<li class="fr" data-r="hokkaido" data-b="hinoki lemon" data-a="x" data-p="x" data-w="gold" data-sp="2900" data-sa="0"><a class="fl" href="distillery/maoi-distillery.html"><span class="fm"><span class="fn">馬追蒸溜所</span><b class="fb fb-gold">金賞</b><span class="fw">北海道夕張郡長沼町</span></span><span class="fs">創業 2022年（社名変更／旧2006年ワイナリー設立）</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="hokkaido" data-b="haskap juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="5500" data-sa="0"><a class="fl" href="distillery/takasu-distillery.html"><span class="fm"><span class="fn">鷹栖蒸溜所</span><span class="fw">北海道上川郡鷹栖町</span></span><span class="fs">創業 未確認</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="tohoku" data-b="juniper kuromoji sansho" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="distillery/sekinoichi.html"><span class="fm"><span class="fn">世嬉の一酒造</span><span class="fw">岩手県一関市</span></span><span class="fs">創業 1918年（大正七年・ジン参入2020年）</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="tohoku" data-b="haskap juniper" data-a="x" data-p="x" data-w="n" data-sp="2068" data-sa="0"><a class="fl" href="distillery/nanbubijin.html"><span class="fm"><span class="fn">南部美人</span><span class="fw">岩手県二戸市</span></span><span class="fs">創業 1902年（明治35年）</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="tohoku" data-b="gyokuro haskap juniper yuzu" data-a="x" data-p="x" data-w="gold" data-sp="4389" data-sa="0"><a class="fl" href="distillery/miyagi-craft-gin.html"><span class="fm"><span class="fn">Miyagi Craft Gin</span><b class="fb fb-gold">金賞</b><span class="fw">宮城県大崎市</span></span><span class="fs">創業 2020年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="tohoku" data-b="juniper lemon sansho yuzu" data-a="x" data-p="x" data-w="gold" data-sp="4345" data-sa="0"><a class="fl" href="distillery/nikka-miyagikyo.html"><span class="fm"><span class="fn">ニッカ宮城峡蒸溜所</span><b class="fb fb-gold">金賞</b><span class="fw">宮城県仙台市青葉区</span></span><span class="fs">創業 2017年(ジン)</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="tohoku" data-b="hinoki juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="4400" data-sa="0"><a class="fl" href="distillery/yamamoto-shuzo.html"><span class="fm"><span class="fn">山本酒造店</span><span class="fw">秋田県山本郡八峰町</span></span><span class="fs">創業 ジン事業開始2020年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="tohoku" data-b="hinoki juniper lemon" data-a="x" data-p="x" data-w="gold" data-sp="1249" data-sa="0"><a class="fl" href="distillery/akita-hakko.html"><span class="fm"><span class="fn">秋田県醗酵工業</span><b class="fb fb-gold">金賞</b><span class="fw">秋田県湯沢市</span></span><span class="fs">創業 未確認</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="tohoku" data-b="juniper kuromoji yuzu" data-a="x" data-p="x" data-w="other" data-sp="4980" data-sa="0"><a class="fl" href="distillery/naturadistill.html"><span class="fm"><span class="fn">naturadistill</span><b class="fb fb-other">受賞歴あり</b><span class="fw">福島県双葉郡川内村</span></span><span class="fs">創業 2024年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="tohoku" data-b="juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="1180" data-sa="0"><a class="fl" href="distillery/shirakawa-meijo.html"><span class="fm"><span class="fn">白河銘醸</span><span class="fw">福島県西白河郡西郷村</span></span><span class="fs">創業 2019年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="gyokuro hinoki sakura sansho yuzu" data-a="x" data-p="x" data-w="n" data-sp="3850" data-sa="0"><a class="fl" href="distillery/kiuchi-yasato.html"><span class="fm"><span class="fn">八郷蒸溜所(木内酒造)</span><span class="fw">茨城県石岡市</span></span><span class="fs">創業 2020年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="juniper lemon" data-a="x" data-p="x" data-w="other" data-sp="3850" data-sa="0"><a class="fl" href="distillery/meiri-shurui.html"><span class="fm"><span class="fn">明利酒類</span><b class="fb fb-other">受賞歴あり</b><span class="fw">茨城県水戸市</span></span><span class="fs">創業 2017年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="distillery/nishibori-shuzo.html"><span class="fm"><span class="fn">小山蒸溜所(西堀酒造)</span><span class="fw">栃木県小山市</span></span><span class="fs">創業 2022年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="ginger juniper yuzu" data-a="x" data-p="x" data-w="n" data-sp="1500" data-sa="0"><a class="fl" href="distillery/miho-shurui.html"><span class="fm"><span class="fn">美峰酒類</span><span class="fw">群馬県高崎市</span></span><span class="fs">創業 1941年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="ginger juniper sansho" data-a="x" data-p="x" data-w="gold" data-sp="2050" data-sa="0"><a class="fl" href="distillery/musashino-distillery.html"><span class="fm"><span class="fn">武蔵野蒸留所</span><b class="fb fb-gold">金賞</b><span class="fw">埼玉県川越市</span></span><span class="fs">創業 2020年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="gyokuro haskap kuromoji lemon sansho shiso" data-a="x" data-p="x" data-w="n" data-sp="1980" data-sa="0"><a class="fl" href="distillery/tateyama-brewing.html"><span class="fm"><span class="fn">TATEYAMA BREWING</span><span class="fw">千葉県館山市</span></span><span class="fs">創業 2021年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="ginger gyokuro haskap hinoki juniper lemon yuzu" data-a="x" data-p="x" data-w="n" data-sp="5950" data-sa="0"><a class="fl" href="distillery/blue-rabbit.html"><span class="fm"><span class="fn">Blue Rabbit Distillery</span><span class="fw">東京都大田区田園調布</span></span><span class="fs">創業 未確認</span><span class="fp">5 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="sansho yuzu" data-a="x" data-p="x" data-w="n" data-sp="6650" data-sa="0"><a class="fl" href="distillery/tokyo-craft-liqueur.html"><span class="fm"><span class="fn">東京クラフトリキュール</span><span class="fw">東京都板橋区</span></span><span class="fs">創業 2018年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="yuzu" data-a="x" data-p="x" data-w="gold" data-sp="1650" data-sa="0"><a class="fl" href="distillery/ethical-spirits.html"><span class="fm"><span class="fn">東京リバーサイド蒸溜所</span><b class="fb fb-gold">金賞</b><span class="fw">東京都台東区</span></span><span class="fs">創業 2021年</span><span class="fp">4 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="lemon" data-a="x" data-p="x" data-w="n" data-sp="3960" data-sa="0"><a class="fl" href="distillery/hachioji-distillery.html"><span class="fm"><span class="fn">東京八王子蒸溜所</span><span class="fw">東京都八王子市</span></span><span class="fs">創業 2021年</span><span class="fp">4 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="gyokuro sakura sansho yuzu" data-a="x" data-p="x" data-w="n" data-sp="3850" data-sa="0"><a class="fl" href="distillery/kiuchi-akihabara.html"><span class="fm"><span class="fn">東京蒸溜所(木内酒造)</span><span class="fw">東京都千代田区</span></span><span class="fs">創業 2019年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="ginger juniper shiso" data-a="x" data-p="x" data-w="n" data-sp="5200" data-sa="0"><a class="fl" href="distillery/fukagawa-distillery.html"><span class="fm"><span class="fn">深川蒸留所</span><span class="fw">東京都江東区</span></span><span class="fs">創業 2023年</span><span class="fp">4 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="haskap hinoki juniper sakura" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="distillery/haneda-brewery.html"><span class="fm"><span class="fn">羽田ブルワリー</span><span class="fw">東京都大田区多摩川</span></span><span class="fs">創業 2020年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="hinoki juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="5940" data-sa="0"><a class="fl" href="distillery/toranomon-distillery.html"><span class="fm"><span class="fn">虎ノ門蒸留所</span><span class="fw">東京都港区</span></span><span class="fs">創業 2020年</span><span class="fp">8 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="juniper lemon" data-a="x" data-p="x" data-w="other" data-sp="5000" data-sa="0"><a class="fl" href="distillery/number-eight.html"><span class="fm"><span class="fn">NUMBER EIGHT DISTILLERY</span><b class="fb fb-other">受賞歴あり</b><span class="fw">神奈川県横浜市中区</span></span><span class="fs">創業 2019年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="haskap sakura" data-a="x" data-p="x" data-w="other" data-sp="3200" data-sa="0"><a class="fl" href="distillery/yokohama-bay-distillery.html"><span class="fm"><span class="fn">横浜ジン蒸溜所</span><b class="fb fb-other">受賞歴あり</b><span class="fw">神奈川県横浜市中区</span></span><span class="fs">創業 2021年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="haskap juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="4950" data-sa="0"><a class="fl" href="distillery/kumazawa-shuzo.html"><span class="fm"><span class="fn">熊澤酒造</span><span class="fw">神奈川県茅ヶ崎市</span></span><span class="fs">創業 1872年（明治5年・ジン参入2021年）</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kanto" data-b="gyokuro hinoki juniper lemon sakura sansho" data-a="x" data-p="x" data-w="other" data-sp="1800" data-sa="0"><a class="fl" href="distillery/koganei-shuzo.html"><span class="fm"><span class="fn">黄金井酒造</span><b class="fb fb-other">受賞歴あり</b><span class="fw">神奈川県厚木市</span></span><span class="fs">創業 2018年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="ginger gyokuro hinoki juniper lemon yuzu" data-a="x" data-p="x" data-w="gold" data-sp="4620" data-sa="0"><a class="fl" href="distillery/echigo-yakuso.html"><span class="fm"><span class="fn">越後薬草蒸留所</span><b class="fb fb-gold">金賞</b><span class="fw">新潟県上越市</span></span><span class="fs">創業 2022年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="juniper kuromoji lemon" data-a="x" data-p="x" data-w="gold" data-sp="4000" data-sa="0"><a class="fl" href="distillery/alembic-kanazawa.html"><span class="fm"><span class="fn">Alembic Distillery</span><b class="fb fb-gold">金賞</b><span class="fw">石川県金沢市大野町</span></span><span class="fs">創業 2019年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="juniper kuromoji sansho yuzu" data-a="x" data-p="x" data-w="n" data-sp="3300" data-sa="0"><a class="fl" href="distillery/oriental-kanazawa.html"><span class="fm"><span class="fn">オリエンタル金沢蒸溜所</span><span class="fw">石川県金沢市東町</span></span><span class="fs">創業 2016年（蒸留酒事業開始2022年12月）</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="juniper kuromoji sansho" data-a="x" data-p="x" data-w="n" data-sp="6000" data-sa="0"><a class="fl" href="distillery/fuyou-shuzo.html"><span class="fm"><span class="fn">芙蓉酒造</span><span class="fw">長野県佐久市</span></span><span class="fs">創業 1887年（YOHAKHU=2020年発売）</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="hinoki kuromoji lemon sakura sansho shiso" data-a="x" data-p="x" data-w="gold" data-sp="4850" data-sa="0"><a class="fl" href="distillery/nozawa-onsen.html"><span class="fm"><span class="fn">野沢温泉蒸留所</span><b class="fb fb-gold">金賞</b><span class="fw">長野県下高井郡野沢温泉村</span></span><span class="fs">創業 2022年</span><span class="fp">6 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="ginger gyokuro haskap hinoki juniper kuromoji lemon sansho" data-a="x" data-p="x" data-w="gold" data-sp="5192" data-sa="0"><a class="fl" href="distillery/yomeishu-kanomori.html"><span class="fm"><span class="fn">養命酒製造 駒ヶ根工場</span><b class="fb fb-gold">金賞</b><span class="fw">長野県駒ヶ根市</span></span><span class="fs">創業 1923年(会社)</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="hinoki juniper sansho" data-a="x" data-p="x" data-w="n" data-sp="3300" data-sa="0"><a class="fl" href="distillery/kurosawa-shuzo.html"><span class="fm"><span class="fn">黒澤酒造</span><span class="fw">長野県南佐久郡佐久穂町</span></span><span class="fs">創業 未確認</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="haskap juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="3850" data-sa="0"><a class="fl" href="distillery/nakatsugawa.html"><span class="fm"><span class="fn">中津川蒸留所</span><span class="fw">岐阜県中津川市</span></span><span class="fs">創業 2021年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="" data-a="x" data-p="x" data-w="n" data-sp="6000" data-sa="0"><a class="fl" href="distillery/tatsumi.html"><span class="fm"><span class="fn">辰巳蒸留所(アルケミエ)</span><span class="fw">岐阜県郡上市</span></span><span class="fs">創業 2017年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="distillery/agct.html"><span class="fm"><span class="fn">AGCT</span><span class="fw">静岡県静岡市駿河区</span></span><span class="fs">創業 2022年11月</span><span class="fp">0 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="ginger gyokuro juniper kuromoji lemon sakura sansho yuzu" data-a="x" data-p="x" data-w="other" data-sp="4500" data-sa="0"><a class="fl" href="distillery/numazu-distillery.html"><span class="fm"><span class="fn">沼津蒸留所</span><b class="fb fb-other">受賞歴あり</b><span class="fw">静岡県沼津市</span></span><span class="fs">創業 2020年</span><span class="fp">4 銘柄</span></a></li>
+<li class="fr" data-r="chubu" data-b="ginger gyokuro juniper lemon sansho" data-a="x" data-p="x" data-w="gold" data-sp="0" data-sa="0"><a class="fl" href="distillery/kiyosu-sakura.html"><span class="fm"><span class="fn">清洲桜醸造</span><b class="fb fb-gold">金賞</b><span class="fw">愛知県清須市</span></span><span class="fs">創業 2019年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="ginger gyokuro juniper yuzu" data-a="x" data-p="x" data-w="n" data-sp="4600" data-sa="0"><a class="fl" href="distillery/iseman.html"><span class="fm"><span class="fn">伊勢萬</span><span class="fw">三重県伊勢市</span></span><span class="fs">創業 未確認</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="ginger juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="3980" data-sa="0"><a class="fl" href="distillery/sicx-kyoto.html"><span class="fm"><span class="fn">SiCX京都東山蒸溜所</span><span class="fw">京都府京都市東山区</span></span><span class="fs">創業 2022年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="juniper kuromoji" data-a="x" data-p="x" data-w="other" data-sp="2310" data-sa="0"><a class="fl" href="distillery/kyotango-mairingen.html"><span class="fm"><span class="fn">京丹後舞輪源蒸留所</span><b class="fb fb-other">受賞歴あり</b><span class="fw">京都府京丹後市弥栄町</span></span><span class="fs">創業 未確認</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="gyokuro" data-a="x" data-p="x" data-w="n" data-sp="1980" data-sa="0"><a class="fl" href="distillery/kyoto-miyako.html"><span class="fm"><span class="fn">京都みやこ蒸溜所</span><span class="fw">京都府船井郡京丹波町</span></span><span class="fs">創業 未確認</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="ginger gyokuro hinoki juniper lemon sansho shiso yuzu" data-a="x" data-p="x" data-w="gold" data-sp="4500" data-sa="0"><a class="fl" href="distillery/kyoto-kinobi.html"><span class="fm"><span class="fn">京都蒸溜所</span><b class="fb fb-gold">金賞</b><span class="fw">京都府京都市</span></span><span class="fs">創業 2014年(2016ジン発売)</span><span class="fp">5 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="ginger juniper lemon sansho yuzu" data-a="x" data-p="x" data-w="gold" data-sp="5500" data-sa="0"><a class="fl" href="distillery/mori-kyoto.html"><span class="fm"><span class="fn">森の京都蒸溜所</span><b class="fb fb-gold">金賞</b><span class="fw">京都府福知山市</span></span><span class="fs">創業 未確認</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="ginger gyokuro sakura sansho yuzu" data-a="x" data-p="x" data-w="gold" data-sp="0" data-sa="0"><a class="fl" href="distillery/suntory-osaka.html"><span class="fm"><span class="fn">サントリー大阪工場</span><b class="fb fb-gold">金賞</b><span class="fw">大阪府大阪市港区</span></span><span class="fs">創業 1919年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="gyokuro sansho shiso yuzu" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="distillery/kaikyo-distillery.html"><span class="fm"><span class="fn">海峡蒸溜所</span><span class="fw">兵庫県明石市</span></span><span class="fs">創業 2017年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="gyokuro juniper sansho shiso yuzu" data-a="x" data-p="x" data-w="n" data-sp="3850" data-sa="0"><a class="fl" href="distillery/kobe-distillery.html"><span class="fm"><span class="fn">神戸蒸溜所</span><span class="fw">兵庫県神戸市北区</span></span><span class="fs">創業 2022年</span><span class="fp">4 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="haskap hinoki juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="5500" data-sa="0"><a class="fl" href="distillery/yamato-yucho.html"><span class="fm"><span class="fn">大和蒸溜所(油長酒造)</span><span class="fw">奈良県御所市</span></span><span class="fs">創業 2017年</span><span class="fp">5 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="hinoki juniper lemon sansho yuzu" data-a="x" data-p="x" data-w="gold" data-sp="2970" data-sa="0"><a class="fl" href="distillery/fujishiro.html"><span class="fm"><span class="fn">富士白蒸留所(中野BC)</span><b class="fb fb-gold">金賞</b><span class="fw">和歌山県海南市</span></span><span class="fs">創業 2017年</span><span class="fp">4 銘柄</span></a></li>
+<li class="fr" data-r="kansai" data-b="ginger hinoki juniper sansho yuzu" data-a="x" data-p="x" data-w="n" data-sp="5500" data-sa="0"><a class="fl" href="distillery/kishu-kumano.html"><span class="fm"><span class="fn">紀州熊野蒸溜所</span><span class="fw">和歌山県西牟婁郡</span></span><span class="fs">創業 2019年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="chugoku" data-b="juniper kuromoji lemon yuzu" data-a="x" data-p="x" data-w="other" data-sp="770" data-sa="0"><a class="fl" href="distillery/chiyomusubi.html"><span class="fm"><span class="fn">千代むすび酒造</span><b class="fb fb-other">受賞歴あり</b><span class="fw">鳥取県境港市</span></span><span class="fs">創業 2019年(ジン)</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="chugoku" data-b="gyokuro juniper lemon sakura sansho yuzu" data-a="x" data-p="x" data-w="worlds_best" data-sp="1496" data-sa="0"><a class="fl" href="distillery/matsui-hakuto.html"><span class="fm"><span class="fn">松井酒造</span><b class="fb fb-wb">World's Best</b><span class="fw">鳥取県倉吉市</span></span><span class="fs">創業 1910年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="chugoku" data-b="ginger juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="2200" data-sa="0"><a class="fl" href="distillery/miyashita-okayama.html"><span class="fm"><span class="fn">岡山蒸溜所(宮下酒造)</span><span class="fw">岡山県岡山市中区</span></span><span class="fs">創業 2016年(ジン)</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="chugoku" data-b="gyokuro juniper lemon" data-a="x" data-p="x" data-w="gold" data-sp="990" data-sa="0"><a class="fl" href="distillery/setouchi-distillery.html"><span class="fm"><span class="fn">SETOUCHI DISTILLERY</span><b class="fb fb-gold">金賞</b><span class="fw">広島県呉市</span></span><span class="fs">創業 2020年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="chugoku" data-b="ginger gyokuro haskap hinoki juniper kuromoji lemon sakura shiso yuzu" data-a="x" data-p="x" data-w="gold" data-sp="2200" data-sa="0"><a class="fl" href="distillery/sakurao.html"><span class="fm"><span class="fn">サクラオB&amp;D</span><b class="fb fb-gold">金賞</b><span class="fw">広島県廿日市市</span></span><span class="fs">創業 1918年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="chugoku" data-b="lemon" data-a="x" data-p="x" data-w="other" data-sp="7000" data-sa="0"><a class="fl" href="distillery/neo-blue.html"><span class="fm"><span class="fn">Neo Blue Distillery</span><b class="fb fb-other">受賞歴あり</b><span class="fw">山口県長門市油谷</span></span><span class="fs">創業 2020年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="shikoku" data-b="haskap juniper sansho yuzu" data-a="x" data-p="x" data-w="gold" data-sp="5500" data-sa="0"><a class="fl" href="distillery/nissin-shurui.html"><span class="fm"><span class="fn">日新酒類</span><b class="fb fb-gold">金賞</b><span class="fw">徳島県板野郡上板町</span></span><span class="fs">創業 2017年(ジン)</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="shikoku" data-b="ginger juniper lemon sansho yuzu" data-a="x" data-p="x" data-w="n" data-sp="3850" data-sa="0"><a class="fl" href="distillery/nishino-kinryo.html"><span class="fm"><span class="fn">西野金陵</span><span class="fw">香川県仲多度郡琴平町</span></span><span class="fs">創業 未確認</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="shikoku" data-b="haskap juniper" data-a="x" data-p="x" data-w="gold" data-sp="2000" data-sa="0"><a class="fl" href="distillery/minakuchi-shuzo.html"><span class="fm"><span class="fn">水口酒造</span><b class="fb fb-gold">金賞</b><span class="fw">愛媛県松山市道後</span></span><span class="fs">創業 1895年（明治28年）</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="shikoku" data-b="ginger juniper lemon sakura" data-a="x" data-p="x" data-w="other" data-sp="3700" data-sa="0"><a class="fl" href="distillery/tsukasabotan.html"><span class="fm"><span class="fn">司牡丹酒造</span><b class="fb fb-other">受賞歴あり</b><span class="fw">高知県高岡郡佐川町</span></span><span class="fs">創業 1603年（400年超・ジン2018年）</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro haskap juniper lemon sansho yuzu" data-a="x" data-p="x" data-w="gold" data-sp="3500" data-sa="0"><a class="fl" href="distillery/kitaya.html"><span class="fm"><span class="fn">喜多屋</span><b class="fb fb-gold">金賞</b><span class="fw">福岡県八女市</span></span><span class="fs">創業 2020年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro juniper lemon sakura yuzu" data-a="x" data-p="x" data-w="n" data-sp="3205" data-sa="0"><a class="fl" href="distillery/shinozaki-asakura.html"><span class="fm"><span class="fn">朝倉蒸溜所(篠崎)</span><span class="fw">福岡県朝倉市</span></span><span class="fs">創業 2020年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro hinoki juniper lemon" data-a="x" data-p="x" data-w="other" data-sp="1800" data-sa="0"><a class="fl" href="distillery/akatorii.html"><span class="fm"><span class="fn">光武酒造場</span><b class="fb fb-other">受賞歴あり</b><span class="fw">佐賀県鹿島市</span></span><span class="fs">創業 1688年（元禄元年・ジン2020年）</span><span class="fp">4 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="distillery/munemasa-chajin.html"><span class="fm"><span class="fn">宗政酒造</span><span class="fw">佐賀県西松浦郡有田町</span></span><span class="fs">創業 1985年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="lemon" data-a="x" data-p="x" data-w="n" data-sp="2500" data-sa="0"><a class="fl" href="distillery/stilldam.html"><span class="fm"><span class="fn">楠乃花蒸溜所</span><span class="fw">佐賀県佐賀市諸富町</span></span><span class="fs">創業 2020年</span><span class="fp">4 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="haskap juniper sansho yuzu" data-a="x" data-p="x" data-w="n" data-sp="7150" data-sa="0"><a class="fl" href="distillery/gotogin.html"><span class="fm"><span class="fn">五島つばき蒸溜所</span><span class="fw">長崎県五島市</span></span><span class="fs">創業 2022年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="juniper" data-a="x" data-p="x" data-w="n" data-sp="2970" data-sa="0"><a class="fl" href="distillery/kinokawa-dennoshin.html"><span class="fm"><span class="fn">杵の川</span><span class="fw">長崎県諫早市</span></span><span class="fs">創業 2019年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="" data-a="x" data-p="x" data-w="gold" data-sp="3000" data-sa="0"><a class="fl" href="distillery/umegae.html"><span class="fm"><span class="fn">梅ヶ枝酒造</span><b class="fb fb-gold">金賞</b><span class="fw">長崎県佐世保市</span></span><span class="fs">創業 2019年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="haskap juniper yuzu" data-a="x" data-p="x" data-w="n" data-sp="3377" data-sa="0"><a class="fl" href="distillery/omoya-iki.html"><span class="fm"><span class="fn">重家酒造</span><span class="fw">長崎県壱岐市</span></span><span class="fs">創業 2021年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="juniper lemon yuzu" data-a="x" data-p="x" data-w="n" data-sp="5500" data-sa="0"><a class="fl" href="distillery/takata-jinjingin.html"><span class="fm"><span class="fn">高田酒造場</span><span class="fw">熊本県球磨郡あさぎり町</span></span><span class="fs">創業 2018年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro lemon" data-a="x" data-p="x" data-w="n" data-sp="6600" data-sa="0"><a class="fl" href="distillery/gno-hinata.html"><span class="fm"><span class="fn">G.N.O Inc.</span><span class="fw">宮崎県宮崎市橘通東3丁目</span></span><span class="fs">創業 2019年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="ginger juniper lemon sansho yuzu" data-a="x" data-p="x" data-w="gold" data-sp="4125" data-sa="0"><a class="fl" href="distillery/kyoya-yuzu.html"><span class="fm"><span class="fn">京屋酒造</span><b class="fb fb-gold">金賞</b><span class="fw">宮崎県日南市</span></span><span class="fs">創業 2017年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="ginger juniper lemon sansho" data-a="x" data-p="x" data-w="n" data-sp="4050" data-sa="0"><a class="fl" href="distillery/osuzu-yama.html"><span class="fm"><span class="fn">尾鈴山蒸留所</span><span class="fw">宮崎県児湯郡木城町</span></span><span class="fs">創業 2020年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="hinoki lemon sakura" data-a="x" data-p="x" data-w="other" data-sp="990" data-sa="0"><a class="fl" href="distillery/ginnez.html"><span class="fm"><span class="fn">櫻の郷酒造</span><b class="fb fb-other">受賞歴あり</b><span class="fw">宮崎県日南市北郷町</span></span><span class="fs">創業 2020年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="ginger gyokuro hinoki juniper lemon shiso yuzu" data-a="x" data-p="x" data-w="gold" data-sp="3850" data-sa="0"><a class="fl" href="distillery/hombo-tsunuki.html"><span class="fm"><span class="fn">マルス津貫蒸溜所(本坊酒造)</span><b class="fb fb-gold">金賞</b><span class="fw">鹿児島県南さつま市</span></span><span class="fs">創業 2017年(ジン)</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro haskap juniper" data-a="x" data-p="x" data-w="other" data-sp="5280" data-sa="0"><a class="fl" href="distillery/satasouji-akayane.html"><span class="fm"><span class="fn">佐多宗二商店</span><b class="fb fb-other">受賞歴あり</b><span class="fw">鹿児島県南九州市頴娃町</span></span><span class="fs">創業 2017年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="sakura yuzu" data-a="x" data-p="x" data-w="other" data-sp="4290" data-sa="0"><a class="fl" href="distillery/jin7-miyagahama.html"><span class="fm"><span class="fn">宮ヶ浜蒸溜所(大山甚七商店)</span><b class="fb fb-other">受賞歴あり</b><span class="fw">鹿児島県指宿市</span></span><span class="fs">創業 2019年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="gyokuro haskap hinoki juniper sakura" data-a="x" data-p="x" data-w="gold" data-sp="3850" data-sa="0"><a class="fl" href="distillery/komasa-gin.html"><span class="fm"><span class="fn">小正醸造</span><b class="fb fb-gold">金賞</b><span class="fw">鹿児島県日置市日吉町</span></span><span class="fs">創業 2018年</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="juniper yuzu" data-a="x" data-p="x" data-w="other" data-sp="3630" data-sa="0"><a class="fl" href="distillery/yamamoto-garappa.html"><span class="fm"><span class="fn">山元酒造</span><b class="fb fb-other">受賞歴あり</b><span class="fw">鹿児島県薩摩川内市</span></span><span class="fs">創業 2020年</span><span class="fp">1 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="juniper lemon yuzu" data-a="x" data-p="x" data-w="gold" data-sp="418" data-sa="0"><a class="fl" href="distillery/hamada-juju.html"><span class="fm"><span class="fn">濵田酒造</span><b class="fb fb-gold">金賞</b><span class="fw">鹿児島県いちき串木野市</span></span><span class="fs">創業 2018年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="kyushu" data-b="haskap juniper" data-a="x" data-p="x" data-w="other" data-sp="2970" data-sa="0"><a class="fl" href="distillery/wakashio-424.html"><span class="fm"><span class="fn">若潮酒造</span><b class="fb fb-other">受賞歴あり</b><span class="fw">鹿児島県志布志市</span></span><span class="fs">創業 2019年</span><span class="fp">2 銘柄</span></a></li>
+<li class="fr" data-r="okinawa" data-b="gyokuro juniper lemon" data-a="x" data-p="x" data-w="n" data-sp="3200" data-sa="0"><a class="fl" href="distillery/masahiro-okinawa.html"><span class="fm"><span class="fn">まさひろ酒造</span><span class="fw">沖縄県糸満市</span></span><span class="fs">創業 2017年(ジン)</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="okinawa" data-b="ginger haskap juniper lemon sakura" data-a="x" data-p="x" data-w="other" data-sp="3960" data-sa="0"><a class="fl" href="distillery/mizuho-origin1848.html"><span class="fm"><span class="fn">瑞穂酒造</span><b class="fb fb-other">受賞歴あり</b><span class="fw">沖縄県那覇市首里</span></span><span class="fs">創業 2018年(ジン)</span><span class="fp">3 銘柄</span></a></li>
+<li class="fr" data-r="okinawa" data-b="ginger juniper lemon sansho" data-a="x" data-p="x" data-w="n" data-sp="2580" data-sa="0"><a class="fl" href="distillery/ishikawa-shuzo-okinawa.html"><span class="fm"><span class="fn">石川酒造場</span><span class="fw">沖縄県中頭郡西原町</span></span><span class="fs">創業 2019年(ジン)</span><span class="fp">2 銘柄</span></a></li>
+    </ul>
+  </div>
+
+  <div class="fd-empty" id="fd-empty">
+    <b>条件に合う銘柄が見つかりませんでした</b>
+    条件を減らすか、<button type="button" class="fd-reset" style="display:inline"
+      onclick="document.getElementById('fd-reset').click()">条件をリセット</button>してください。
+  </div>
+
+  <p class="fd-note">
+    価格は各蒸溜所の公式サイト・公式オンラインストアで確認した掲載時点の参考価格です（税込／税別の別は各銘柄ページに明記）。
+    実売価格は販売店により異なります。公式が価格を公開していない銘柄は「未確認」と表示しています。推測値は載せていません。<br>
+    アルコール度数・容量・ボタニカルも同様に公式表記に基づきます。<br>
+    <strong>「World&#39;s Best」は World Gin Awards の<u>部門別</u>の世界最高賞</strong>で、全部門を通じた単一の最高賞ではありません。どの部門での受賞かは各銘柄ページと<a href="awards.html">受賞ジンの年表</a>に明記しています。「金賞」は Gold / Double Gold / Trophy をまとめた表示です。<br>
+    誤りを見つけた場合は<a href="about.html">運営者情報</a>からご連絡ください。
+  </p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__cols">
+      <div>
+        <h4>Gin-DB</h4>
+        <p style="font-size:12px;line-height:1.7;">日本のクラフトジン蒸溜所と銘柄を、香り・受賞歴・地域から横断検索できる無料データベース。掲載データは各蒸溜所の公式情報で確認しています。</p>
+      </div>
+      <div>
+        <h4>探す</h4>
+        <ul>
+          <li><a href="find.html">クラフトジン一覧・検索</a></li>
+          <li><a href="botanical.html">ボタニカル逆引き</a></li>
+          <li><a href="awards.html">受賞ジン</a></li>
+          <li><a href="furusato.html">ふるさと納税</a></li>
+          <li><a href="guide/index.html">ガイド・コラム</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>サイト情報</h4>
+        <ul>
+          <li><a href="about.html">運営者情報</a></li>
+          <li><a href="privacy.html">プライバシーポリシー</a></li>
+          <li><a href="disclaimer.html">免責事項・広告表記</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>お知らせ</h4>
+        <p class="site-footer__notice">20歳未満の飲酒は法律で禁止されています。</p>
+        <p class="site-footer__legal">飲酒は20歳になってから。お酒は楽しく適量で。妊娠中・授乳期の飲酒はやめましょう。</p>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      © 2026 Gin-DB ／ 当サイトは楽天市場・Amazon等のアフィリエイトプログラムを利用しています（PR）
+      <div style="margin-top:6px;font-size:11px;">Amazonのアソシエイトとして、Gin-DBは適格販売により収入を得ています。</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.getElementById('main');
+  if(!root) return;
+  var q       = document.getElementById('fd-q');
+  var clearBt = document.getElementById('fd-clear');
+  var filters = document.getElementById('fd-filters');
+  var toggle  = document.getElementById('fd-ftoggle');
+  var countEl = document.getElementById('fd-count');
+  var emptyEl = document.getElementById('fd-empty');
+  var resetBt = document.getElementById('fd-reset');
+  var sortSel = document.getElementById('fd-sort');
+  var tabs    = Array.prototype.slice.call(document.querySelectorAll('.fd-tab'));
+  var panels  = { brand: document.getElementById('fd-panel-brand'),
+                  distillery: document.getElementById('fd-panel-distillery') };
+  var mode = 'brand';
+  var active = { bots:[], region:[], abv:[], price:[], award:[] };
+
+  function chips(){ return Array.prototype.slice.call(filters.querySelectorAll('.fd-chip')); }
+
+  function rowsOf(m){ return Array.prototype.slice.call(panels[m].querySelectorAll('.fr')); }
+
+  // 検索対象テキストは行の表示テキストから1度だけ作る（HTMLに複製しない）
+  function indexRows(m){
+    rowsOf(m).forEach(function(r,i){
+      r.dataset.i = i;
+      r._hay = (r.textContent || '').toLowerCase().replace(/\s+/g,' ');
+    });
+  }
+
+  function matches(row, needle){
+    if(needle && row._hay.indexOf(needle) === -1) return false;
+    if(active.region.length && active.region.indexOf(row.getAttribute('data-r')) === -1) return false;
+    if(active.bots.length){
+      var b = (row.getAttribute('data-b')||'').split(' ');
+      for(var i=0;i<active.bots.length;i++){ if(b.indexOf(active.bots[i]) === -1) return false; }
+    }
+    if(mode === 'brand'){
+      if(active.abv.length && active.abv.indexOf(row.getAttribute('data-a')) === -1) return false;
+      if(active.price.length && active.price.indexOf(row.getAttribute('data-p')) === -1) return false;
+    }
+    if(active.award.length){
+      var a = row.getAttribute('data-w');
+      var ok = false;
+      for(var j=0;j<active.award.length;j++){
+        if(active.award[j] === 'any'){ if(a !== 'n') ok = true; }
+        else if(active.award[j] === a) ok = true;
+      }
+      if(!ok) return false;
+    }
+    return true;
+  }
+
+  function apply(){
+    var needle = (q.value||'').trim().toLowerCase();
+    var rows = rowsOf(mode), n = 0;
+    for(var i=0;i<rows.length;i++){
+      var ok = matches(rows[i], needle);
+      rows[i].classList.toggle('is-hidden', !ok);
+      if(ok) n++;
+    }
+    countEl.innerHTML = '<b>' + n + '</b> 件';
+    emptyEl.classList.toggle('is-shown', n === 0);
+    clearBt.style.display = needle ? '' : 'none';
+    var any = needle || active.bots.length || active.region.length || active.abv.length
+              || active.price.length || active.award.length;
+    resetBt.style.display = any ? '' : 'none';
+    writeHash();
+  }
+
+  function sortRows(){
+    var key = sortSel.value;
+    var list = panels[mode].querySelector('.fd-list');
+    var rows = rowsOf(mode);
+    rows.sort(function(a,b){
+      if(key === 'default') return (+a.dataset.i) - (+b.dataset.i);
+      if(key === 'price-asc' || key === 'price-desc'){
+        var pa = +a.getAttribute('data-sp'), pb = +b.getAttribute('data-sp');
+        if(!pa && !pb) return (+a.dataset.i) - (+b.dataset.i);
+        if(!pa) return 1;            // 価格未確認は常に末尾
+        if(!pb) return -1;
+        return key === 'price-asc' ? pa - pb : pb - pa;
+      }
+      if(key === 'abv-desc'){
+        var aa = +a.getAttribute('data-sa'), ab = +b.getAttribute('data-sa');
+        if(!aa && !ab) return (+a.dataset.i) - (+b.dataset.i);
+        if(!aa) return 1;
+        if(!ab) return -1;
+        return ab - aa;
+      }
+      return 0;
+    });
+    var frag = document.createDocumentFragment();
+    rows.forEach(function(r){ frag.appendChild(r); });
+    list.appendChild(frag);
+  }
+
+  function syncChipVisibility(){
+    filters.querySelectorAll('.fd-fgroup--brandonly').forEach(function(g){
+      g.style.display = (mode === 'brand') ? '' : 'none';
+    });
+  }
+
+  function setMode(m){
+    mode = m;
+    tabs.forEach(function(t){
+      var on = t.getAttribute('data-mode') === m;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.setAttribute('tabindex', on ? '0' : '-1');
+    });
+    panels.brand.hidden = (m !== 'brand');
+    panels.distillery.hidden = (m !== 'distillery');
+    q.setAttribute('placeholder', m === 'brand'
+      ? '銘柄名・蒸溜所名・県名・ボタニカルで検索'
+      : '蒸溜所名・県名・市町村名で検索');
+    syncChipVisibility();
+    sortRows();
+    apply();
+  }
+
+  chips().forEach(function(c){
+    c.addEventListener('click', function(){
+      var g = c.getAttribute('data-g'), v = c.getAttribute('data-v');
+      var arr = active[g], i = arr.indexOf(v);
+      if(i === -1){
+        // 受賞歴は単一選択（「受賞歴あり」と「金賞」を同時に押すと意味が壊れるため）
+        if(g === 'award'){ arr.length = 0; chips().forEach(function(o){
+          if(o.getAttribute('data-g')==='award') o.setAttribute('aria-pressed','false'); }); }
+        arr.push(v); c.setAttribute('aria-pressed','true');
+      } else {
+        arr.splice(i,1); c.setAttribute('aria-pressed','false');
+      }
+      apply();
+    });
+  });
+
+  tabs.forEach(function(t){
+    t.addEventListener('click', function(){ setMode(t.getAttribute('data-mode')); });
+    t.addEventListener('keydown', function(e){
+      if(e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      var i = tabs.indexOf(t), n = (e.key === 'ArrowRight') ? (i+1)%tabs.length : (i-1+tabs.length)%tabs.length;
+      tabs[n].focus(); setMode(tabs[n].getAttribute('data-mode'));
+    });
+  });
+
+  var timer;
+  q.addEventListener('input', function(){ clearTimeout(timer); timer = setTimeout(apply, 110); });
+  q.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ q.value=''; apply(); } });
+  clearBt.addEventListener('click', function(){ q.value=''; q.focus(); apply(); });
+  sortSel.addEventListener('change', function(){ sortRows(); apply(); });
+
+  toggle.addEventListener('click', function(){
+    var open = filters.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+
+  resetBt.addEventListener('click', function(){
+    q.value = '';
+    Object.keys(active).forEach(function(k){ active[k].length = 0; });
+    chips().forEach(function(c){ c.setAttribute('aria-pressed','false'); });
+    sortSel.value = 'default';
+    sortRows(); apply(); q.focus();
+  });
+
+  // ---- URLハッシュ同期（絞り込んだ状態を共有・ブックマークできる）
+  var lockHash = false;
+  function writeHash(){
+    if(lockHash) return;
+    var p = [];
+    if(mode !== 'brand') p.push('tab=' + mode);
+    if(q.value.trim()) p.push('q=' + encodeURIComponent(q.value.trim()));
+    Object.keys(active).forEach(function(k){
+      if(active[k].length) p.push(k + '=' + active[k].join(','));
+    });
+    if(sortSel.value !== 'default') p.push('sort=' + sortSel.value);
+    var h = p.length ? '#' + p.join('&') : '';
+    if(h !== location.hash) history.replaceState(null, '', location.pathname + location.search + h);
+  }
+  function readHash(){
+    var h = location.hash.replace(/^#/, '');
+    if(!h) return;
+    lockHash = true;
+    h.split('&').forEach(function(kv){
+      var i = kv.indexOf('='); if(i < 0) return;
+      var k = kv.slice(0,i), v = decodeURIComponent(kv.slice(i+1));
+      if(k === 'q'){ q.value = v; }
+      else if(k === 'tab'){ if(panels[v]) mode = v; }
+      else if(k === 'sort'){ sortSel.value = v; }
+      else if(active[k]){
+        active[k] = v.split(',').filter(Boolean);
+        chips().forEach(function(c){
+          if(c.getAttribute('data-g') === k && active[k].indexOf(c.getAttribute('data-v')) !== -1)
+            c.setAttribute('aria-pressed','true');
+        });
+      }
+    });
+    lockHash = false;
+  }
+
+  indexRows('brand');
+  indexRows('distillery');
+  readHash();
+  var anyFilter = Object.keys(active).some(function(k){ return active[k].length; });
+  if(anyFilter) { filters.classList.add('is-open'); toggle.setAttribute('aria-expanded','true'); }
+  setMode(mode);
+})();
+</script>
+
+</body>
+</html>
