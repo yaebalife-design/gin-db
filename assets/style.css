@@ -11,6 +11,11 @@ body {
   overflow-x: hidden;
 }
 a { color: inherit; text-decoration: none; transition: color 0.2s; }
+/* hidden 属性を確実に効かせる。
+   .bot-tab などが display:inline-flex を持っていると、
+   ブラウザ標準の [hidden]{display:none} に勝ってしまい、
+   JavaScript で hidden を立てても消えない（2026-08-31に実際に発生）。 */
+[hidden] { display: none !important; }
 img { max-width: 100%; display: block; }
 button { font-family: inherit; }
 
