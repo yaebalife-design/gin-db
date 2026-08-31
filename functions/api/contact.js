@@ -1,20 +1,18 @@
 /**
  * お問い合わせの受け口（Cloudflare Pages Functions）
  *
- * ■ 設計の要点：運営者のメールアドレスをサイト上に一切出さない
+ * ■ 設計の要点：メールアドレスがシステムのどこにも存在しない
  *   ブラウザが話す相手は gin-db.com/api/contact だけ。
- *   送信先（メールアドレスやWebhook URL）は **Cloudflare の環境変数の中にしか存在しない**。
- *   このファイルにも、HTMLにも、JSにも、リポジトリにも書かない。
- *   したがってページのソースを見ても、スクレイピングしても、宛先は分からない。
+ *   受け取った内容は Cloudflare D1（同じアカウント内のデータベース）に保存し、
+ *   運営者は gin-db.com/inbox で読む。
+ *   メール送信も外部サービスへの転送もしないので、**宛先アドレスというものが存在しない**。
  *
- * ■ 必要な設定（Cloudflare ダッシュボード → Pages → gin-db → 設定 → 環境変数）
- *   CONTACT_WEBHOOK  … 受信先のURL。Discord/Slackのwebhook、
- *                       Google Apps Script のウェブアプリURL など何でもよい。
- *                       ここにJSONをPOSTする。
- *   （任意）CONTACT_WEBHOOK_FORMAT = "discord" にすると Discord の形に整形する。
- *   （任意）TURNSTILE_SECRET      … Cloudflare Turnstile を使う場合のみ。
+ * ■ Cloudflare 側の設定
+ *   D1 バインディング  DB               … 保存先（これが本命）
+ *   環境変数（任意）   CONTACT_WEBHOOK  … 外部へも飛ばしたい場合だけ。既定では使わない
+ *   環境変数（任意）   TURNSTILE_SECRET … Turnstile を使う場合だけ
  *
- *   環境変数が未設定のうちは、フォームは「受付を準備中」と正直に返す（黙って捨てない）。
+ *   保存先が無いうちは、フォームは「受付を準備中」と正直に返す（黙って捨てない）。
  */
 
 const MAX = { name: 100, email: 200, url: 500, message: 4000, kind: 40 };
@@ -106,52 +104,57 @@ export async function onRequestPost({ request, env }) {
     return json(422, { ok: false, error: "bad_email", message: "メールアドレスの形式をご確認ください。" });
   }
 
-  const hook = env.CONTACT_WEBHOOK;
-  if (!hook) {
-    // 宛先が未設定。黙って捨てず、送れなかったことを正直に返す。
+  const country = request.headers.get("cf-ipcountry") || "";
+  const at = new Date().toISOString();
+  let stored = false;
+
+  // --- 保存（本命）。D1に入れば成功。メールは一切絡まない
+  if (env.DB) {
+    try {
+      await env.DB.prepare(
+        "INSERT INTO messages (at, kind, name, email, url, country, message, status) " +
+        "VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, 'new')"
+      ).bind(at, kind, name, email, url, country, message).run();
+      stored = true;
+    } catch (e) {
+      // 例外の中身は返さない
+    }
+  }
+
+  // --- 外部への転送（環境変数が設定されている場合だけ。既定では使わない）
+  if (env.CONTACT_WEBHOOK) {
+    const lines = [
+      `種類: ${kind}`,
+      `お名前: ${name || "（未記入）"}`,
+      `返信先: ${email || "（未記入・返信不要）"}`,
+      `対象ページ: ${url || "（未記入）"}`,
+      `国: ${country}`,
+      `日時: ${at}`,
+      "",
+      message,
+    ];
+    const payload = (env.CONTACT_WEBHOOK_FORMAT || "").toLowerCase() === "discord"
+      ? { content: ["**Gin-DB お問い合わせ**", "```", ...lines, "```"].join("
+").slice(0, 1900) }
+      : { site: "Gin-DB", kind, name, email, url, country, at, message, text: lines.join("
+") };
+    try {
+      const r = await fetch(env.CONTACT_WEBHOOK, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (r.ok) stored = true;
+    } catch (e) {
+      // 宛先URLが漏れうるので中身は返さない
+    }
+  }
+
+  if (!stored) {
+    // 保存先が無い／保存に失敗した。黙って捨てず、送れなかったことを正直に返す。
     return json(503, {
       ok: false, error: "not_configured",
       message: "申し訳ありません。ただいま受付の設定作業中で送信できません。時間をおいてお試しください。",
-    });
-  }
-
-  const country = request.headers.get("cf-ipcountry") || "";
-  const at = new Date().toISOString();
-  const lines = [
-    `種類: ${kind}`,
-    `お名前: ${name || "（未記入）"}`,
-    `返信先: ${email || "（未記入・返信不要）"}`,
-    `対象ページ: ${url || "（未記入）"}`,
-    `国: ${country}`,
-    `日時: ${at}`,
-    "",
-    message,
-  ];
-
-  let payload;
-  if ((env.CONTACT_WEBHOOK_FORMAT || "").toLowerCase() === "discord") {
-    payload = { content: ["**Gin-DB お問い合わせ**", "```", ...lines, "```"].join("\n").slice(0, 1900) };
-  } else {
-    payload = { site: "Gin-DB", kind, name, email, url, country, at, message, text: lines.join("\n") };
-  }
-
-  try {
-    const r = await fetch(hook, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-    if (!r.ok) {
-      return json(502, {
-        ok: false, error: "delivery_failed",
-        message: "送信に失敗しました。お手数ですが時間をおいてお試しください。",
-      });
-    }
-  } catch (e) {
-    // 例外の中身は返さない（宛先URLが漏れうるため）
-    return json(502, {
-      ok: false, error: "delivery_failed",
-      message: "送信に失敗しました。お手数ですが時間をおいてお試しください。",
     });
   }
 

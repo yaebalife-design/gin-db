@@ -141,3 +141,6 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
+
+# wrangler のローカルキャッシュ。アカウント名（＝メールアドレス）が入るので絶対にコミットしない
+.wrangler/
