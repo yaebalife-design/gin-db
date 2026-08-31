@@ -1178,6 +1178,21 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   box-shadow: 0 6px 16px rgba(212, 175, 55, 0.18);
   color: white;
 }
+/* 一覧の中に何本も並ぶときのボタン。1銘柄ごとに大きなボタンが2個ずつ縦に連なると
+   圧が強すぎる（社長指摘 2026-08-31「食い気味すぎる」）。
+   ブランド色はそのままに、寸法だけ落として1行に収める。
+   ※銘柄ページ本体の購入ボタンには当てない。あちらは主役なので大きいままでよい。 */
+.affiliate-btns--compact .affiliate-btn {
+  /* 高さは44px以上を確保する（指でのタップ領域の目安）。
+     詰めすぎると押しにくくなり、圧を下げるつもりが使いにくさに変わる。 */
+  padding: 11px 15px;
+  min-height: 44px;
+  box-sizing: border-box;
+  font-size: 13px;
+  border-radius: 8px;
+  gap: 6px;
+}
+.affiliate-btns--compact { gap: 8px; }
 /* H案: 完全ブランド色背景（最派手バージョン）*/
 .affiliate-btn--rakuten {
   background: linear-gradient(135deg, #8c1010 0%, #bf0000 100%);
