@@ -1066,23 +1066,54 @@
 
   <script>
   (function() {
-    const tabs = document.querySelectorAll('.bot-tab');
-    const sections = document.querySelectorAll('.botanical-section');
-    function show(id) {
-      sections.forEach(s => s.style.display = (s.id === id) ? '' : 'none');
+    // 2026-08-31 変更:
+    // 以前はタブで1セクションだけ表示し、他10セクション（カード80枚）を display:none にしていた。
+    // 隠したテキストは検索エンジンの評価が下がるので、**全セクションを常に表示**し、
+    // タブは「その位置へスクロールする索引」に変えた。
+    const tabs = Array.prototype.slice.call(document.querySelectorAll('.bot-tab'));
+    const sections = Array.prototype.slice.call(document.querySelectorAll('.botanical-section'));
+
+    // クリックで飛んでいる最中は、通過したセクションで上書きされないよう追従を止める
+    let lockUntil = 0;
+
+    function markActive(id) {
       tabs.forEach(t => t.classList.toggle('is-active', t.dataset.target === id));
     }
+
     tabs.forEach(t => {
       t.addEventListener('click', e => {
         e.preventDefault();
         const id = t.dataset.target;
-        show(id);
+        const el = document.getElementById(id);
+        if (!el) return;
+        markActive(id);
+        lockUntil = Date.now() + 1200;
         history.replaceState(null, '', '#' + id);
-        window.scrollTo({top: document.querySelector('.bot-tabs').offsetTop - 24, behavior: 'smooth'});
+        const top = el.getBoundingClientRect().top + window.pageYOffset - 16;
+        window.scrollTo({ top: top, behavior: 'smooth' });
       });
     });
-    const initial = location.hash.slice(1) || 'bot-yuzu';
-    show(initial);
+
+    // 見えている見出しに追従してタブをハイライトする
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(entries => {
+        if (Date.now() < lockUntil) return;
+        const shown = entries.filter(en => en.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+        if (shown.length) markActive(shown[0].target.id);
+      }, { rootMargin: '-10% 0px -70% 0px', threshold: 0 });
+      sections.forEach(s => io.observe(s));
+    }
+
+    // ハッシュ付きで開かれたときはそこへ飛ぶ
+    const initial = location.hash.slice(1);
+    if (initial && document.getElementById(initial)) {
+      markActive(initial);
+      requestAnimationFrame(() => document.getElementById(initial)
+        .scrollIntoView({ block: 'start' }));
+    } else if (tabs.length) {
+      markActive(tabs[0].dataset.target);
+    }
   })();
   </script>
 
