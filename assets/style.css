@@ -1017,6 +1017,11 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   box-shadow: 0 2px 12px rgba(184,151,92,0.5);
 }
 .timeline__item .award--silver { background: linear-gradient(135deg, #c8c8c8 0%, #888 100%); }
+/* 銅賞。WGA2026から Bronze も載せるようになったので追加（2026-08-31） */
+.timeline__item .award--bronze {
+  background: linear-gradient(135deg, #c08457 0%, #8a5a33 100%);
+  box-shadow: 0 2px 8px rgba(138,90,51,0.35);
+}
 .timeline__item .name { min-width: 0; }
 .timeline__item .name strong { display: block; font-size: 15px; font-weight: 600; font-family: var(--serif); }
 .timeline__item .name .sub { font-size: 12px; color: var(--sub); margin-top: 2px; display: block; }
