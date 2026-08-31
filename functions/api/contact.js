@@ -134,10 +134,8 @@ export async function onRequestPost({ request, env }) {
       message,
     ];
     const payload = (env.CONTACT_WEBHOOK_FORMAT || "").toLowerCase() === "discord"
-      ? { content: ["**Gin-DB お問い合わせ**", "```", ...lines, "```"].join("
-").slice(0, 1900) }
-      : { site: "Gin-DB", kind, name, email, url, country, at, message, text: lines.join("
-") };
+      ? { content: ["**Gin-DB お問い合わせ**", "```", ...lines, "```"].join("\n").slice(0, 1900) }
+      : { site: "Gin-DB", kind, name, email, url, country, at, message, text: lines.join("\n") };
     try {
       const r = await fetch(env.CONTACT_WEBHOOK, {
         method: "POST",
