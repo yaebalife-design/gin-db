@@ -309,10 +309,12 @@ export async function onRequestPost({ request, env }) {
   // --- 保存（本命）。D1に入れば成功。メールは一切絡まない
   if (env.DB) {
     try {
+      // 状態はシートと同じ値を入れる。片方だけ 'new' だと、
+      // 後から「これはスパム判定された分か」を照合できなくなる。
       await env.DB.prepare(
         "INSERT INTO messages (at, kind, name, email, url, country, message, status) " +
-        "VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, 'new')"
-      ).bind(at, kind, name, email, url, country, message).run();
+        "VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)"
+      ).bind(at, kind, name, email, url, country, message, flagged || "new").run();
       stored = true;
     } catch (e) {
       // 例外の中身は返さない
