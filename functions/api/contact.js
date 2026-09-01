@@ -140,7 +140,7 @@ async function appendToSheet(env, row) {
   }
 }
 
-export /* ---- スパム対策のしきい値 --------------------------------------------------
+/* ---- スパム対策のしきい値 --------------------------------------------------
  * 弾いたことは相手に教えない（200 / ok:true を返す）。
  * エラーを返すと「何が悪いか」を教えることになり、抜け方を探られるため。
  * 弾いた分も blocked テーブルに理由付きで残す。人間を誤って落としていないか
@@ -227,7 +227,7 @@ async function recordBlocked(env, reason, body, ip, country) {
 }
 
 
-async function onRequestPost({ request, env }) {
+export async function onRequestPost({ request, env }) {
   let body;
   try {
     body = await request.json();
