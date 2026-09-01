@@ -201,8 +201,8 @@
 
       <!-- スパム対策。人には見えない。入力があった送信は捨てる -->
       <div class="ct-hp" aria-hidden="true">
-        <label for="ct-website">この欄は入力しないでください</label>
-        <input type="text" id="ct-website" name="website" tabindex="-1" autocomplete="off">
+        <label for="ct-ref2">この欄は入力しないでください</label>
+        <input type="text" id="ct-ref2" name="ct_ref2" tabindex="-1" autocomplete="off" inputmode="none">
       </div>
 
       <button type="submit" class="ct-submit" id="ct-submit">送信する</button>
@@ -312,7 +312,11 @@
         email: email,
         url: form.url.value,
         message: message,
-        website: form.website.value,      // ハニーポット
+        // ハニーポット。欄名を website にすると、ブラウザやパスワード管理ソフトが
+        // 「URLの入力欄」と判断して**勝手に埋める**ことがある（autocomplete="off" は
+        // 無視されることが多い）。埋まると正当な問い合わせが黙って捨てられるので、
+        // 自動入力のヒューリスティクスが反応しない名前にしてある。
+        hp: form.ct_ref2.value,
         elapsed: Date.now() - shownAt
       })
     }).then(function(r){

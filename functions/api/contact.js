@@ -243,7 +243,9 @@ export async function onRequestPost({ request, env }) {
   }
 
   // --- スパム対策1: ハニーポット。人には見えない項目に入力があったら弾く
-  if (clean(body.website, 50)) {
+  // 欄名は自動入力に狙われないものにしてある。
+  // 旧名 website も当面受ける（キャッシュされた古いページからの送信のため）。
+  if (clean(body.hp, 50) || clean(body.ct_ref2, 50) || clean(body.website, 50)) {
     // ボットには成功したように見せる（再送を誘発しないため）
     return json(200, { ok: true });
   }
@@ -274,9 +276,14 @@ export async function onRequestPost({ request, env }) {
   const spam = looksLikeSpam(clean(body.message, MAX.message),
                              clean(body.name, MAX.name),
                              clean(body.url, MAX.url));
+  // 本文の判定は語の一致による推測なので、人間を誤って弾く可能性が残る。
+  // **捨てずに**「スパム判定」の状態でシートへ回す。
+  // 社長は状態列で見分けられるし、正当な指摘が失われることは無くなる。
+  // （ハニーポット・3秒未満・回数超過は機械が相手なので捨ててよい）
+  let flagged = "";
   if (spam) {
     await recordBlocked(env, spam, body, ip, country0);
-    return json(200, { ok: true });
+    flagged = "スパム判定（" + spam + "）";
   }
 
   const kind = clean(body.kind, MAX.kind);
@@ -321,7 +328,7 @@ export async function onRequestPost({ request, env }) {
     url,
     country,
     message,
-    "未対応",
+    flagged || "未対応",
   ];
   if (await appendToSheet(env, sheetRow)) stored = true;
 
