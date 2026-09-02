@@ -124,6 +124,10 @@
 .fd-empty{display:none;padding:56px 20px;text-align:center;color:var(--sub)}
 .fd-empty.is-shown{display:block}
 .fd-empty b{display:block;font-size:16px;color:var(--ink,#23281f);margin-bottom:8px}
+.fd-empty .fd-empty__reset{display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;padding:10px 22px;margin-top:14px;border:1px solid var(--green);
+  border-radius:8px;background:none;color:var(--green);font:inherit;font-weight:600;cursor:pointer}
+.fd-empty .fd-empty__reset:hover{background:rgba(45,90,61,.06)}
 
 .fd-note{font-size:12px;color:var(--sub);line-height:1.9;margin:22px 0 8px;padding:14px 16px;
   background:var(--paper,#fbfaf7);border:1px solid var(--line);border-radius:11px}
@@ -179,14 +183,16 @@
     </div>
   </div>
 
-  <div class="fd-sticky">
-    <div class="fd-tabs" role="tablist" aria-label="検索対象">
-      <button type="button" class="fd-tab" role="tab" data-mode="brand" aria-selected="true"
-        aria-controls="fd-panel-brand" id="fd-tab-brand">銘柄から探す</button>
-      <button type="button" class="fd-tab" role="tab" data-mode="distillery" aria-selected="false"
-        aria-controls="fd-panel-distillery" id="fd-tab-distillery" tabindex="-1">蒸溜所から探す</button>
-    </div>
+  <div class="fd-tabs" role="tablist" aria-label="検索対象">
+    <button type="button" class="fd-tab" role="tab" data-mode="brand" aria-selected="true"
+      aria-controls="fd-panel-brand" id="fd-tab-brand">銘柄から探す</button>
+    <button type="button" class="fd-tab" role="tab" data-mode="distillery" aria-selected="false"
+      aria-controls="fd-panel-distillery" id="fd-tab-distillery" tabindex="-1">蒸溜所から探す</button>
+  </div>
 
+  <!-- タブは sticky に含めない。モバイル実測でsticky部が画面の35%を
+       常時占有し、リストの可視域が550pxしか残っていなかった（UX監査[M]） -->
+  <div class="fd-sticky">
     <div class="fd-search">
       <svg class="fd-search__icon" aria-hidden="true"><use href="/assets/icons.svg#i-search"/></svg>
       <label for="fd-q" class="sr-only">キーワードで絞り込む</label>
@@ -266,7 +272,7 @@
 <li class="fr" data-r="tohoku" data-b="juniper lemon" data-a="abv1" data-p="p1" data-w="n" data-sp="1180" data-sa="37.5"><a class="fl" href="gin/shirakawa-meijo-1.html"><span class="fm"><span class="fn">侍刃（JINJIN／ジンジン）</span><span class="fw">白河銘醸<i>/</i>福島県</span></span><span class="fs"><span>37.5%</span><i>/</i>500ml</span><span class="fp">¥1,180（税込・市場実勢）</span></a><p class="fo">ジュニパー、オレンジ系（公式詳細未確認）</p></li>
 <li class="fr" data-r="kanto" data-b="yuzu sansho sakura gyokuro hinoki" data-a="abv1" data-p="p2" data-w="n" data-sp="3850" data-sa="40.0"><a class="fl" href="gin/kiuchi-yasato-1.html"><span class="fm"><span class="fn">日の丸ジン 蔵風土（くらふうど）</span><span class="fw">八郷蒸溜所(木内酒造)<i>/</i>茨城県</span></span><span class="fs"><span>40%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式）</span></a><p class="fo">福来みかん、山椒、柚子、緑茶、桜葉等＋杉樽熟成米焼酎ブレンド</p></li>
 <li class="fr" data-r="kanto" data-b="juniper lemon" data-a="abv1" data-p="p3" data-w="other" data-sp="7800" data-sa="40.0"><a class="fl" href="gin/meiri-shurui-1.html"><span class="fm"><span class="fn">ノエルのポーション（プレミアムクラフトジン）</span><b class="fb fb-other">受賞歴あり</b><span class="fw">明利酒類<i>/</i>茨城県</span></span><span class="fs"><span>40%</span><i>/</i>720ml</span><span class="fp">¥7,800（税込・公式）</span></a><p class="fo">マジョラム、ジュニパー、カモミール、オレンジフラワー、オレンジピール、レモンピール、リコリス、コリアンダー、シナモン、アンジェリカルート（10種）</p></li>
-<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p2" data-w="n" data-sp="3850" data-sa="45.0"><a class="fl" href="gin/meiri-shurui-2.html"><span class="fm"><span class="fn">和GIN（プレミアムクラフトジン）</span><span class="fw">明利酒類<i>/</i>茨城県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式希望小売）</span></a><p class="fo">和素材中心（公式商品ページで詳細要確認）</p></li>
+<li class="fr" data-r="kanto" data-b="" data-a="abv2" data-p="p2" data-w="n" data-sp="3850" data-sa="45.0"><a class="fl" href="gin/meiri-shurui-2.html"><span class="fm"><span class="fn">和GIN（プレミアムクラフトジン）</span><span class="fw">明利酒類<i>/</i>茨城県</span></span><span class="fs"><span>45%</span><i>/</i>700ml</span><span class="fp">¥3,850（税込・公式希望小売）</span></a><p class="fo">和素材中心（公式は個別のボタニカル構成を公開していない）</p></li>
 <li class="fr" data-r="kanto" data-b="" data-a="x" data-p="x" data-w="n" data-sp="0" data-sa="0"><a class="fl" href="gin/nishibori-shuzo-1.html"><span class="fm"><span class="fn">クラフトジン</span><span class="fw">小山蒸溜所(西堀酒造)<i>/</i>栃木県</span></span><span class="fs"><span class="q">未確認</span><i>/</i>未確認</span><span class="fp q">未確認</span></a><p class="fo">清酒酵母発酵・蒸留（公式に銘柄詳細記載なし）</p></li>
 <li class="fr" data-r="kanto" data-b="juniper" data-a="abv1" data-p="p1" data-w="n" data-sp="1500" data-sa="40.0"><a class="fl" href="gin/miho-shurui-1.html"><span class="fm"><span class="fn">クラフトジン 歌川（うたがわ）</span><span class="fw">美峰酒類<i>/</i>群馬県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp">市場実勢 約¥1,500</span></a><p class="fo">ジュニパー、ラベンダー含む9種</p></li>
 <li class="fr" data-r="kanto" data-b="yuzu" data-a="abv1" data-p="x" data-w="n" data-sp="0" data-sa="40.0"><a class="fl" href="gin/miho-shurui-3.html"><span class="fm"><span class="fn">クラフトジン歌川 ゆず</span><span class="fw">美峰酒類<i>/</i>群馬県</span></span><span class="fs"><span>40%</span><i>/</i>500ml</span><span class="fp q">未確認</span></a><p class="fo">歌川＋柚子強化</p></li>
@@ -582,8 +588,9 @@
 
   <div class="fd-empty" id="fd-empty">
     <b>条件に合う銘柄が見つかりませんでした</b>
-    条件を減らすか、<button type="button" class="fd-reset" style="display:inline"
-      onclick="document.getElementById('fd-reset').click()">条件をリセット</button>してください。
+    条件を減らすか、リセットしてください。<br>
+    <button type="button" class="fd-empty__reset"
+      onclick="document.getElementById('fd-reset').click()">条件をすべてリセット</button>
   </div>
 
   <p class="fd-note">
