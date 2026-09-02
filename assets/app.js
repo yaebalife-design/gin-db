@@ -124,12 +124,37 @@
     });
   }
 
+  // トップへ戻る。twscは100画面分・findは41画面分の長さがあるのに
+  // 底から戻る手段がスクロールしかなかった（2026-09-02 UX監査）。
+  function initBackToTop() {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'ページの先頭へ戻る');
+    btn.innerHTML = '↑';
+    document.body.appendChild(btn);
+    var shown = false;
+    function toggle() {
+      var want = window.scrollY > 600;
+      if (want !== shown) {
+        shown = want;
+        btn.classList.toggle('is-visible', want);
+      }
+    }
+    window.addEventListener('scroll', toggle, { passive: true });
+    btn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    toggle();
+  }
+
   function init() {
     initReveal();
     initHeaderShadow();
     initNavToggle();
     initCountUp();
     initFurusatoFilter();
+    initBackToTop();
   }
 
   if (document.readyState === 'loading') {

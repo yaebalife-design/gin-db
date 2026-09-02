@@ -92,7 +92,7 @@
 .tw-en{margin:0;font-size:11px;color:var(--sub-2);line-height:1.5}
 .tw-meta{margin-top:auto;padding-top:8px;border-top:1px solid var(--line-light);
   display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between}
-.tw-dist{font-size:12px;color:var(--green);text-decoration:none;font-weight:500}
+.tw-dist{font-size:12px;color:var(--green);text-decoration:none;font-weight:500;display:inline-block;padding:10px 0}
 .tw-dist small{color:var(--sub);margin-left:5px;font-size:11px;font-weight:400}
 .tw-dist:hover{text-decoration:underline}
 .tw-dist--none{color:var(--sub);font-weight:400}
@@ -120,12 +120,19 @@
   border:1px solid var(--line);color:var(--sub);background:var(--bg)}
 .tw-chip.tw-sg{border-color:var(--gold);color:var(--gold-deep);font-weight:600}
 
-.tw-filters{margin:0 0 18px}
+/* フィルタは絞り込み中でも見失わないよう貼り付ける（UX監査[H]） */
+.tw-filters{margin:0 0 18px;position:sticky;top:58px;z-index:5;
+  background:var(--bg);padding:6px 0 10px;border-bottom:1px solid var(--line)}
+.tw-jump{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tw-jump a{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;
+  border-radius:99px;border:1px solid rgba(212,184,127,.5);color:var(--gold-light);
+  text-decoration:none;font-size:13px;font-weight:600}
+.tw-jump a:hover{background:rgba(212,184,127,.12)}
 .tw-flabel{margin:14px 0 8px;font-size:12px;color:var(--sub);font-weight:600}
 .tw-chiprow{display:flex;flex-wrap:wrap;gap:7px}
 .twchip{background:var(--paper);border:1px solid var(--line);color:var(--sub);
   font-size:12px;padding:8px 14px;border-radius:99px;cursor:pointer;font-family:inherit;
-  transition:.15s;min-height:36px}
+  transition:.15s;min-height:44px}
 .twchip:hover{border-color:var(--gold);color:var(--ink)}
 .twchip.is-on{background:var(--green);border-color:var(--green);color:#fff;font-weight:600}
 .tw-result{margin:14px 0 0;font-size:12px;color:var(--sub)}
@@ -154,7 +161,7 @@
       <a href="../index.html">トップ</a>
       <a href="../find.html">一覧・検索</a>
       <a href="../botanical.html">ボタニカル逆引き</a>
-      <a href="../awards.html">受賞ジン</a>
+      <a href="../awards.html" class="current" aria-current="page">受賞ジン</a>
       <a href="../furusato.html">ふるさと納税</a>
       <a href="../guide/index.html">ガイド</a>
     </nav>
@@ -162,6 +169,14 @@
 </header>
 <main id="main">
 <article class="container">
+
+  <nav class="breadcrumb" aria-label="パンくず">
+    <ol>
+      <li><a href="../index.html">トップ</a></li>
+      <li><a href="../awards.html">受賞ジン</a></li>
+      <li>TWSC受賞データベース</li>
+    </ol>
+  </nav>
 
   <div class="tw-hero">
     <h1>日本のジン受賞データベース<br>TWSC 2019-2026 全492受賞</h1>
@@ -173,6 +188,10 @@
       <div class="tw-kpi"><b>23</b><span>最高金賞</span></div>
       <div class="tw-kpi"><b>71</b><span>受賞した蒸溜所</span></div>
       <div class="tw-kpi"><b>4.4倍</b><span>受賞数の伸び</span></div>
+    </div>
+    <div class="tw-jump">
+      <a href="#twfilter">全492件の一覧・絞り込みへ</a>
+      <a href="#tw-sg">最高金賞だけ見る</a>
     </div>
   </div>
 
@@ -245,7 +264,7 @@
   </section>
 
   <section class="section">
-    <h2 class="tw-h2"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="/assets/icons.svg#i-medal"/></svg><span>最高金賞 全23件</span></h2>
+    <span id="tw-sg"></span><h2 class="tw-h2"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="/assets/icons.svg#i-medal"/></svg><span>最高金賞 全23件</span></h2>
     <p class="tw-lead">TWSCの最上位の賞です。2019年からの8回で、
        日本産のジンが受けたのは全部で23件でした。</p>
   <h3 class="tw-yhead">2026年 <small>11件</small></h3>
@@ -519,7 +538,7 @@
   <section class="section">
     <h2 class="tw-h2"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="/assets/icons.svg#i-search"/></svg><span>全492受賞の一覧</span></h2>
     <p class="tw-lead">年と賞で絞り込めます。銘柄名は公式の表記のまま載せています。</p>
-  <div class="tw-filters">
+  <div class="tw-filters" id="twfilter">
     <p class="tw-flabel">年で絞る</p>
     <div class="tw-chiprow">
     <button type="button" class="twchip is-on" data-k="y" data-v="all">すべて</button>
