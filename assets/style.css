@@ -1676,3 +1676,10 @@ input[type=search]::-webkit-search-cancel-button{display:none}
   color:var(--green);font-weight:600;text-decoration:none}
 .furusato-block__more a:hover{text-decoration:underline}
 .furusato-block .affiliate-disclosure{margin-top:10px;font-size:11px}
+
+/* ふるさと納税ブロック: 返礼品ページ直リンク（2026-09-03）。額を小さく添える */
+.furusato-block__links .affiliate-link small{font-size:11px;font-weight:400;color:var(--sub);margin-left:4px}
+.furusato-block__more2{margin:6px 0 0;font-size:12px;line-height:1.8}
+.furusato-block__more2 a{color:var(--sub);text-decoration:underline;text-underline-offset:3px;
+  display:inline-flex;align-items:center;min-height:44px}
+.furusato-block__more2 a:hover{color:var(--green)}
