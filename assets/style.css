@@ -1653,3 +1653,26 @@ input[type=search]::-webkit-search-cancel-button{display:none}
 .hero__btn--gold{background:linear-gradient(135deg,var(--gold-deep),var(--gold));
   border-color:transparent;color:#fff}
 .hero__btn--gold:hover{filter:brightness(1.08);color:#fff}
+
+/* ===== 銘柄ページ: ふるさと納税の返礼品ブロック（2026-09-03） ===========
+   購入ブロックの直後に置く。押せる要素は44px基準。 */
+.furusato-block{background:var(--paper);border:1px solid var(--line);
+  border-left:3px solid var(--gold);border-radius:0 12px 12px 0;
+  padding:20px 22px;margin:0 0 44px}
+.furusato-block__title{display:flex;align-items:center;gap:8px;font-family:var(--serif);
+  font-size:18px;color:var(--ink);margin:0 0 10px}
+.furusato-block__title .icon-svg{color:var(--gold-deep);width:20px;height:20px;flex:0 0 auto}
+.furusato-block__lead{font-size:14px;line-height:1.9;color:var(--ink);margin:0 0 8px}
+.furusato-block__amount{font-size:14px;color:var(--ink);margin:0 0 6px;font-weight:600}
+.furusato-block__amount span{font-size:11px;font-weight:400;color:var(--sub);margin-right:8px}
+.furusato-block__note,.furusato-block__also{font-size:12px;color:var(--sub);margin:4px 0 0;line-height:1.7}
+.furusato-block__links{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.furusato-block__links .affiliate-link{display:inline-flex;align-items:center;gap:4px;
+  min-height:44px;padding:8px 14px;border:1px solid var(--line);border-radius:8px;
+  background:var(--bg);font-size:13px;font-weight:600;text-decoration:none}
+.furusato-block__links .affiliate-link:hover{border-color:var(--gold)}
+.furusato-block__more{margin:12px 0 0;font-size:13px}
+.furusato-block__more a{display:inline-flex;align-items:center;gap:4px;min-height:44px;
+  color:var(--green);font-weight:600;text-decoration:none}
+.furusato-block__more a:hover{text-decoration:underline}
+.furusato-block .affiliate-disclosure{margin-top:10px;font-size:11px}
