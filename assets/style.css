@@ -1211,8 +1211,25 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   color: #131921;
   border-color: #e08a00;
 }
+/* Yahoo!ショッピング（2026-09-15追加）。
+   ブランド色は #FF0033 だが、白文字だと 3.96:1 で 4.5:1 に届かないため
+   明るい側を #e60033（白文字で 4.76:1）に落としたグラデーションにする。
+   楽天も赤なので、ボタンの並びは 楽天 → Amazon（橙）→ Yahoo にして
+   赤が隣り合わないようにしている（並び順は各 gen_*.py 側）。 */
+.affiliate-btn--yahoo {
+  background: linear-gradient(135deg, #8f0020 0%, #e60033 100%);
+  color: white;
+  border-color: #c4002a;
+}
 .affiliate-btn--rakuten .affiliate-btn__icon { color: white; }
 .affiliate-btn--amazon .affiliate-btn__icon { color: #131921; }
+.affiliate-btn--yahoo .affiliate-btn__icon { color: white; }
+.affiliate-btn--yahoo:hover {
+  background: linear-gradient(135deg, #a80026 0%, #ff1a47 100%);
+  border-color: #ff5c7a;
+  box-shadow: 0 6px 18px rgba(230, 0, 51, 0.45);
+  color: white;
+}
 .affiliate-btn--rakuten:hover {
   background: linear-gradient(135deg, #a01818 0%, #d92020 100%);
   border-color: #ff5050;
@@ -1264,6 +1281,9 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
 }
 .affiliate-link--amazon:hover {
   color: #cf7800;
+}
+.affiliate-link--yahoo:hover {
+  color: #d10029;
 }
 /* ふるさと納税ポータル（A8経由）。地は黒×金のまま、ホバー時だけポータル別のアクセント */
 .affiliate-link--choice:hover { color: #1f8a4c; }
