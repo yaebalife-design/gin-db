@@ -1,0 +1,6 @@
+# Cloudflare Pages のリダイレクト（上から順に評価。1行 = 元のパス 先のパス ステータス）
+# 2026-09-20 小山蒸溜所（西堀酒造）を削除: 公式が「今後ジンを製造」としておりジン未発売。関東の一覧へ送る
+/distillery/nishibori-shuzo       /region/kanto  301
+/distillery/nishibori-shuzo.html  /region/kanto  301
+/gin/nishibori-shuzo-1            /region/kanto  301
+/gin/nishibori-shuzo-1.html       /region/kanto  301
