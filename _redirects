@@ -4,3 +4,16 @@
 /distillery/nishibori-shuzo.html  /region/kanto  301
 /gin/nishibori-shuzo-1            /region/kanto  301
 /gin/nishibori-shuzo-1.html       /region/kanto  301
+# 2026-09-23 宗政酒造（茶神）・白河銘醸（侍刃）を一旦外す: 公式で存在を確かめられない。各地方の一覧へ送る
+/distillery/munemasa-chajin        /region/kyushu  301
+/distillery/munemasa-chajin.html   /region/kyushu  301
+/gin/munemasa-chajin-1             /region/kyushu  301
+/gin/munemasa-chajin-1.html        /region/kyushu  301
+/gin/munemasa-chajin-2             /region/kyushu  301
+/gin/munemasa-chajin-2.html        /region/kyushu  301
+/gin/munemasa-chajin-3             /region/kyushu  301
+/gin/munemasa-chajin-3.html        /region/kyushu  301
+/distillery/shirakawa-meijo        /region/tohoku  301
+/distillery/shirakawa-meijo.html   /region/tohoku  301
+/gin/shirakawa-meijo-1             /region/tohoku  301
+/gin/shirakawa-meijo-1.html        /region/tohoku  301
