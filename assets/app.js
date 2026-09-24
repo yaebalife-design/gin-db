@@ -14,8 +14,18 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+    // 2026-09-24: threshold 0.12 だと「要素の12%が画面に入ったら表示」になり、
+    //   画面の何倍も縦に長いブロック（関東23蒸溜所の一覧＝高さ約8,900px）は12%に届かず、ずっと透明のままだった（社長「押しても表示されない」）。
+    //   少しでも画面に入ったら表示する（threshold 0）。rootMargin で画面下端の少し手前から出す演出は残す。
+    }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
     els.forEach(function (e) { io.observe(e); });
+    // 念のための保険: 読み込みから1.5秒たっても画面内にあるのに出ていないブロックは表示する
+    setTimeout(function () {
+      els.forEach(function (e) {
+        var r = e.getBoundingClientRect();
+        if (r.top < window.innerHeight && r.bottom > 0) e.classList.add('reveal-in');
+      });
+    }, 1500);
   }
 
   // 2. Header scroll shadow
