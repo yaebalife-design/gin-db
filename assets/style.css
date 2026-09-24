@@ -902,17 +902,25 @@ h1, h2, h3, h4 {
   -webkit-overflow-scrolling: touch;
   position: relative;
 }
-.article-table-wrap::after {
-  content: "→ 横スクロール";
+/* 2026-09-24: 「横スクロール」の案内は、表の外の右上に薄く出して動かさない（社長指摘）。
+   以前は ::after を表の枠（スクロールする箱）の中に absolute で置いていたため、横にスクロールすると
+   案内も一緒に流れて見出しに重なっていた。::before を枠の先頭に1行ぶん置き、sticky + left:0 で
+   横スクロールしても枠の右上に留まるようにする。背景なし・字は薄い金色。 */
+.article-table-wrap::before {
+  content: "横にスクロールできます →";
   display: none;
-  position: absolute;
-  top: 8px;
-  right: 12px;
+  position: sticky;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 16px;
+  margin-bottom: 3px;
+  padding-right: 2px;
+  text-align: right;
   font-size: 10px;
-  color: var(--gold-deep);
-  background: rgba(255,255,255,0.9);
-  padding: 2px 8px;
-  border-radius: 10px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: rgba(139, 111, 63, 0.5);
   pointer-events: none;
 }
 .article-table {
@@ -954,7 +962,7 @@ h1, h2, h3, h4 {
 @media (max-width: 600px) {
   .article-table { font-size: 12.5px; min-width: 540px; }
   .article-table thead th, .article-table tbody td { padding: 10px 8px; }
-  .article-table-wrap::after { display: inline-block; }
+  .article-table-wrap::before { display: block; }
 }
 
 /* ========== Timeline ========== */
