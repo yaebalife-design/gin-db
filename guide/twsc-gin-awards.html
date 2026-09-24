@@ -69,6 +69,8 @@
 .tw-trend{display:flex;flex-direction:column;gap:8px;margin:0 0 12px}
 .tw-row{display:grid;grid-template-columns:52px 1fr 58px auto;gap:10px;align-items:center}
 .tw-y{font-size:13px;color:var(--sub);font-variant-numeric:tabular-nums}
+.tw-trend--pref .tw-row{grid-template-columns:68px 1fr 58px auto}
+.tw-trend--pref .tw-y{white-space:nowrap}
 .tw-bar{background:var(--line-light);border-radius:5px;height:17px;overflow:hidden}
 .tw-bar span{display:block;height:100%;border-radius:5px;
   background:linear-gradient(90deg,var(--gold-deep),var(--gold-light))}
@@ -544,7 +546,7 @@
     <h2 class="tw-h2"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="/assets/icons.svg#i-map"/></svg><span>都道府県別の受賞数</span></h2>
     <p class="tw-lead">当サイトに収録している蒸溜所の受賞426件を、蒸溜所の所在地で都道府県ごとに数えました（37都道府県のうち上位10）。
        出品者が当サイト未収録の受賞66件は、所在地が分からないため入れていません。</p>
-    <div class="tw-trend">
+    <div class="tw-trend tw-trend--pref">
     <div class="tw-row">
       <div class="tw-y">東京都</div>
       <div class="tw-bar"><span style="width:100%"></span></div>
