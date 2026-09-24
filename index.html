@@ -171,63 +171,100 @@
   <section class="section reveal" id="regions">
     <div class="section__head">
       <h2 class="section__title"><svg class="icon-svg" aria-hidden="true"><use href="/assets/icons.svg#i-map"/></svg>地域別マップ</h2>
-      <span class="section__sub">全国の蒸溜所123件を9地域に分類</span>
+      <span class="section__sub">都道府県ごとの蒸溜所数（全123件・41都道府県）</span>
     </div>
-    <div class="region-grid">
-      <a href="region/hokkaido.html" class="region-tile" style="--region-color:#3b6e9c;">
-        <span class="region-tile__name-en">HOKKAIDO</span>
-        <span class="region-tile__name">北海道</span>
-        <span class="region-tile__count"><strong>10</strong>蒸溜所</span>
-        <span class="region-tile__arrow"><svg class="icon-svg" aria-hidden="true" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
-      </a>
-      <a href="region/tohoku.html" class="region-tile" style="--region-color:#7b4f8c;">
-        <span class="region-tile__name-en">TOHOKU</span>
-        <span class="region-tile__name">東北</span>
-        <span class="region-tile__count"><strong>9</strong>蒸溜所</span>
-        <span class="region-tile__arrow"><svg class="icon-svg" aria-hidden="true" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
-      </a>
-      <a href="region/kanto.html" class="region-tile" style="--region-color:#3d6e3d;">
-        <span class="region-tile__name-en">KANTO</span>
-        <span class="region-tile__name">関東</span>
-        <span class="region-tile__count"><strong>23</strong>蒸溜所</span>
-        <span class="region-tile__arrow"><svg class="icon-svg" aria-hidden="true" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
-      </a>
-      <a href="region/chubu.html" class="region-tile" style="--region-color:#9c6f3b;">
-        <span class="region-tile__name-en">CHUBU</span>
-        <span class="region-tile__name">中部</span>
-        <span class="region-tile__count"><strong>20</strong>蒸溜所</span>
-        <span class="region-tile__arrow"><svg class="icon-svg" aria-hidden="true" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
-      </a>
-      <a href="region/kansai.html" class="region-tile" style="--region-color:#9c4f4f;">
-        <span class="region-tile__name-en">KANSAI</span>
-        <span class="region-tile__name">近畿</span>
-        <span class="region-tile__count"><strong>17</strong>蒸溜所</span>
-        <span class="region-tile__arrow"><svg class="icon-svg" aria-hidden="true" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
-      </a>
-      <a href="region/chugoku.html" class="region-tile" style="--region-color:#3b8c8c;">
-        <span class="region-tile__name-en">CHUGOKU</span>
-        <span class="region-tile__name">中国</span>
-        <span class="region-tile__count"><strong>7</strong>蒸溜所</span>
-        <span class="region-tile__arrow"><svg class="icon-svg" aria-hidden="true" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
-      </a>
-      <a href="region/shikoku.html" class="region-tile" style="--region-color:#4f8c4f;">
-        <span class="region-tile__name-en">SHIKOKU</span>
-        <span class="region-tile__name">四国</span>
-        <span class="region-tile__count"><strong>4</strong>蒸溜所</span>
-        <span class="region-tile__arrow"><svg class="icon-svg" aria-hidden="true" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
-      </a>
-      <a href="region/kyushu.html" class="region-tile" style="--region-color:#8c3b6e;">
-        <span class="region-tile__name-en">KYUSHU</span>
-        <span class="region-tile__name">九州</span>
-        <span class="region-tile__count"><strong>28</strong>蒸溜所</span>
-        <span class="region-tile__arrow"><svg class="icon-svg" aria-hidden="true" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
-      </a>
-      <a href="region/okinawa.html" class="region-tile" style="--region-color:#0e7c8c;">
-        <span class="region-tile__name-en">OKINAWA</span>
-        <span class="region-tile__name">沖縄</span>
-        <span class="region-tile__count"><strong>5</strong>蒸溜所</span>
-        <span class="region-tile__arrow"><svg class="icon-svg" aria-hidden="true" width="14" height="14"><use href="/assets/icons.svg#i-arrow-right"/></svg></span>
-      </a>
+    <style>
+    .jp-wrap{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:28px;align-items:center}
+    @media (max-width:768px){.jp-wrap{grid-template-columns:1fr;gap:18px}}
+    .jp-map{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;max-width:560px;width:100%;margin:0 auto}
+    .jp-tile{aspect-ratio:1;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+      line-height:1.05;text-decoration:none;color:var(--ink);font-size:9px;overflow:hidden;transition:transform .15s var(--ease)}
+    .jp-tile i{font-style:normal;font-size:8.5px;letter-spacing:-0.04em;white-space:nowrap}
+    .jp-tile b{font-size:12px;font-variant-numeric:tabular-nums}
+    a.jp-tile:hover{transform:scale(1.12);box-shadow:var(--shadow-md);z-index:1}
+    .jp-l0{background:#efece4;color:#b3ad9f}
+    .jp-l1{background:#efe2c4}
+    .jp-l2{background:#dcc393}
+    .jp-l3{background:#c49f5f;color:#fff}
+    .jp-l4{background:#8b6f3f;color:#fff}
+    @media (max-width:480px){.jp-tile i{font-size:7px;letter-spacing:-0.08em}.jp-tile b{font-size:10.5px}.jp-map{gap:2px}}
+    .jp-legend{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;font-size:11px;color:var(--sub);margin-top:10px}
+    .jp-legend span{display:inline-flex;align-items:center;gap:4px}
+    .jp-legend em{display:inline-block;width:12px;height:12px;border-radius:3px}
+    .jp-regs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .jp-reg{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--paper);
+      border:1px solid var(--line);border-radius:10px;text-decoration:none;color:var(--ink);font-size:13.5px}
+    .jp-reg b{font-family:var(--serif);color:var(--green-dark);font-size:17px}
+    .jp-reg:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+    .jp-note{font-size:12px;color:var(--sub);margin:0 0 10px}
+    </style>
+    <div class="jp-wrap">
+      <div>
+        <div class="jp-map" role="img" aria-label="日本地図：都道府県ごとの蒸溜所数">
+      <a class="jp-tile jp-l4" style="grid-column:12;grid-row:1;" href="region/hokkaido.html" title="北海道 10蒸溜所" aria-label="北海道 10蒸溜所（北海道の蒸溜所一覧へ）"><i>北海道</i><b>10</b></a>
+      <span class="jp-tile jp-l0" style="grid-column:12;grid-row:2;" title="青森県 収録なし"><i>青森</i></span>
+      <a class="jp-tile jp-l2" style="grid-column:11;grid-row:3;" href="region/tohoku.html" title="秋田県 3蒸溜所" aria-label="秋田県 3蒸溜所（東北の蒸溜所一覧へ）"><i>秋田</i><b>3</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:12;grid-row:3;" href="region/tohoku.html" title="岩手県 2蒸溜所" aria-label="岩手県 2蒸溜所（東北の蒸溜所一覧へ）"><i>岩手</i><b>2</b></a>
+      <span class="jp-tile jp-l0" style="grid-column:11;grid-row:4;" title="山形県 収録なし"><i>山形</i></span>
+      <a class="jp-tile jp-l2" style="grid-column:12;grid-row:4;" href="region/tohoku.html" title="宮城県 3蒸溜所" aria-label="宮城県 3蒸溜所（東北の蒸溜所一覧へ）"><i>宮城</i><b>3</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:8;grid-row:5;" href="region/chubu.html" title="石川県 3蒸溜所" aria-label="石川県 3蒸溜所（中部の蒸溜所一覧へ）"><i>石川</i><b>3</b></a>
+      <span class="jp-tile jp-l0" style="grid-column:9;grid-row:5;" title="富山県 収録なし"><i>富山</i></span>
+      <a class="jp-tile jp-l2" style="grid-column:10;grid-row:5;" href="region/chubu.html" title="新潟県 2蒸溜所" aria-label="新潟県 2蒸溜所（中部の蒸溜所一覧へ）"><i>新潟</i><b>2</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:11;grid-row:5;" href="region/tohoku.html" title="福島県 1蒸溜所" aria-label="福島県 1蒸溜所（東北の蒸溜所一覧へ）"><i>福島</i><b>1</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:4;grid-row:6;" href="region/chugoku.html" title="島根県 1蒸溜所" aria-label="島根県 1蒸溜所（中国の蒸溜所一覧へ）"><i>島根</i><b>1</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:5;grid-row:6;" href="region/chugoku.html" title="鳥取県 2蒸溜所" aria-label="鳥取県 2蒸溜所（中国の蒸溜所一覧へ）"><i>鳥取</i><b>2</b></a>
+      <span class="jp-tile jp-l0" style="grid-column:8;grid-row:6;" title="福井県 収録なし"><i>福井</i></span>
+      <a class="jp-tile jp-l2" style="grid-column:9;grid-row:6;" href="region/chubu.html" title="岐阜県 2蒸溜所" aria-label="岐阜県 2蒸溜所（中部の蒸溜所一覧へ）"><i>岐阜</i><b>2</b></a>
+      <a class="jp-tile jp-l3" style="grid-column:10;grid-row:6;" href="region/chubu.html" title="長野県 6蒸溜所" aria-label="長野県 6蒸溜所（中部の蒸溜所一覧へ）"><i>長野</i><b>6</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:11;grid-row:6;" href="region/kanto.html" title="群馬県 2蒸溜所" aria-label="群馬県 2蒸溜所（関東の蒸溜所一覧へ）"><i>群馬</i><b>2</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:12;grid-row:6;" href="region/kanto.html" title="栃木県 1蒸溜所" aria-label="栃木県 1蒸溜所（関東の蒸溜所一覧へ）"><i>栃木</i><b>1</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:3;grid-row:7;" href="region/chugoku.html" title="山口県 1蒸溜所" aria-label="山口県 1蒸溜所（中国の蒸溜所一覧へ）"><i>山口</i><b>1</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:4;grid-row:7;" href="region/chugoku.html" title="広島県 2蒸溜所" aria-label="広島県 2蒸溜所（中国の蒸溜所一覧へ）"><i>広島</i><b>2</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:5;grid-row:7;" href="region/chugoku.html" title="岡山県 1蒸溜所" aria-label="岡山県 1蒸溜所（中国の蒸溜所一覧へ）"><i>岡山</i><b>1</b></a>
+      <a class="jp-tile jp-l3" style="grid-column:6;grid-row:7;" href="region/kansai.html" title="兵庫県 4蒸溜所" aria-label="兵庫県 4蒸溜所（近畿の蒸溜所一覧へ）"><i>兵庫</i><b>4</b></a>
+      <a class="jp-tile jp-l4" style="grid-column:7;grid-row:7;" href="region/kansai.html" title="京都府 7蒸溜所" aria-label="京都府 7蒸溜所（近畿の蒸溜所一覧へ）"><i>京都</i><b>7</b></a>
+      <span class="jp-tile jp-l0" style="grid-column:8;grid-row:7;" title="滋賀県 収録なし"><i>滋賀</i></span>
+      <a class="jp-tile jp-l1" style="grid-column:9;grid-row:7;" href="region/chubu.html" title="愛知県 1蒸溜所" aria-label="愛知県 1蒸溜所（中部の蒸溜所一覧へ）"><i>愛知</i><b>1</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:10;grid-row:7;" href="region/chubu.html" title="山梨県 2蒸溜所" aria-label="山梨県 2蒸溜所（中部の蒸溜所一覧へ）"><i>山梨</i><b>2</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:11;grid-row:7;" href="region/kanto.html" title="埼玉県 2蒸溜所" aria-label="埼玉県 2蒸溜所（関東の蒸溜所一覧へ）"><i>埼玉</i><b>2</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:12;grid-row:7;" href="region/kanto.html" title="茨城県 3蒸溜所" aria-label="茨城県 3蒸溜所（関東の蒸溜所一覧へ）"><i>茨城</i><b>3</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:1;grid-row:8;" href="region/kyushu.html" title="佐賀県 3蒸溜所" aria-label="佐賀県 3蒸溜所（九州の蒸溜所一覧へ）"><i>佐賀</i><b>3</b></a>
+      <a class="jp-tile jp-l3" style="grid-column:2;grid-row:8;" href="region/kyushu.html" title="福岡県 4蒸溜所" aria-label="福岡県 4蒸溜所（九州の蒸溜所一覧へ）"><i>福岡</i><b>4</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:6;grid-row:8;" href="region/kansai.html" title="大阪府 2蒸溜所" aria-label="大阪府 2蒸溜所（近畿の蒸溜所一覧へ）"><i>大阪</i><b>2</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:7;grid-row:8;" href="region/kansai.html" title="奈良県 1蒸溜所" aria-label="奈良県 1蒸溜所（近畿の蒸溜所一覧へ）"><i>奈良</i><b>1</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:8;grid-row:8;" href="region/kansai.html" title="三重県 1蒸溜所" aria-label="三重県 1蒸溜所（近畿の蒸溜所一覧へ）"><i>三重</i><b>1</b></a>
+      <a class="jp-tile jp-l3" style="grid-column:9;grid-row:8;" href="region/chubu.html" title="静岡県 4蒸溜所" aria-label="静岡県 4蒸溜所（中部の蒸溜所一覧へ）"><i>静岡</i><b>4</b></a>
+      <a class="jp-tile jp-l3" style="grid-column:10;grid-row:8;" href="region/kanto.html" title="神奈川県 4蒸溜所" aria-label="神奈川県 4蒸溜所（関東の蒸溜所一覧へ）"><i>神奈川</i><b>4</b></a>
+      <a class="jp-tile jp-l4" style="grid-column:11;grid-row:8;" href="region/kanto.html" title="東京都 8蒸溜所" aria-label="東京都 8蒸溜所（関東の蒸溜所一覧へ）"><i>東京</i><b>8</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:12;grid-row:8;" href="region/kanto.html" title="千葉県 3蒸溜所" aria-label="千葉県 3蒸溜所（関東の蒸溜所一覧へ）"><i>千葉</i><b>3</b></a>
+      <a class="jp-tile jp-l3" style="grid-column:1;grid-row:9;" href="region/kyushu.html" title="長崎県 4蒸溜所" aria-label="長崎県 4蒸溜所（九州の蒸溜所一覧へ）"><i>長崎</i><b>4</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:2;grid-row:9;" href="region/kyushu.html" title="熊本県 2蒸溜所" aria-label="熊本県 2蒸溜所（九州の蒸溜所一覧へ）"><i>熊本</i><b>2</b></a>
+      <span class="jp-tile jp-l0" style="grid-column:3;grid-row:9;" title="大分県 収録なし"><i>大分</i></span>
+      <a class="jp-tile jp-l1" style="grid-column:4;grid-row:9;" href="region/shikoku.html" title="愛媛県 1蒸溜所" aria-label="愛媛県 1蒸溜所（四国の蒸溜所一覧へ）"><i>愛媛</i><b>1</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:5;grid-row:9;" href="region/shikoku.html" title="香川県 1蒸溜所" aria-label="香川県 1蒸溜所（四国の蒸溜所一覧へ）"><i>香川</i><b>1</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:6;grid-row:9;" href="region/shikoku.html" title="徳島県 1蒸溜所" aria-label="徳島県 1蒸溜所（四国の蒸溜所一覧へ）"><i>徳島</i><b>1</b></a>
+      <a class="jp-tile jp-l2" style="grid-column:7;grid-row:9;" href="region/kansai.html" title="和歌山県 2蒸溜所" aria-label="和歌山県 2蒸溜所（近畿の蒸溜所一覧へ）"><i>和歌山</i><b>2</b></a>
+      <a class="jp-tile jp-l4" style="grid-column:2;grid-row:10;" href="region/kyushu.html" title="鹿児島県 10蒸溜所" aria-label="鹿児島県 10蒸溜所（九州の蒸溜所一覧へ）"><i>鹿児島</i><b>10</b></a>
+      <a class="jp-tile jp-l3" style="grid-column:3;grid-row:10;" href="region/kyushu.html" title="宮崎県 5蒸溜所" aria-label="宮崎県 5蒸溜所（九州の蒸溜所一覧へ）"><i>宮崎</i><b>5</b></a>
+      <a class="jp-tile jp-l1" style="grid-column:5;grid-row:10;" href="region/shikoku.html" title="高知県 1蒸溜所" aria-label="高知県 1蒸溜所（四国の蒸溜所一覧へ）"><i>高知</i><b>1</b></a>
+      <a class="jp-tile jp-l3" style="grid-column:1;grid-row:11;" href="region/okinawa.html" title="沖縄県 5蒸溜所" aria-label="沖縄県 5蒸溜所（沖縄の蒸溜所一覧へ）"><i>沖縄</i><b>5</b></a>
+        </div>
+        <div class="jp-legend"><span><em class="jp-l0"></em>0</span><span><em class="jp-l1"></em>1</span><span><em class="jp-l2"></em>2〜3</span><span><em class="jp-l3"></em>4〜6</span><span><em class="jp-l4"></em>7以上</span></div>
+      </div>
+      <div>
+        <p class="jp-note">地図の県か、下の地域から蒸溜所の一覧へ移動できます。</p>
+        <div class="jp-regs">
+      <a class="jp-reg" href="region/hokkaido.html"><span>北海道</span><b>10</b></a>
+      <a class="jp-reg" href="region/tohoku.html"><span>東北</span><b>9</b></a>
+      <a class="jp-reg" href="region/kanto.html"><span>関東</span><b>23</b></a>
+      <a class="jp-reg" href="region/chubu.html"><span>中部</span><b>20</b></a>
+      <a class="jp-reg" href="region/kansai.html"><span>近畿</span><b>17</b></a>
+      <a class="jp-reg" href="region/chugoku.html"><span>中国</span><b>7</b></a>
+      <a class="jp-reg" href="region/shikoku.html"><span>四国</span><b>4</b></a>
+      <a class="jp-reg" href="region/kyushu.html"><span>九州</span><b>28</b></a>
+      <a class="jp-reg" href="region/okinawa.html"><span>沖縄</span><b>5</b></a>
+        </div>
+      </div>
     </div>
   </section>
 
