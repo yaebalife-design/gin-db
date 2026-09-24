@@ -52,6 +52,9 @@
 .tw-links i{grid-column:2;grid-row:1/3;color:var(--gold-deep);font-style:normal;font-size:17px}
 
 /* ヒーローだけは既存ページに合わせて暗い面にする */
+.tw-fig{margin:18px 0 0}
+.tw-fig img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:14px;display:block}
+.tw-fig figcaption{font-size:11px;color:var(--sub);text-align:right;margin-top:6px}
 .tw-hero{background:linear-gradient(155deg,var(--green-deeper) 0%,var(--green-dark) 55%,#1b3524 100%);
   border-radius:16px;padding:28px 22px;margin:0 0 28px;box-shadow:var(--shadow-md)}
 .tw-hero h1{margin:0 0 12px;font-family:var(--serif);font-size:clamp(21px,4.6vw,32px);
@@ -194,6 +197,8 @@
       <a href="#tw-sg">最高金賞だけ見る</a>
     </div>
   </div>
+
+  <figure class="tw-fig"><img src="../assets/images/guide/twsc-hero.webp" alt="クラフトジンのボトルとグラス、受賞リボンのイメージ" width="1200" height="675" loading="eager" decoding="async"><figcaption>画像はイメージです。実在の銘柄・受賞とは関係ありません</figcaption></figure>
 
   <div class="tw-note">
     <p><strong>なぜこのページを作ったか。</strong>
@@ -532,6 +537,74 @@
       </tr>
       </tbody>
     </table>
+  </div>
+  </section>
+
+  <section class="section">
+    <h2 class="tw-h2"><svg class="icon-svg" width="22" height="22" aria-hidden="true"><use href="/assets/icons.svg#i-map"/></svg><span>都道府県別の受賞数</span></h2>
+    <p class="tw-lead">当サイトに収録している蒸溜所の受賞426件を、蒸溜所の所在地で都道府県ごとに数えました（37都道府県のうち上位10）。
+       出品者が当サイト未収録の受賞66件は、所在地が分からないため入れていません。</p>
+    <div class="tw-trend">
+    <div class="tw-row">
+      <div class="tw-y">東京都</div>
+      <div class="tw-bar"><span style="width:100%"></span></div>
+      <div class="tw-n"><strong>41</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">6蒸溜所</span></div>
+    </div>
+    <div class="tw-row">
+      <div class="tw-y">長野県</div>
+      <div class="tw-bar"><span style="width:83%"></span></div>
+      <div class="tw-n"><strong>34</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">5蒸溜所</span></div>
+    </div>
+    <div class="tw-row">
+      <div class="tw-y">鹿児島県</div>
+      <div class="tw-bar"><span style="width:78%"></span></div>
+      <div class="tw-n"><strong>32</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">8蒸溜所</span></div>
+    </div>
+    <div class="tw-row">
+      <div class="tw-y">佐賀県</div>
+      <div class="tw-bar"><span style="width:78%"></span></div>
+      <div class="tw-n"><strong>32</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">3蒸溜所</span></div>
+    </div>
+    <div class="tw-row">
+      <div class="tw-y">北海道</div>
+      <div class="tw-bar"><span style="width:68%"></span></div>
+      <div class="tw-n"><strong>28</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">8蒸溜所</span></div>
+    </div>
+    <div class="tw-row">
+      <div class="tw-y">広島県</div>
+      <div class="tw-bar"><span style="width:56%"></span></div>
+      <div class="tw-n"><strong>23</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">2蒸溜所</span></div>
+    </div>
+    <div class="tw-row">
+      <div class="tw-y">千葉県</div>
+      <div class="tw-bar"><span style="width:51%"></span></div>
+      <div class="tw-n"><strong>21</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">2蒸溜所</span></div>
+    </div>
+    <div class="tw-row">
+      <div class="tw-y">岐阜県</div>
+      <div class="tw-bar"><span style="width:46%"></span></div>
+      <div class="tw-n"><strong>19</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">2蒸溜所</span></div>
+    </div>
+    <div class="tw-row">
+      <div class="tw-y">新潟県</div>
+      <div class="tw-bar"><span style="width:46%"></span></div>
+      <div class="tw-n"><strong>19</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">2蒸溜所</span></div>
+    </div>
+    <div class="tw-row">
+      <div class="tw-y">宮崎県</div>
+      <div class="tw-bar"><span style="width:39%"></span></div>
+      <div class="tw-n"><strong>16</strong>件</div>
+      <div class="tw-x"><span class="tw-sgc tw-sgc--0">3蒸溜所</span></div>
+    </div>
   </div>
   </section>
 
