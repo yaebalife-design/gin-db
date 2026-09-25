@@ -75,7 +75,7 @@
     <span style="display:block;margin-top:8px;font-size:11px;color:var(--sub-2);">※ 各カードの「楽天ふるさと納税で見る」は楽天市場の検索結果へのアフィリエイト広告（PR）です。</span>
   </div>
 
-  <section class="section" id="portal-filter">
+  <section class="section" id="portal-filter" style="margin-bottom:30px;">
     <div class="section__head" style="margin-bottom:10px;">
       <h2 class="section__title" style="font-size:16px;">使うポータルで絞る</h2>
       <span class="section__sub" id="fresult">64蒸溜所を表示中</span>
@@ -94,9 +94,10 @@
     </p>
   </section>
 
-  <section class="section">
+  <!-- 2026-09-25: 地域タブは押すとその地域に絞る（もう一度押すと全部）。ポータル欄との間を詰めて「2つの絞り込み」に見せる -->
+  <section class="section" style="margin-bottom:8px;">
     <div class="section__head" style="margin-bottom:14px;">
-      <h2 class="section__title" style="font-size:16px;">地域で探す</h2>
+      <h2 class="section__title" style="font-size:16px;">地域で絞る</h2>
     </div>
     <div class="bot-tabs">
         <a href="#reg-hokkaido" class="bot-tab ftab" data-region="hokkaido">北海道 <strong style="margin-left:6px;">6</strong></a>
@@ -1142,10 +1143,18 @@
   var result = document.getElementById('fresult');
   if (!chips.length || !cards.length) return;
 
-  function apply(key) {
+  /* 2026-09-25 社長「地域をクリックしたらそれに絞る。もう一度押したら全部出る」。
+     以前の地域タブはその位置へ飛ぶだけだった。ポータルと地域の2つの条件を掛け合わせる。 */
+  var tabs = [].slice.call(document.querySelectorAll('.ftab'));
+  var state = { portal: 'all', region: null };
+  var regionOf = function (c) { var s = c.closest('.fregion'); return s ? s.id.replace('reg-', '') : ''; };
+
+  function apply() {
+    var key = state.portal, reg = state.region;
+    var portalOk = function (c) { return key === 'all' || (c.getAttribute('data-portals') || '').indexOf(key) !== -1; };
     var shown = 0;
     cards.forEach(function (c) {
-      var ok = key === 'all' || (c.getAttribute('data-portals') || '').indexOf(key) !== -1;
+      var ok = portalOk(c) && (!reg || regionOf(c) === reg);
       c.hidden = !ok;
       if (ok) shown++;
     });
@@ -1155,15 +1164,17 @@
       var n = sec.querySelector('.fcount');
       if (n) n.textContent = '（' + vis + '蒸溜所）';
     });
-    /* 地域タブの件数も絞り込み後の数にする。
-       ここを放置すると「ふるさと本舗 2件」なのにタブは「北海道 5」のままになり、
-       押しても何も無い地域へ飛ばすことになる。0件の地域はタブごと隠す。 */
-    [].slice.call(document.querySelectorAll('.ftab')).forEach(function (tab) {
-      var sec = document.getElementById('reg-' + tab.getAttribute('data-region'));
-      var vis = sec ? sec.querySelectorAll('.fcard:not([hidden])').length : 0;
+    /* 地域タブの件数は「今のポータル」で数える（地域で絞っていても他の地域の数は見せる）。
+       0件の地域はタブごと隠す。 */
+    tabs.forEach(function (tab) {
+      var r = tab.getAttribute('data-region');
+      var vis = cards.filter(function (c) { return portalOk(c) && regionOf(c) === r; }).length;
       tab.hidden = vis === 0;
       var st = tab.querySelector('strong');
       if (st) st.textContent = vis;
+      var on = r === reg;
+      tab.classList.toggle('is-active', on);
+      tab.setAttribute('aria-pressed', on ? 'true' : 'false');
     });
 
     var label = 'すべて';
@@ -1174,38 +1185,60 @@
       if (on) label = ch.getAttribute('data-label') || label;
     });
     if (result) {
-      result.textContent = key === 'all'
-        ? cards.length + '蒸溜所を表示中'
-        : label + 'で買える ' + shown + '蒸溜所';
+      var regLabel = '';
+      tabs.forEach(function (t) { if (t.getAttribute('data-region') === reg) regLabel = t.firstChild.textContent.trim(); });
+      var parts = [];
+      if (regLabel) parts.push(regLabel);
+      if (key !== 'all') parts.push(label + 'で買える');
+      result.textContent = parts.length ? parts.join('・') + ' ' + shown + '蒸溜所' : cards.length + '蒸溜所を表示中';
     }
+  }
+
+  function save() {
+    if (!history.replaceState) return;
+    var h = [];
+    if (state.portal !== 'all') h.push('portal=' + state.portal);
+    if (state.region) h.push('region=' + state.region);
+    history.replaceState(null, '', h.length ? '#' + h.join('&') : location.pathname);
   }
 
   chips.forEach(function (ch) {
     ch.addEventListener('click', function (e) {
       e.preventDefault();
-      var key = ch.getAttribute('data-portal');
-      apply(key);
-      if (history.replaceState) {
-        history.replaceState(null, '', key === 'all' ? location.pathname : '#portal=' + key);
-      }
+      state.portal = ch.getAttribute('data-portal');
+      apply(); save();
+    });
+  });
+
+  tabs.forEach(function (tab) {
+    tab.setAttribute('role', 'button');
+    tab.addEventListener('click', function (e) {
+      e.preventDefault();
+      var r = tab.getAttribute('data-region');
+      state.region = state.region === r ? null : r;   // もう一度押したら全部に戻す
+      apply(); save();
     });
   });
 
   function fromHash() {
     var m = /(?:^|[#&])portal=([a-z]+)/.exec(location.hash);
-    if (!m) return 'all';
-    for (var i = 0; i < chips.length; i++) {
-      if (chips[i].getAttribute('data-portal') === m[1]) return m[1];
-    }
-    return 'all';
+    var n = /(?:^|[#&])region=([a-z]+)/.exec(location.hash);
+    var p = 'all';
+    if (m) chips.forEach(function (c) { if (c.getAttribute('data-portal') === m[1]) p = m[1]; });
+    var r = null;
+    if (n) tabs.forEach(function (t) { if (t.getAttribute('data-region') === n[1]) r = n[1]; });
+    /* 旧リンク（#reg-kanto）で来た人も、その地域に絞った状態にする */
+    var old = /^#reg-([a-z]+)$/.exec(location.hash);
+    if (old) tabs.forEach(function (t) { if (t.getAttribute('data-region') === old[1]) r = old[1]; });
+    state.portal = p; state.region = r;
   }
 
   /* 同じページ内でハッシュだけ変わったときも反映する。
      #portal=a のリンクを共有された人が、すでにページを開いていた場合に
      何も起きないのを防ぐ。 */
-  window.addEventListener('hashchange', function () { apply(fromHash()); });
+  window.addEventListener('hashchange', function () { fromHash(); apply(); });
 
-  apply(fromHash());
+  fromHash(); apply();
 })();
 </script>
 </body>
