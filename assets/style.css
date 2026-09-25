@@ -1722,3 +1722,20 @@ input[type=search]::-webkit-search-cancel-button{display:none}
 .xlinks__list b{grid-column:1;grid-row:1;font-size:14px;color:var(--ink);font-weight:600}
 .xlinks__list span{grid-column:1;grid-row:2;font-size:12px;color:var(--sub);line-height:1.6}
 .xlinks__list i{grid-column:2;grid-row:1/3;color:var(--gold-deep);font-style:normal;display:flex}
+
+/* ===== 銘柄のボトル画像（ツール/bottle_images.py・2026-09-26） =====
+   瓶を切らないよう contain で表示し、余白は画像の縁と同じ深緑で埋める */
+.card__img--bottle{background-size:contain!important;background-repeat:no-repeat;background-position:center;background-color:#0a1c11;padding:0}
+.card__img--bottle::before{display:none}
+.card__imgnote{position:absolute;right:8px;bottom:6px;font-size:10px;line-height:1;color:rgba(255,255,255,.72);letter-spacing:.03em;font-family:var(--sans);font-weight:400;z-index:1;pointer-events:none}
+/* スマホの香り逆引きは写真が細い縦長の小窓になる。幅に合わせると瓶が豆粒になるので高さに合わせる（左右は背景だけ切れる） */
+@media(max-width:600px){.bcard .card__imgnote{display:none}.bcard .card__img--bottle{background-size:auto 94%!important}}
+.detail-hero--bottle{display:flex;align-items:center}
+.detail-hero--bottle .detail-hero__body{flex:1 1 auto;min-width:0}
+.detail-hero__bottle{flex:0 0 260px;margin:24px 28px 24px 0;border-radius:14px;overflow:hidden;border:1px solid rgba(212,184,127,.45);box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.detail-hero__bottle img{display:block;width:100%;height:auto}
+@media(max-width:640px){
+  .detail-hero--bottle{flex-direction:column-reverse;align-items:stretch}
+  .detail-hero__bottle{flex:none;width:min(72%,280px);margin:24px auto 0}
+  .detail-hero--bottle .detail-hero__body{min-height:0;padding-top:20px}
+}
