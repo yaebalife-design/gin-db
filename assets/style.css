@@ -1745,3 +1745,15 @@ input[type=search]::-webkit-search-cancel-button{display:none}
 .bottle__photo img{display:block;width:100%;height:auto}
 @media(max-width:600px){.bottle__photo{flex:none;width:min(64%,240px);margin:0 auto}}
 .bottle__photo .card__imgnote{position:static;display:block;text-align:right;padding:5px 8px 6px;background:#0a1c11}
+
+/* ===== 受賞史（awards.html）の行: 左に小さなボトル、札は銘柄名の上に小さく（2026-09-27 社長「くどい？」） ===== */
+.timeline__item{grid-template-columns:60px 1fr;grid-template-areas:"thumb award" "thumb name";column-gap:16px;row-gap:4px;padding:12px 18px 12px 12px}
+.timeline__item .tl-thumb{grid-area:thumb;width:60px;height:60px;border-radius:8px;overflow:hidden;background:#0a1c11;display:flex;align-items:center;justify-content:center;flex:none}
+.timeline__item .tl-thumb--none{background:var(--bg);border:1px solid var(--line);color:var(--gold)}
+.timeline__item .award{grid-area:award;justify-self:start;align-self:end;width:auto;min-height:0;font-size:9.5px;padding:3px 8px;letter-spacing:.06em;box-shadow:none}
+.timeline__item .name{grid-area:name;align-self:start}
+@media (max-width:700px){
+  .timeline__item{grid-template-columns:52px 1fr;column-gap:12px;gap:4px 12px}
+  .timeline__item .tl-thumb{width:52px;height:52px}
+  .timeline__item .award{padding:3px 8px}
+}
