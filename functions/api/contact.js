@@ -16,7 +16,9 @@
  */
 
 const MAX = { name: 100, email: 200, url: 500, message: 4000, kind: 40 };
-const KINDS = ["掲載情報の誤り", "新規蒸溜所の掲載依頼", "画像・引用について", "その他"];
+const KINDS = ["掲載情報の誤り", "新規蒸溜所の掲載依頼", "画像・引用について", "その他",
+  // 蒸溜所・販売店の方へ（for-distilleries.html・2026-10-04）。ページ側の文字列と完全一致させること
+  "掲載内容の修正", "画像の差し替え・取り下げ", "新商品・受賞のお知らせ", "取材・インタビューのご希望"];
 
 function json(status, body) {
   return new Response(JSON.stringify(body), {
