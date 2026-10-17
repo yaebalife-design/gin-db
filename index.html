@@ -104,9 +104,11 @@
   <div class="hero__bg" style="background-image: url('assets/images/hero.jpg');"></div>
   <div class="hero__inner">
     <span class="hero__eyebrow">JAPAN CRAFT GIN DATABASE</span>
-    <h1>日本のクラフトジンを、<br><span class="accent">香り</span>から探す。</h1>
+    <h1><span class="hl">日本のクラフトジンを、</span><br><span class="hl"><span class="accent">香り</span>から探す。</span></h1>
     <div class="hero__divider"></div>
-    <p>全国123の蒸溜所（2026年10月時点）が手がけるジャパニーズジン286銘柄を、<br><span style="display:inline-block;">ボタニカル</span>・<span style="display:inline-block;">受賞歴</span>・<span style="display:inline-block;">地域</span>から横断検索。<br>各蒸溜所の公式情報で確かめた、ジャパニーズジンの専門データベース。</p>
+    <!-- 2026-10-17 社長「改行きもい」: <br> 直書きで「を、」だけが1行に残っていた。意味のかたまり（inline-block）の間でだけ折り返す。括弧書きの時点は最後の注記へ -->
+    <p><span class="hl">全国123の蒸溜所が手がける</span><span class="hl">ジャパニーズジン286銘柄を、</span><br><span class="hl">ボタニカル・受賞歴・地域から</span><span class="hl">横断検索。</span><br><small class="hero__asof"><span class="hl">各蒸溜所の公式情報で確かめた、</span><span class="hl">ジャパニーズジンの専門データベースです。</span><span class="hl">数字は2026年10月時点のものです。</span></small></p>
+    <style>.hero .hl{display:inline-block}.hero__asof{display:block;margin-top:6px;font-size:.88em;opacity:.85}@media(max-width:480px){.hero h1{font-size:min(34px,calc((100vw - 48px) / 11.4))}.hero__stats{display:grid;grid-template-columns:1fr 1fr;gap:22px 0}.hero__stat::after{display:none}}</style>
     <div class="hero__stats">
       <div class="hero__stat"><span class="num">123</span><span class="label">DISTILLERIES</span></div>
       <div class="hero__stat"><span class="num">286</span><span class="label">BRANDS</span></div>
