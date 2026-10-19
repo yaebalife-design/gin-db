@@ -40,9 +40,6 @@
 .topsearch__form{position:relative;display:flex;gap:9px;align-items:stretch}
 .topsearch__icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:19px;height:19px;
   color:var(--sub);pointer-events:none;z-index:1}
-/* 2026-09-24: 虫眼鏡はフォーム全体ではなく入力欄の箱に対して中央に置く。
-   スマホでは検索ボタンが下の段に折り返してフォームが2段になり、フォーム基準の top:50% だと
-   虫眼鏡が入力欄の下にはみ出していた（社長指摘） */
 .topsearch__field{position:relative;flex:1;min-width:0;display:block}
 .topsearch__form input{width:100%;box-sizing:border-box;min-width:0;font:inherit;font-size:16px;padding:15px 16px 15px 44px;
   border:1.5px solid var(--line);border-radius:12px;background:var(--paper);color:inherit;box-shadow:var(--shadow-sm)}
@@ -106,7 +103,6 @@
     <span class="hero__eyebrow">JAPAN CRAFT GIN DATABASE</span>
     <h1><span class="hl">日本のクラフトジンを、</span><br><span class="hl"><span class="accent">香り</span>から探す。</span></h1>
     <div class="hero__divider"></div>
-    <!-- 2026-10-17 社長「改行きもい」: <br> 直書きで「を、」だけが1行に残っていた。意味のかたまり（inline-block）の間でだけ折り返す。括弧書きの時点は最後の注記へ -->
     <p><span class="hl">全国123の蒸溜所が手がける</span><span class="hl">ジャパニーズジン289銘柄を、</span><br><span class="hl">ボタニカル・受賞歴・地域から</span><span class="hl">横断検索。</span><br><small class="hero__asof"><span class="hl">各蒸溜所の公式情報で確かめた、</span><span class="hl">ジャパニーズジンの専門データベースです。</span><span class="hl">数字は2026年10月時点のものです。</span></small></p>
     <style>.hero .hl{display:inline-block}.hero__asof{display:block;margin-top:6px;font-size:.88em;opacity:.85}@media(max-width:480px){.hero h1{font-size:min(34px,calc((100vw - 48px) / 11.4))}.hero__stats{display:grid;grid-template-columns:1fr 1fr;gap:22px 0}.hero__stat::after{display:none}}</style>
     <div class="hero__stats">
@@ -317,7 +313,7 @@
           <span class="card__badge">WORLD'S BEST</span>
           <h3 class="card__title">ohoro GIN Standard</h3>
           <p class="card__sub">ニセコ蒸溜所｜北海道</p>
-          <div class="card__price"><small style="font-weight:400;color:var(--sub);font-size:12px;">参考価格</small> ¥4,500（税別・公式希望小売）</div>
+          <div class="card__price"><small style="font-weight:400;color:var(--sub);font-size:12px;">参考価格</small> ¥4,500 税別</div>
           <div class="card__meta">47% / 700ml</div>
         </div>
       </a>
@@ -327,7 +323,7 @@
           <span class="card__badge">WORLD'S BEST</span>
           <h3 class="card__title">白兎プレミアム</h3>
           <p class="card__sub">松井酒造｜鳥取県</p>
-          <div class="card__price"><small style="font-weight:400;color:var(--sub);font-size:12px;">参考価格</small> ¥3,960（税込・公式希望小売）</div>
+          <div class="card__price"><small style="font-weight:400;color:var(--sub);font-size:12px;">参考価格</small> ¥3,960 税込</div>
           <div class="card__meta">47% / 700ml</div>
         </div>
       </a>

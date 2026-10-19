@@ -902,7 +902,7 @@ h1, h2, h3, h4 {
   -webkit-overflow-scrolling: touch;
   position: relative;
 }
-/* 2026-09-24: 「横スクロール」の案内は、表の外の右上に薄く出して動かさない（社長指摘）。
+/* 2026-09-24: 「横スクロール」の案内は、表の外の右上に薄く出して動かさない（指摘を受けて）。
    以前は ::after を表の枠（スクロールする箱）の中に absolute で置いていたため、横にスクロールすると
    案内も一緒に流れて見出しに重なっていた。::before を枠の先頭に1行ぶん置き、sticky + left:0 で
    横スクロールしても枠の右上に留まるようにする。背景なし・字は薄い金色。 */
@@ -1192,7 +1192,7 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   color: white;
 }
 /* 一覧の中に何本も並ぶときのボタン。1銘柄ごとに大きなボタンが2個ずつ縦に連なると
-   圧が強すぎる（社長指摘 2026-08-31「食い気味すぎる」）。
+   圧が強すぎる（2026-08-31「食い気味すぎる」との指摘）。
    ブランド色はそのままに、寸法だけ落として1行に収める。
    ※銘柄ページ本体の購入ボタンには当てない。あちらは主役なので大きいままでよい。 */
 .affiliate-btns--compact .affiliate-btn {
@@ -1746,7 +1746,7 @@ input[type=search]::-webkit-search-cancel-button{display:none}
 @media(max-width:600px){.bottle__photo{flex:none;width:min(64%,240px);margin:0 auto}}
 .bottle__photo .card__imgnote{position:static;display:block;text-align:right;padding:5px 8px 6px;background:#0a1c11}
 
-/* ===== 受賞史（awards.html）の行: 左に小さなボトル、札は銘柄名の上に小さく（2026-09-27 社長「くどい？」） ===== */
+/* ===== 受賞史（awards.html）の行: 左に小さなボトル、札は銘柄名の上に小さく（2026-09-27「くどい？」との指摘） ===== */
 .timeline__item{grid-template-columns:60px 1fr;grid-template-areas:"thumb award" "thumb name";column-gap:16px;row-gap:4px;padding:12px 18px 12px 12px}
 .timeline__item .tl-thumb{grid-area:thumb;width:60px;height:60px;border-radius:8px;overflow:hidden;background:#0a1c11;display:flex;align-items:center;justify-content:center;flex:none}
 .timeline__item .tl-thumb--none{background:var(--bg);border:1px solid var(--line);color:var(--gold)}

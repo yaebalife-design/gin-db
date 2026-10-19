@@ -1378,8 +1378,6 @@
   var result = document.getElementById('fresult');
   if (!chips.length || !cards.length) return;
 
-  /* 2026-09-25 社長「地域をクリックしたらそれに絞る。もう一度押したら全部出る」。
-     以前の地域タブはその位置へ飛ぶだけだった。ポータルと地域の2つの条件を掛け合わせる。 */
   var tabs = [].slice.call(document.querySelectorAll('.ftab'));
   var state = { portal: 'all', region: null };
   var regionOf = function (c) { var s = c.closest('.fregion'); return s ? s.id.replace('reg-', '') : ''; };
