@@ -71,6 +71,13 @@
 .fz-note__jump a{display:inline-block;white-space:nowrap;color:var(--green);font-weight:700;margin-right:14px}
 .fz-note__pr{margin-top:8px;font-size:11px;color:var(--sub-2)}
 .fz-count{display:inline-block;white-space:nowrap;font-size:13px;color:var(--sub);font-weight:400;margin-left:8px}
+body[data-fz-portal="c"] .furusato-card__links a.affiliate-link:not(.affiliate-link--choice){display:none}
+body[data-fz-portal="r"] .furusato-card__links a.affiliate-link:not(.affiliate-link--rakuten){display:none}
+body[data-fz-portal="f"] .furusato-card__links a.affiliate-link:not(.affiliate-link--furunavi){display:none}
+body[data-fz-portal="s"] .furusato-card__links a.affiliate-link:not(.affiliate-link--satofull){display:none}
+body[data-fz-portal="a"] .furusato-card__links a.affiliate-link:not(.affiliate-link--aupay){display:none}
+body[data-fz-portal="h"] .furusato-card__links a.affiliate-link:not(.affiliate-link--honpo){display:none}
+body[data-fz-portal="l"] .furusato-card__links a.affiliate-link:not(.affiliate-link--furulab){display:none}
 </style>
 
   <nav class="breadcrumb" aria-label="パンくず">
@@ -1384,6 +1391,8 @@
 
   function apply() {
     var key = state.portal, reg = state.region;
+    /* 絞ったポータルのボタンだけをカードに残す（CSS は body[data-fz-portal] で切り替え） */
+    document.body.setAttribute('data-fz-portal', key);
     var portalOk = function (c) { return key === 'all' || (c.getAttribute('data-portals') || '').indexOf(key) !== -1; };
     var shown = 0;
     cards.forEach(function (c) {
