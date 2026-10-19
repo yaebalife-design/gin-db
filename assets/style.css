@@ -1206,6 +1206,12 @@ a.timeline__item:hover::after { opacity: 1; right: 14px; }
   gap: 6px;
 }
 .affiliate-btns--compact { gap: 8px; }
+/* 2026-10-19 スマホでは3つを1行に（縦に3つ積むと1銘柄で画面の半分を使っていた）。店名は短いラベルで渡す */
+@media (max-width: 600px) {
+  .affiliate-btns--compact { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; width: 100%; }
+  .affiliate-btns--compact .affiliate-btn { min-width: 0; padding: 10px 4px; font-size: 12.5px; justify-content: center; }
+  .affiliate-btns--compact .affiliate-btn__icon { display: none; }
+}
 /* H案: 完全ブランド色背景（最派手バージョン）*/
 .affiliate-btn--rakuten {
   background: linear-gradient(135deg, #8c1010 0%, #bf0000 100%);
