@@ -1757,3 +1757,17 @@ input[type=search]::-webkit-search-cancel-button{display:none}
   .timeline__item .tl-thumb{width:52px;height:52px}
   .timeline__item .award{padding:3px 8px}
 }
+
+/* 2026-10-19 UX監査
+   1) 年齢確認：スマホで「はい（20歳以/上）」「いい/え」と折れていた（新規の読者が最初に見る画面）。縦に並べて折らない
+   2) 見出し：「季の美 京都ドライジ/ン」「近畿のクラ/フトジン」のように最後の1〜2字だけ次の行に落ちていた。
+      文節で折り、行の長さをそろえる（対応していないブラウザでは今までどおり） */
+.age-gate__btn { white-space: nowrap; }
+@media (max-width: 480px) {
+  .age-gate__buttons { flex-direction: column; align-items: stretch; gap: 10px; }
+  .age-gate__btn { width: 100%; padding: 14px 16px; }
+}
+h1, h2, h3, .card__title, .section__title {
+  word-break: auto-phrase;
+  text-wrap: balance;
+}
