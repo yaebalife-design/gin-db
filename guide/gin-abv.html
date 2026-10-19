@@ -47,8 +47,10 @@
 .ab-kpi span{font-size:12px;color:var(--sub)}
 .ab-answer p{font-size:14px;line-height:1.9;margin:0}
 /* 文節で折る（Chrome系）。Safari は未対応なので数字と単位は .nw でも守る */
-.ab-hero,.ab-answer,.ab-sec,.kg-buy{word-break:auto-phrase}
+.ab-hero,.ab-answer,.ab-sec,.kg-buy,.ab-note{word-break:auto-phrase}
 .ab-list{max-width:760px}
+/* PCで説明の箱と一覧の幅をそろえる（2026-10-19 値段の記事のレビュー） */
+.ab-sec>.ab-rule,.ab-sec>.ab-p,.ab-sec>.ab-note{max-width:760px}
 .ab-table--mix th small{white-space:nowrap}
 .ab-sec{margin:44px 0;scroll-margin-top:80px}
 .ab-h2{font-family:var(--serif);font-size:24px;border-bottom:2px solid var(--gold);padding-bottom:8px;margin:0 0 12px;line-height:1.45}
@@ -93,6 +95,7 @@
 .kg-buy{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 20px;margin:48px 0}
 .kg-buy__row{padding:14px 0;border-top:1px solid var(--line)}
 .ab-buyhead{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.ab-buyhead>div{flex:1;min-width:0}
 .kg-buy__row p{font-weight:700;margin:0}.kg-buy__row p span{display:block;font-weight:400;font-size:12px;color:var(--sub);margin-top:2px}
 .kg-buy .affiliate-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
 .kg-buy .affiliate-btn{min-width:0;padding:9px 4px;font-size:12px;justify-content:center;width:auto}
@@ -195,6 +198,7 @@
     <div class="ab-links">
       <a href="japanese-gin-ranking.html#abv">度数が高いジン TOP10</a>
       <a href="../find.html#sort=abv-desc">全銘柄を度数順に見る</a>
+      <a href="gin-price.html">ジンの値段</a>
       <a href="gin-tonic-recipe.html">ジントニックの黄金比</a>
       <a href="martini-complete-guide.html">マティーニ完全ガイド</a>
       <a href="what-is-craft-gin.html">クラフトジンとは</a>
