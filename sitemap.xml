@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://gin-db.com/</loc><priority>1.0</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/find</loc><priority>0.95</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/botanical</loc><priority>0.9</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/find</loc><priority>0.95</priority><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gin-db.com/botanical</loc><priority>0.9</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/awards</loc><priority>0.9</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/furusato</loc><priority>0.9</priority><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://gin-db.com/guide/</loc><priority>0.9</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/10-ways-to-drink</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/citrus-gin-ranking</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/guide/craft-gin-gift</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/craft-gin-gift</loc><priority>0.85</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/guide/distillery-tour-5</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/gin-abv</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/gin-botanicals-guide</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/gin-calorie</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/guide/gin-price</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/gin-price</loc><priority>0.85</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/guide/gin-tonic-recipe</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/ginger-gin-ranking</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/guide/gyokuro-gin-ranking</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/gyokuro-gin-ranking</loc><priority>0.85</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/guide/haskap-gin-ranking</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/hinoki-gin-ranking</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/japanese-gin-history</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/japanese-gin-ranking</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/guide/juniper-gin-guide</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/guide/juniper-gin-guide</loc><priority>0.85</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/guide/kuromoji-gin-ranking</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/kyoto-craft-gin</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/guide/martini-complete-guide</loc><priority>0.85</priority><lastmod>2026-10-29</lastmod></url>
@@ -68,13 +68,13 @@
   <url><loc>https://gin-db.com/distillery/kiuchi-akihabara</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/kiuchi-yasato</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/kiyokawa-farm</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/distillery/kiyosu-sakura</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/distillery/kiyosu-sakura</loc><priority>0.8</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/distillery/kizakura-tamba</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/kk-itteki</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/kobe-distillery</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/koganei-shuzo</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/komaki</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/distillery/komasa-gin</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/distillery/komasa-gin</loc><priority>0.8</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/distillery/kumazawa-shuzo</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/kurosawa-shuzo</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/kyotango-mairingen</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
@@ -155,14 +155,14 @@
   <url><loc>https://gin-db.com/distillery/yamamoto-shuzo</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/yamato-yucho</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/distillery/yamaya</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/distillery/yokohama-bay-distillery</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/distillery/yokohama-bay-distillery</loc><priority>0.8</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/distillery/yomeishu-kanomori</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/region/chubu</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/region/chubu</loc><priority>0.8</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/region/chugoku</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/region/hokkaido</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/region/kansai</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/region/kanto</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/region/kyushu</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/region/kanto</loc><priority>0.8</priority><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gin-db.com/region/kyushu</loc><priority>0.8</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/region/okinawa</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/region/shikoku</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/region/tohoku</loc><priority>0.8</priority><lastmod>2026-10-29</lastmod></url>
@@ -250,8 +250,8 @@
   <url><loc>https://gin-db.com/gin/kiuchi-yasato-1</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/gin/kiuchi-yasato-2</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/gin/kiyokawa-farm-1</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/kiyosu-sakura-1</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/kiyosu-sakura-2</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/gin/kiyosu-sakura-1</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gin-db.com/gin/kiyosu-sakura-2</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/gin/kizakura-tamba-1</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/gin/kizakura-tamba-2</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/gin/kizakura-tamba-3</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
@@ -266,10 +266,10 @@
   <url><loc>https://gin-db.com/gin/komaki-1</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/gin/komaki-2</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/gin/komaki-3</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/komasa-gin-1</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/komasa-gin-2</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/komasa-gin-3</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/komasa-gin-4</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/gin/komasa-gin-1</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gin-db.com/gin/komasa-gin-2</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gin-db.com/gin/komasa-gin-3</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gin-db.com/gin/komasa-gin-4</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/gin/kumazawa-shuzo-1</loc><priority>0.7</priority><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://gin-db.com/gin/kumazawa-shuzo-2</loc><priority>0.7</priority><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://gin-db.com/gin/kurosawa-shuzo-1</loc><priority>0.7</priority><lastmod>2026-10-28</lastmod></url>
@@ -461,10 +461,10 @@
   <url><loc>https://gin-db.com/gin/yamato-yucho-5</loc><priority>0.7</priority><lastmod>2026-10-28</lastmod></url>
   <url><loc>https://gin-db.com/gin/yamaya-1</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/gin/yamaya-2</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/yokohama-bay-distillery-1</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/yokohama-bay-distillery-2</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/yokohama-bay-distillery-3</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://gin-db.com/gin/yokohama-bay-distillery-4</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
+  <url><loc>https://gin-db.com/gin/yokohama-bay-distillery-1</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gin-db.com/gin/yokohama-bay-distillery-2</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gin-db.com/gin/yokohama-bay-distillery-3</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
+  <url><loc>https://gin-db.com/gin/yokohama-bay-distillery-4</loc><priority>0.7</priority><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://gin-db.com/gin/yomeishu-kanomori-1</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/gin/yomeishu-kanomori-2</loc><priority>0.7</priority><lastmod>2026-10-29</lastmod></url>
   <url><loc>https://gin-db.com/about</loc><priority>0.5</priority><lastmod>2026-10-26</lastmod></url>
